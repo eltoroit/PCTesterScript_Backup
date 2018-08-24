@@ -31,6 +31,7 @@ function reportError(instruction) {
 function promptYesNo(instruction) {
 	log.promptMsg(instruction.Message__c);
 
+	exec("call sendkeys.bat '' ''");
 	const inputReadLine1 = readline.createInterface({
 		input: process.stdin,
 		output: process.stdout
