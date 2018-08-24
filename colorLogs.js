@@ -21,6 +21,7 @@ let colorFgBlue = "\x1b[34m";
 let colorFgMagenta = "\x1b[35m";
 let colorFgCyan = "\x1b[36m";
 let colorFgWhite = "\x1b[37m";
+let colorFgGray = "\x1b[90m";
 
 // Color Background
 let colorBgBlack = "\x1b[40m";
@@ -37,7 +38,7 @@ module.exports = {
         console.log(colorBgBlack + colorBright + colorFgRed + msg + colorReset);
     },
     debug: function (msg) {
-        console.log(colorBgBlack + colorBright + colorFgMagenta + msg + colorReset);
+        console.log(colorBgBlack + colorDim + colorFgGray + msg + colorReset);
     },
     info: function (msg) {
         console.log(colorBgBlack + colorBright + colorFgWhite + msg + colorReset);
