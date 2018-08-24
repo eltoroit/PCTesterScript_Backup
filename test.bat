@@ -6,13 +6,13 @@ REM This file will be opened indirectly when tester types t <ENTER>
 CLS
 ECHO Application Tester built by Andres Perez (ELTORO.IT)
 ECHO Please wait while we download the latest scripts
-CD TH
-IF EXIST DX18Scripts (
+CD C:\TH
+IF EXIST PCTesterScript (
 	REM ECHO DELETING
-	RMDIR /S /Q DX18Scripts
+	RMDIR /S /Q PCTesterScript
 ) ELSE (
 	REM ECHO NOTHING
 )
-git clone https://github.com/eltoroit/DX18Scripts.git
-CD DX18Scripts
+git clone https://github.com/eltoroit/PCTesterScript.git
+CD PCTesterScript
 node tester.js &

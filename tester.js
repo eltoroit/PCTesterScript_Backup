@@ -12,8 +12,8 @@ const http = require('http');
 const https = require('https');
 const log = require('./colorLogs.js');
 
-var debug = false;
-var verbose = false;
+var debug = true;
+var verbose = true;
 var timerDelay = 250;
 var executeManualChanges = true;
 
@@ -384,12 +384,6 @@ function executeInstruction() {
 		case "Manual":
 			promptYesNo(instruction);
 			break;
-
-
-
-
-
-
 		case "Open Application":
 			instruction.callback = function (output) {
 				if (output.stderr) {
@@ -479,7 +473,7 @@ function menuChooseEvent(data) {
 }
 
 log.clearScreen();
-log.promptMsg('04_34_PM');
+log.promptMsg('Version: 2018-08-24 @ 18:15:00 PM EST');
 fs.readFile('data.json', "utf8", function (err, data) {
 	if (err) throw err;
 	var data = JSON.parse(data);
