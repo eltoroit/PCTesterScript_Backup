@@ -12,10 +12,11 @@ const http = require('http');
 const https = require('https');
 const log = require('./colorLogs.js');
 
+// Skip manual checks
 var debug = true;
 var verbose = true;
 var timerDelay = 250;
-var executeManualChanges = true;
+var executeManualChecks = false;
 
 var errors = [];
 var errorCodes = {};
@@ -39,7 +40,7 @@ function promptYesNo(instruction) {
 		output: process.stdout
 	});
 
-	if (executeManualChanges) {
+	if (executeManualChecks) {
 		var untilCorrectResponse = function () {
 			inputReadLine1.question(log.getPromptMsg("[Y/N] > "), function (answer) {
 				if (answer[0].toUpperCase() === 'Y') {
@@ -58,6 +59,7 @@ function promptYesNo(instruction) {
 
 		untilCorrectResponse();
 	} else {
+		log.error("Manual checks are being skipped for testing!");
 		nextInstruction();
 	}
 }
