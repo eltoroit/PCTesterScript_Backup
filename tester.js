@@ -32,7 +32,7 @@ function promptYesNo(instruction) {
 	log.promptMsg(instruction.Message__c);
 
 	var sendKeysCmd = "call sendkeys.bat \"C:\\Windows\\System32\\cmd.exe\" \"\"";
-	log.debug("Sending keys: " + sendKeysCmd);
+	// log.debug("Sending keys: " + sendKeysCmd);
 	exec(sendKeysCmd);
 	const inputReadLine1 = readline.createInterface({
 		input: process.stdin,
