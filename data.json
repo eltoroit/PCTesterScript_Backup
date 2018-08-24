@@ -1,0 +1,1012 @@
+{
+  "events": [
+    {
+      "attributes": {
+        "type": "Event__c",
+        "url": "/services/data/v42.0/sobjects/Event__c/a02L000000BaNO5IAN"
+      },
+      "Id": "a02L000000BaNO5IAN",
+      "Name": "Dreamforce  '18"
+    }
+  ],
+  "actionsByEvent": {
+    "a02L000000BaNO5IAN": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZkIAI"
+        },
+        "Id": "a00L000000937ZkIAI",
+        "Name": "ACT-0006",
+        "AppName__c": "Clear Screen",
+        "Enabled__c": true,
+        "ExtId__c": "a00L0000008OGuTIAW",
+        "Operation__c": "Clear",
+        "Order__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZzIAI"
+        },
+        "Id": "a00L000000937ZzIAI",
+        "Name": "ACT-0021",
+        "AppName__c": "Say Hi",
+        "Command__c": "Application Tester built by Andres Perez (ELTORO.IT)",
+        "Enabled__c": true,
+        "ExtId__c": "a00L0000008OGunIAG",
+        "Operation__c": "Write",
+        "Order__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937a5IAA"
+        },
+        "Id": "a00L000000937a5IAA",
+        "Name": "ACT-0027",
+        "AppName__c": "MANUAL CHECKS",
+        "Command__c": "=== === === MANUAL CHECKS === === ===",
+        "Enabled__c": true,
+        "ExtId__c": "a00L0000008PUdRIAW",
+        "Operation__c": "Write",
+        "Order__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZpIAI"
+        },
+        "Id": "a00L000000937ZpIAI",
+        "Name": "ACT-0011",
+        "AppName__c": "Desktop Image",
+        "Command__c": "Trailhead DX background image?",
+        "Enabled__c": true,
+        "ErrorMessage__c": "User could not validate: Trailhead DX background image?",
+        "Expected__c": "User validated: Trailhead DX background image?",
+        "ExtId__c": "a00L0000008OGvbIAG",
+        "Message__c": "User validated: Trailhead DX background image?",
+        "Operation__c": "Manual",
+        "Order__c": 5
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZtIAI"
+        },
+        "Id": "a00L000000937ZtIAI",
+        "Name": "ACT-0015",
+        "AppName__c": "Firefox + Salesforce is homepage + visual bookmarks",
+        "Command__c": "C:\\Users\\Public\\Desktop\\Firefox.lnk",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Firefox + Salesforce is homepage + visual bookmarks\"",
+        "Expected__c": "Application was opened from shortcut",
+        "ExtId__c": "a00L0000008OGxSIAW",
+        "Message__c": "Opening Application: \"Firefox + Salesforce is homepage + visual bookmarks\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 6
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937aBIAQ"
+        },
+        "Id": "a00L000000937aBIAQ",
+        "Name": "ACT-0033",
+        "AppName__c": "Desktop: Data Loader",
+        "Command__c": "C:\\Users\\Admin\\Desktop\\Dataloader.lnk",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Desktop: Data Loader\"",
+        "Expected__c": "Application was opened from shortcut",
+        "ExtId__c": "a00L0000008OGxhIAG",
+        "Message__c": "Opening Application: \"Desktop: Data Loader\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 7
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937aMIAQ"
+        },
+        "Id": "a00L000000937aMIAQ",
+        "Name": "ACT-0044",
+        "AppName__c": "Desktop: Notepad++",
+        "Command__c": "C:\\Users\\Public\\Desktop\\Notepad++.lnk",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Desktop: Notepad++\"",
+        "Expected__c": "Application was opened from shortcut",
+        "ExtId__c": "a00L0000008PXCYIA4",
+        "Message__c": "Opening Application: \"Desktop: Notepad++\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 8
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZwIAI"
+        },
+        "Id": "a00L000000937ZwIAI",
+        "Name": "ACT-0018",
+        "AppName__c": "Chrome + Salesforce is homepage",
+        "Command__c": "\"C:\\Users\\Public\\Desktop\\Google Chrome.lnk\"",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Chrome + Salesforce is homepage\"",
+        "Expected__c": "Application was opened from shortcut",
+        "ExtId__c": "a00L0000008OGxIIAW",
+        "Message__c": "Opening Application: \"Chrome + Salesforce is homepage\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 9
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZlIAI"
+        },
+        "Id": "a00L000000937ZlIAI",
+        "Name": "ACT-0007",
+        "AppName__c": "Chrome: Plugin",
+        "Command__c": "Chrome Plugin to split screen",
+        "Enabled__c": true,
+        "ErrorMessage__c": "User could not validate: Chrome Plugin to split screen",
+        "Expected__c": "User validated: Chrome Plugin to split screen",
+        "ExtId__c": "a00L0000008OHDaIAO",
+        "Message__c": "User validated: Chrome Plugin to split screen",
+        "Operation__c": "Manual",
+        "Order__c": 10
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZgIAI"
+        },
+        "Id": "a00L000000937ZgIAI",
+        "Name": "ACT-0002",
+        "AppName__c": "VS Code",
+        "Command__c": "code",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Unable to open application: \"VS Code\"",
+        "Expected__c": "Application runs with no errors",
+        "ExtId__c": "a00L0000008OHDzIAO",
+        "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 11
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937aLIAQ"
+        },
+        "Id": "a00L000000937aLIAQ",
+        "Name": "ACT-0043",
+        "AppName__c": "AUTOMATED TESTS",
+        "Command__c": "=== === === AUTOMATED CHECKS === === ===",
+        "Enabled__c": true,
+        "ExtId__c": "a00L0000008PUdWIAW",
+        "Operation__c": "Write",
+        "Order__c": 12
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937aIIAQ"
+        },
+        "Id": "a00L000000937aIIAQ",
+        "Name": "ACT-0040",
+        "AppName__c": "Chrome: Bookmark: Login",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Chrome: Bookmark: Login",
+        "Expected__c": "Bookmark is correct",
+        "ExtId__c": "a00L0000008OGzEIAW",
+        "Message__c": "Validating: Chrome: Bookmark: Login",
+        "Operation__c": "Chrome Bookmark",
+        "Order__c": 13,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03L0000009K3WTIA0"
+              },
+              "Action__c": "a00L000000937aIIAQ",
+              "Id": "a03L0000009K3WTIA0",
+              "Name": "JSON-0013",
+              "Key__c": "url",
+              "Path__c": ":roots:bookmark_bar:children:[name=Login | Salesforce]:",
+              "Value__c": "https://login.salesforce.com/"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZhIAI"
+        },
+        "Id": "a00L000000937ZhIAI",
+        "Name": "ACT-0003",
+        "AppName__c": "Chrome: Bookmark: Survey",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Chrome: Bookmark: Survey",
+        "Expected__c": "Bookmark is correct",
+        "ExtId__c": "a00L0000008OH0CIAW",
+        "Message__c": "Validating: Chrome: Bookmark: Survey",
+        "Operation__c": "Chrome Bookmark",
+        "Order__c": 14,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03L0000009K3WPIA0"
+              },
+              "Action__c": "a00L000000937ZhIAI",
+              "Id": "a03L0000009K3WPIA0",
+              "Name": "JSON-0009",
+              "Key__c": "url",
+              "Path__c": ":roots:bookmark_bar:children:[name=Session Survey]:",
+              "Value__c": "https://trailhead.getfeedback.com/r/2A5pEzDU/"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937aEIAQ"
+        },
+        "Id": "a00L000000937aEIAQ",
+        "Name": "ACT-0036",
+        "AppName__c": "Chrome: Bookmark: TrailheaDX",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Chrome: Bookmark: TrailheaDX",
+        "Expected__c": "Bookmark is correct",
+        "ExtId__c": "a00L0000008OH0WIAW",
+        "Message__c": "Validating: Chrome: Bookmark: TrailheaDX",
+        "Operation__c": "Chrome Bookmark",
+        "Order__c": 15,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03L0000009K3WSIA0"
+              },
+              "Action__c": "a00L000000937aEIAQ",
+              "Id": "a03L0000009K3WSIA0",
+              "Name": "JSON-0012",
+              "Key__c": "url",
+              "Path__c": ":roots:bookmark_bar:children:[name=TrailheaDX]:",
+              "Value__c": "https://developer.salesforce.com/trailheadx"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937aFIAQ"
+        },
+        "Id": "a00L000000937aFIAQ",
+        "Name": "ACT-0037",
+        "AppName__c": "Chrome: Bookmark: Trailmix Wed (2006)",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Chrome: Bookmark: Trailmix Wed (2006)",
+        "Expected__c": "Bookmark is correct",
+        "ExtId__c": "a00L0000008OH1jIAG",
+        "Message__c": "Validating: Chrome: Bookmark: Trailmix Wed (2006)",
+        "Operation__c": "Chrome Bookmark",
+        "Order__c": 16,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03L0000009K3WHIA0"
+              },
+              "Action__c": "a00L000000937aFIAQ",
+              "Id": "a03L0000009K3WHIA0",
+              "Name": "JSON-0001",
+              "Key__c": "url",
+              "Path__c": ":roots:bookmark_bar:children:[name=TRAILMIX WED]:children:[name=Room 2006]:children:[name=Trailmixes | Salesforce Trailhead]:",
+              "Value__c": "https://trailhead.salesforce.com/en/users/00550000007GH2eAAG/trailmixes/tdx18-room2006-wednesday-projects"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZyIAI"
+        },
+        "Id": "a00L000000937ZyIAI",
+        "Name": "ACT-0020",
+        "AppName__c": "Chrome: Bookmark: Trailmix Wed (2008)",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Chrome: Bookmark: Trailmix Wed (2008)",
+        "Expected__c": "Bookmark is correct",
+        "ExtId__c": "a00L0000008OHD6IAO",
+        "Message__c": "Validating: Chrome: Bookmark: Trailmix Wed (2008)",
+        "Operation__c": "Chrome Bookmark",
+        "Order__c": 17,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03L0000009K3WGIA0"
+              },
+              "Action__c": "a00L000000937ZyIAI",
+              "Id": "a03L0000009K3WGIA0",
+              "Name": "JSON-0000",
+              "Key__c": "url",
+              "Path__c": ":roots:bookmark_bar:children:[name=TRAILMIX WED]:children:[name=Room 2008]:children:[name=Trailmixes | Salesforce Trailhead]:",
+              "Value__c": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/tdx18-room2008-wednesday-projects"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937aDIAQ"
+        },
+        "Id": "a00L000000937aDIAQ",
+        "Name": "ACT-0035",
+        "AppName__c": "Chrome: Bookmark: Trailmix Wed (2010/12)",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Chrome: Bookmark: Trailmix Wed (2010/12)",
+        "Expected__c": "Bookmark is correct",
+        "ExtId__c": "a00L0000008OHDBIA4",
+        "Message__c": "Validating: Chrome: Bookmark: Trailmix Wed (2010/12)",
+        "Operation__c": "Chrome Bookmark",
+        "Order__c": 18,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03L0000009K3WIIA0"
+              },
+              "Action__c": "a00L000000937aDIAQ",
+              "Id": "a03L0000009K3WIIA0",
+              "Name": "JSON-0002",
+              "Key__c": "url",
+              "Path__c": ":roots:bookmark_bar:children:[name=TRAILMIX WED]:children:[name=Room 2010/2012]:children:[name=Trailmixes | Salesforce Trailhead]:",
+              "Value__c": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/tdx18-room2010-wednesday-projects"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZuIAI"
+        },
+        "Id": "a00L000000937ZuIAI",
+        "Name": "ACT-0016",
+        "AppName__c": "Chrome: Bookmark: Trailmix Thu (2006)",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Chrome: Bookmark: Trailmix Thu (2006)",
+        "Expected__c": "Bookmark is correct",
+        "ExtId__c": "a00L0000008OHDGIA4",
+        "Message__c": "Validating: Chrome: Bookmark: Trailmix Thu (2006)",
+        "Operation__c": "Chrome Bookmark",
+        "Order__c": 19,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03L0000009K3WKIA0"
+              },
+              "Action__c": "a00L000000937ZuIAI",
+              "Id": "a03L0000009K3WKIA0",
+              "Name": "JSON-0004",
+              "Key__c": "url",
+              "Path__c": ":roots:bookmark_bar:children:[name=TRAILMIX THUR]:children:[name=Room 2006]:children:[name=Trailmixes | Salesforce Trailhead]:",
+              "Value__c": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/tdx18-room2006-thursday-projects"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937aHIAQ"
+        },
+        "Id": "a00L000000937aHIAQ",
+        "Name": "ACT-0039",
+        "AppName__c": "Chrome: Bookmark: Trailmix Thu (2008)",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Chrome: Bookmark: Trailmix Thu (2008)",
+        "Expected__c": "Bookmark is correct",
+        "ExtId__c": "a00L0000008OHDQIA4",
+        "Message__c": "Validating: Chrome: Bookmark: Trailmix Thu (2008)",
+        "Operation__c": "Chrome Bookmark",
+        "Order__c": 20,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03L0000009K3WJIA0"
+              },
+              "Action__c": "a00L000000937aHIAQ",
+              "Id": "a03L0000009K3WJIA0",
+              "Name": "JSON-0003",
+              "Key__c": "url",
+              "Path__c": ":roots:bookmark_bar:children:[name=TRAILMIX THUR]:children:[name=Room 2008]:children:[name=Trailmixes | Salesforce Trailhead]:",
+              "Value__c": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/tdx18-room2008-thursday-projects"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937aGIAQ"
+        },
+        "Id": "a00L000000937aGIAQ",
+        "Name": "ACT-0038",
+        "AppName__c": "Chrome: Bookmark: Trailmix Thu (2010/12)",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Chrome: Bookmark: Trailmix Thu (2010/12)",
+        "Expected__c": "Bookmark is correct",
+        "ExtId__c": "a00L0000008OHDVIA4",
+        "Message__c": "Validating: Chrome: Bookmark: Trailmix Thu (2010/12)",
+        "Operation__c": "Chrome Bookmark",
+        "Order__c": 21,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03L0000009K3WLIA0"
+              },
+              "Action__c": "a00L000000937aGIAQ",
+              "Id": "a03L0000009K3WLIA0",
+              "Name": "JSON-0005",
+              "Key__c": "url",
+              "Path__c": ":roots:bookmark_bar:children:[name=TRAILMIX THUR]:children:[name=Room 2010/2012]:children:[name=Trailmixes | Salesforce Trailhead]:",
+              "Value__c": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/tdx18-room2010-thursday-projects"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937aJIAQ"
+        },
+        "Id": "a00L000000937aJIAQ",
+        "Name": "ACT-0041",
+        "AppName__c": "Chrome: Bookmark: SFDC Certification",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Chrome: Bookmark: SFDC Certification",
+        "Expected__c": "Bookmark is correct",
+        "ExtId__c": "a00L0000008PXCOIA4",
+        "Message__c": "Validating: Chrome: Bookmark: SFDC Certification",
+        "Operation__c": "Chrome Bookmark",
+        "Order__c": 22,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03L0000009K3WQIA0"
+              },
+              "Action__c": "a00L000000937aJIAQ",
+              "Id": "a03L0000009K3WQIA0",
+              "Name": "JSON-0010",
+              "Key__c": "url",
+              "Path__c": ":roots:bookmark_bar:children:[name=Salesforce Certification]:",
+              "Value__c": "https://www.webassessor.com/wa.do?page=publicHome&branding=SALESFORCE"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937a3IAA"
+        },
+        "Id": "a00L000000937a3IAA",
+        "Name": "ACT-0025",
+        "AppName__c": "Chrome: Bookmark: Mimeo Ebook",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Chrome: Bookmark: Mimeo Ebook",
+        "Expected__c": "Bookmark is correct",
+        "ExtId__c": "a00L0000008PXCTIA4",
+        "Message__c": "Validating: Chrome: Bookmark: Mimeo Ebook",
+        "Operation__c": "Chrome Bookmark",
+        "Order__c": 23,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03L0000009K3WRIA0"
+              },
+              "Action__c": "a00L000000937a3IAA",
+              "Id": "a03L0000009K3WRIA0",
+              "Name": "JSON-0011",
+              "Key__c": "url",
+              "Path__c": ":roots:bookmark_bar:children:[name=Mimeo Ebook]:",
+              "Value__c": "https://salesforce.mimeo.digital/login"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937a7IAA"
+        },
+        "Id": "a00L000000937a7IAA",
+        "Name": "ACT-0029",
+        "AppName__c": "Chrome: Bookmark: Kahoot!",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Chrome: Bookmark: Kahoot!",
+        "Expected__c": "Bookmark is correct",
+        "ExtId__c": "a00L0000008OrqzIAC",
+        "Message__c": "Validating: Chrome: Bookmark: Kahoot!",
+        "Operation__c": "Chrome Bookmark",
+        "Order__c": 24,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03L0000009K3WOIA0"
+              },
+              "Action__c": "a00L000000937a7IAA",
+              "Id": "a03L0000009K3WOIA0",
+              "Name": "JSON-0008",
+              "Key__c": "url",
+              "Path__c": ":roots:bookmark_bar:children:[name=Kahoot!]:",
+              "Value__c": "https://kahoot.it/"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZrIAI"
+        },
+        "Id": "a00L000000937ZrIAI",
+        "Name": "ACT-0013",
+        "AppName__c": "Chrome: Plugin Resize",
+        "Command__c": "c:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "package.json",
+        "ExtId__c": "a00L0000008OHDkIAO",
+        "Fix__c": "Please install plugin from here: https://chrome.google.com/webstore/detail/tab-resize-split-screen-l/bkpenclhmiealbebdopglffmfdiilejc",
+        "Message__c": "Checking path: c:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
+        "Operation__c": "Check Path",
+        "Order__c": 25
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937a2IAA"
+        },
+        "Id": "a00L000000937a2IAA",
+        "Name": "ACT-0024",
+        "AppName__c": "Java SDK",
+        "Command__c": "C:\\Program Files\\java\\jdk1.8*",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "jdk1.8",
+        "ExtId__c": "a00L0000008OHE4IAO",
+        "Fix__c": "Please ensure Java JDK is installed. http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html\"",
+        "Message__c": "Checking path: C:\\Program Files\\java\\jdk1.8*",
+        "Operation__c": "Check Path",
+        "Order__c": 26
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZnIAI"
+        },
+        "Id": "a00L000000937ZnIAI",
+        "Name": "ACT-0009",
+        "AppName__c": "Check Java version",
+        "Command__c": "java -version",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Check Java version (java -version)",
+        "Expected__c": "java version \"1.8.0_162\"",
+        "ExtId__c": "a00L0000008OHE9IAO",
+        "Fix__c": "Please ensure Java JDK is installed. http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html\"",
+        "Message__c": "Validating: Check Java version (java -version)",
+        "Operation__c": "Check Contains",
+        "Order__c": 27
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZmIAI"
+        },
+        "Id": "a00L000000937ZmIAI",
+        "Name": "ACT-0008",
+        "AppName__c": "SFDX Update",
+        "Command__c": "sfdx update",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: SFDX Update (sfdx update)",
+        "Expected__c": "sfdx-cli: Updating CLI... already on latest version",
+        "ExtId__c": "a00L0000008OHDpIAO",
+        "Fix__c": "Please install SFDX from here: https://sfdc.co/sfdx_cli_win64",
+        "Message__c": "Validating: SFDX Update (sfdx update)",
+        "Operation__c": "Check Contains",
+        "Order__c": 28
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937aCIAQ"
+        },
+        "Id": "a00L000000937aCIAQ",
+        "Name": "ACT-0034",
+        "AppName__c": "VS Code Version",
+        "Command__c": "code --version",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: VS Code Version (code --version)",
+        "Expected__c": "1.20.1",
+        "ExtId__c": "a00L0000008OHDuIAO",
+        "Message__c": "Validating: VS Code Version (code --version)",
+        "Operation__c": "Check Contains",
+        "Order__c": 29
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937aKIAQ"
+        },
+        "Id": "a00L000000937aKIAQ",
+        "Name": "ACT-0042",
+        "AppName__c": "VS Code Plugin (1/6)",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-42*",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-42",
+        "ExtId__c": "a00L0000008OHEOIA4",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-42*",
+        "Operation__c": "Check Path",
+        "Order__c": 30
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZoIAI"
+        },
+        "Id": "a00L000000937ZoIAI",
+        "Name": "ACT-0010",
+        "AppName__c": "VS Code Plugin (2/6)",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-42*",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-apex-42",
+        "ExtId__c": "a00L0000008OHETIA4",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-42*",
+        "Operation__c": "Check Path",
+        "Order__c": 31
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZiIAI"
+        },
+        "Id": "a00L000000937ZiIAI",
+        "Name": "ACT-0004",
+        "AppName__c": "VS Code Plugin (3/6)",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-42*",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-apex-debugger-42",
+        "ExtId__c": "a00L0000008OHEYIA4",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-42*",
+        "Operation__c": "Check Path",
+        "Order__c": 32
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZqIAI"
+        },
+        "Id": "a00L000000937ZqIAI",
+        "Name": "ACT-0012",
+        "AppName__c": "VS Code Plugin (4/6)",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-42*",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-core-42",
+        "ExtId__c": "a00L0000008OHEdIAO",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-42*",
+        "Operation__c": "Check Path",
+        "Order__c": 33
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZjIAI"
+        },
+        "Id": "a00L000000937ZjIAI",
+        "Name": "ACT-0005",
+        "AppName__c": "VS Code Plugin (5/6)",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-42*",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-lightning-42",
+        "ExtId__c": "a00L0000008OHEiIAO",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-42*",
+        "Operation__c": "Check Path",
+        "Order__c": 34
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937a1IAA"
+        },
+        "Id": "a00L000000937a1IAA",
+        "Name": "ACT-0023",
+        "AppName__c": "VS Code Plugin (6/6)",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-visualforce-42",
+        "ExtId__c": "a00L0000008OHEnIAO",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
+        "Operation__c": "Check Path",
+        "Order__c": 35
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937aAIAQ"
+        },
+        "Id": "a00L000000937aAIAQ",
+        "Name": "ACT-0032",
+        "AppName__c": "SFDX (Shell)",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\settings.json",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "ExtId__c": "a00L0000008OHF2IAO",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
+        "Operation__c": "JSON File - Edit",
+        "Order__c": 36,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03L0000009K3WNIA0"
+              },
+              "Action__c": "a00L000000937aAIAQ",
+              "Id": "a03L0000009K3WNIA0",
+              "Name": "JSON-0007",
+              "Key__c": "terminal.integrated.shell.windows",
+              "Path__c": ":",
+              "Value__c": "C:\\Program Files\\Git\\bin\\bash.exe"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZfIAI"
+        },
+        "Id": "a00L000000937ZfIAI",
+        "Name": "ACT-0001",
+        "AppName__c": "SFDX (Java)",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\settings.json",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "ExtId__c": "a00L0000008OHF7IAO",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
+        "Operation__c": "JSON File - Edit",
+        "Order__c": 37,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03L0000009K3WMIA0"
+              },
+              "Action__c": "a00L000000937ZfIAI",
+              "Id": "a03L0000009K3WMIA0",
+              "Name": "JSON-0006",
+              "Key__c": "salesforcedx-vscode-apex.java.home",
+              "Path__c": ":",
+              "Value__c": "C:\\Program Files\\java\\jdk1.8.0_162"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937a6IAA"
+        },
+        "Id": "a00L000000937a6IAA",
+        "Name": "ACT-0028",
+        "AppName__c": "Git 2.16",
+        "Command__c": "git --version",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "git version 2.16.2.windows.1",
+        "ExtId__c": "a00L0000008OHEJIA4",
+        "Fix__c": "Download from here: https://github.com/git-for-windows/git/releases/download/v2.16.2.windows.1/Git-2.16.2-64-bit.exe",
+        "Message__c": "Checking exact: git --version",
+        "Operation__c": "Check Exact",
+        "Order__c": 38
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937a4IAA"
+        },
+        "Id": "a00L000000937a4IAA",
+        "Name": "ACT-0026",
+        "AppName__c": "Git config email",
+        "Command__c": "git config --global user.email \"you@example.com\"",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Git config email (git config --global user.email \"you@example.com\")",
+        "ExtId__c": "a00L0000008OmxPIAS",
+        "Message__c": "Validating: Git config email (git config --global user.email \"you@example.com\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 39
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZsIAI"
+        },
+        "Id": "a00L000000937ZsIAI",
+        "Name": "ACT-0014",
+        "AppName__c": "Git config name",
+        "Command__c": "git config --global user.name \"Your Name\"",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Git config name (git config --global user.name \"Your Name\")",
+        "ExtId__c": "a00L0000008OmxUIAS",
+        "Message__c": "Validating: Git config name (git config --global user.name \"Your Name\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 40
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937a9IAA"
+        },
+        "Id": "a00L000000937a9IAA",
+        "Name": "ACT-0031",
+        "AppName__c": "Ruby",
+        "Command__c": "ruby --version",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "ruby 2.4.3p205 (2017-12-14 revision 61247) [x64-mingw32]",
+        "ExtId__c": "a00L0000008OHEsIAO",
+        "Fix__c": "Download from here: https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.3-1/rubyinstaller-2.4.3-1-x64.exe",
+        "Message__c": "Checking exact: ruby --version",
+        "Operation__c": "Check Exact",
+        "Order__c": 41
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZeIAI"
+        },
+        "Id": "a00L000000937ZeIAI",
+        "Name": "ACT-0000",
+        "AppName__c": "Travis",
+        "Command__c": "travis version",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "1.8.8",
+        "ExtId__c": "a00L0000008OHExIAO",
+        "Fix__c": "gem install travis",
+        "Message__c": "Checking exact: travis version",
+        "Operation__c": "Check Exact",
+        "Order__c": 42
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937ZxIAI"
+        },
+        "Id": "a00L000000937ZxIAI",
+        "Name": "ACT-0019",
+        "AppName__c": "7-Zip",
+        "Command__c": "\"C:\\Program Files\\7-Zip\\7z.exe\" -version",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: 7-Zip (\"C:\\Program Files\\7-Zip\\7z.exe\" -version)",
+        "Expected__c": "7-Zip 18.01 (x64)",
+        "ExtId__c": "a00L0000008OHFCIA4",
+        "Message__c": "Validating: 7-Zip (\"C:\\Program Files\\7-Zip\\7z.exe\" -version)",
+        "Operation__c": "Check Contains",
+        "Order__c": 43
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937a8IAA"
+        },
+        "Id": "a00L000000937a8IAA",
+        "Name": "ACT-0030",
+        "AppName__c": "Node",
+        "Command__c": "node --version",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "v9.6.1",
+        "ExtId__c": "a00L0000008OHFHIA4",
+        "Message__c": "Checking exact: node --version",
+        "Operation__c": "Check Exact",
+        "Order__c": 44
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937a0IAA"
+        },
+        "Id": "a00L000000937a0IAA",
+        "Name": "ACT-0022",
+        "AppName__c": "Python",
+        "Command__c": "python --version",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Python (python --version)",
+        "Expected__c": "Python 2.7.14",
+        "ExtId__c": "a00L0000008OHFMIA4",
+        "Message__c": "Validating: Python (python --version)",
+        "Operation__c": "Check Contains",
+        "Order__c": 45
+      }
+    ]
+  }
+}
