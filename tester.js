@@ -135,7 +135,7 @@ function checkPath(instruction) {
 	instruction.Command__c = "DIR \"" + instruction.Command__c + "\" /B";
 	if (!instruction.callback) {
 		instruction.callback = function (output) {
-			if (output.stdout.toLowerCase().indexOf(instruction.Expected__c.toLowerCase) >= 0) {
+			if (output.stdout.indexOf(instruction.Expected__c.toLowerCase()) >= 0) {
 				if (verbose) log.success("VALID: [Found: '" + instruction.Expected__c + "']");
 				nextInstruction();
 			} else {
