@@ -13,7 +13,7 @@ const https = require('https');
 const log = require('./colorLogs.js');
 
 // Skip manual checks
-var debug = true;
+var debug = false;
 var verbose = true;
 var timerDelay = 250;
 var executeManualChecks = false;
