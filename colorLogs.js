@@ -48,27 +48,27 @@ module.exports = {
     },
     error: function (msg) {
         console.log(colorBgBlack + colorBright + colorFgRed + msg + colorReset);
-        showTrace();
+        this.showTrace();
     },
     debug: function (msg) {
         console.log(colorBgBlack + colorDim + colorFgGray + msg + colorReset);
-        showTrace();
+        this.showTrace();
     },
     info: function (msg) {
         console.log(colorBgBlack + colorBright + colorFgWhite + msg + colorReset);
-        showTrace();
+        this.showTrace();
     },
     success: function (msg) {
         console.log(colorBgBlack + colorBright + colorFgGreen + msg + colorReset);
-        showTrace();
+        this.showTrace();
     },
     promptMsg: function (msg) {
         console.log(this.getPromptMsg(msg));
-        showTrace();
+        this.showTrace();
     },
     clearScreen: function () {
         console.log(clearScreenCode);
-        showTrace();
+        this.showTrace();
     },
     getPromptMsg: function (msg) {
         return colorBgBlack + colorBright + colorFgYellow + msg + colorReset;
