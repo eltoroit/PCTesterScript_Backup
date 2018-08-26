@@ -34,41 +34,35 @@ let colorBgCyan = "\x1b[46m";
 let colorBgWhite = "\x1b[47m";
 
 module.exports = {
-    showTrace: function () {
+    getTrace: function () {
         try {
             throw new Error();
         } catch (e) {
             if (typeof e.stack === 'string') {
                 var lines = e.stack.split('\n');
-                for (var i = 0; i < lines.length; i++) {
-                    console.log(i + ": " + lines[i]);
-                }
-            }
+				return "[" + lines[3].split(':')[2] + "]: ";
+            } else {
+				return "";
+			}
         }
     },
     error: function (msg) {
-        console.log(colorBgBlack + colorBright + colorFgRed + msg + colorReset);
-        this.showTrace();
+        console.log(colorBgBlack + colorBright + colorFgRed + this.getTrace() + msg + colorReset);
     },
     debug: function (msg) {
-        console.log(colorBgBlack + colorDim + colorFgGray + msg + colorReset);
-        this.showTrace();
+        console.log(colorBgBlack + colorDim + colorFgGray + this.getTrace() + msg + colorReset);
     },
     info: function (msg) {
-        console.log(colorBgBlack + colorBright + colorFgWhite + msg + colorReset);
-        this.showTrace();
+        console.log(colorBgBlack + colorBright + colorFgWhite + this.getTrace() + msg + colorReset);
     },
     success: function (msg) {
-        console.log(colorBgBlack + colorBright + colorFgGreen + msg + colorReset);
-        this.showTrace();
+        console.log(colorBgBlack + colorBright + colorFgGreen + this.getTrace() + msg + colorReset);
     },
     promptMsg: function (msg) {
         console.log(this.getPromptMsg(msg));
-        this.showTrace();
     },
     clearScreen: function () {
         console.log(clearScreenCode);
-        this.showTrace();
     },
     getPromptMsg: function (msg) {
         return colorBgBlack + colorBright + colorFgYellow + msg + colorReset;
