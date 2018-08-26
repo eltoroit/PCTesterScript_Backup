@@ -34,23 +34,41 @@ let colorBgCyan = "\x1b[46m";
 let colorBgWhite = "\x1b[47m";
 
 module.exports = {
+    showTrace: function () {
+        try {
+            throw new Error();
+        } catch (e) {
+            if (typeof e.stack === 'string') {
+                var lines = e.stack.split('\n');
+                for (var i = 0; i < lines.length; i++) {
+                    console.log(i + ": " + lines[i]);
+                }
+            }
+        }
+    },
     error: function (msg) {
         console.log(colorBgBlack + colorBright + colorFgRed + msg + colorReset);
+        showTrace();
     },
     debug: function (msg) {
         console.log(colorBgBlack + colorDim + colorFgGray + msg + colorReset);
+        showTrace();
     },
     info: function (msg) {
         console.log(colorBgBlack + colorBright + colorFgWhite + msg + colorReset);
+        showTrace();
     },
     success: function (msg) {
         console.log(colorBgBlack + colorBright + colorFgGreen + msg + colorReset);
+        showTrace();
     },
     promptMsg: function (msg) {
         console.log(this.getPromptMsg(msg));
+        showTrace();
     },
     clearScreen: function () {
         console.log(clearScreenCode);
+        showTrace();
     },
     getPromptMsg: function (msg) {
         return colorBgBlack + colorBright + colorFgYellow + msg + colorReset;
