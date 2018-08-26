@@ -35,15 +35,20 @@ let colorBgWhite = "\x1b[47m";
 
 module.exports = {
     getTrace: function () {
-        try {
-            throw new Error();
-        } catch (e) {
-            if (typeof e.stack === 'string') {
-                var lines = e.stack.split('\n');
-				return "[" + lines[3].split(':')[2] + "]: ";
-            } else {
-				return "";
-			}
+        var localDebug = true;
+        if (localDebug) {
+            try {
+                throw new Error();
+            } catch (e) {
+                if (typeof e.stack === 'string') {
+                    var lines = e.stack.split('\n');
+                    return "[" + lines[3].split(':')[2] + "]: ";
+                } else {
+                    return "";
+                }
+            }    
+        } else {
+            return "";
         }
     },
     error: function (msg) {

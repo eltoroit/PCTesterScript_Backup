@@ -412,8 +412,11 @@ function executeInstruction() {
 			break;
 		case "Write":
 			if (instruction.Command__c == "=== === === AUTOMATED CHECKS === === ===") {
-				debug = true;
-				verbose = true;
+				if (executeManualChecks) {
+					log.error("Switching debug mode ON");
+					debug = true;
+					verbose = true;	
+				}
 			}
 			log.info(instruction.Command__c);
 			nextInstruction();
