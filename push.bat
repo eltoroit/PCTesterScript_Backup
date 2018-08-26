@@ -1,4 +1,9 @@
 git add .
-# git commit -m $0
-git commit --amend -m $0
+<<<<<<< HEAD
+git commit -m "$1"
+# git commit --amend -m "$1"
+=======
+# git commit -m "$1"
+git commit --amend -m "$1"
+>>>>>>> Updated Commands or Data
 git push origin master
