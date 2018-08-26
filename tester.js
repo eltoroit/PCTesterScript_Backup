@@ -14,7 +14,7 @@ const log = require('./colorLogs.js');
 
 // Skip manual checks
 var debug = false;
-var verbose = true;
+var verbose = false;
 var timerDelay = 250;
 var executeManualChecks = false;
 
