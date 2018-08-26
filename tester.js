@@ -26,8 +26,8 @@ var instructions = [];
 function reportError(instruction) {
 	if (debug) log.debug('ERROR FOR: ' + log.getPrettyJson(instruction));
 	errors.push(instruction);
-	log.error("*** *** ERROR");
-	log.error(log.getPrettyJson(instruction));
+	log.error("*** *** ERROR", 1);
+	log.error(log.getPrettyJson(instruction), 1);
 }
 function promptYesNo(instruction) {
 	log.promptMsg(instruction.Message__c);
@@ -277,7 +277,7 @@ function jsonFile_Edit(instruction) {
 						}
 					}
 				} else {
-					log.error("DATA IS NOT CORRECT (1)");
+					log.error("DATA IS NOT CORRECT (3)");
 					reportError(instruction);
 				}
 			} else {
@@ -285,7 +285,7 @@ function jsonFile_Edit(instruction) {
 				data = data[path];
 				var s2 = JSON.stringify(data).length;
 				if (s1 <= s2) {
-					log.error("DATA IS NOT CORRECT(2)");
+					log.error("DATA IS NOT CORRECT(4)");
 					reportError(instruction);
 				}
 			}

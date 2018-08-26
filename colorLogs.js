@@ -34,7 +34,8 @@ let colorBgCyan = "\x1b[46m";
 let colorBgWhite = "\x1b[47m";
 
 module.exports = {
-    getTrace: function () {
+    getTrace: function (offset) {
+        if (!offset) offset = 0;
         var localDebug = true;
         if (localDebug) {
             try {
@@ -42,7 +43,7 @@ module.exports = {
             } catch (e) {
                 if (typeof e.stack === 'string') {
                     var lines = e.stack.split('\n');
-                    return "[" + lines[3].split(':')[2] + "]: ";
+                    return "[" + lines[3 + offset].split(':')[2] + "]: ";
                 } else {
                     return "";
                 }
@@ -51,7 +52,8 @@ module.exports = {
             return "";
         }
     },
-    error: function (msg) {
+    error: function (msg, offset) {
+        if (!offset) offset = 0;
         console.log(colorBgBlack + colorBright + colorFgRed + this.getTrace() + msg + colorReset);
     },
     debug: function (msg) {
