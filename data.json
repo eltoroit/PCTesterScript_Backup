@@ -7,9 +7,36 @@
       },
       "Id": "a02L000000BaNO5IAN",
       "Name": "Dreamforce  '18"
+    },
+    {
+      "attributes": {
+        "type": "Event__c",
+        "url": "/services/data/v42.0/sobjects/Event__c/a02L000000BaNO5IAN"
+      },
+      "Id": "TEST_BOOKMARKS",
+      "Name": "TEST BOOKMARKS"
     }
   ],
   "actionsByEvent": {
+    "TEST_BOOKMARKS": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00L000000937aIIAQ"
+        },
+        "Id": "a00L000000937aIIAQ",
+        "Name": "ACT-0040",
+        "AppName__c": "Bookmarks",
+        "Command__c": "",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Bookmarks",
+        "Expected__c": "Bookmark is correct",
+        "ExtId__c": "a00L000000937aIIAQ2",
+        "Message__c": "Validating: Bookmarks",
+        "Operation__c": "Bookmark",
+        "Order__c": 39
+      }
+    ],
     "a02L000000BaNO5IAN": [
       {
         "attributes": {
@@ -703,34 +730,15 @@
         },
         "Id": "a00L000000937aIIAQ",
         "Name": "ACT-0040",
-        "AppName__c": "Chrome: Bookmark: Login",
-        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks",
+        "AppName__c": "Bookmark: Login",
+        "Command__c": "[BAR][Salesforce Login]=https://login.salesforce.com/",
         "Enabled__c": true,
-        "ErrorMessage__c": "Could not validate: Chrome: Bookmark: Login",
+        "ErrorMessage__c": "Could not validate: Bookmark: Login",
         "Expected__c": "Bookmark is correct",
         "ExtId__c": "a00L000000937aIIAQ",
-        "Message__c": "Validating: Chrome: Bookmark: Login",
-        "Operation__c": "Chrome Bookmark",
-        "Order__c": 39,
-        "JSON_Actions__r": {
-          "totalSize": 1,
-          "done": true,
-          "records": [
-            {
-              "attributes": {
-                "type": "JSON_Action__c",
-                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03L0000009K3WTIA0"
-              },
-              "Action__c": "a00L000000937aIIAQ",
-              "Id": "a03L0000009K3WTIA0",
-              "Name": "JSON-0013",
-              "Key__c": "url",
-              "Path__c": ":roots:bookmark_bar:children:[name=Login | Salesforce]:",
-              "Value__c": "https://login.salesforce.com/",
-              "UniqueAction__c": "a00L000000937aIIAQ"
-            }
-          ]
-        }
+        "Message__c": "Validating: Bookmark: Login",
+        "Operation__c": "Bookmark",
+        "Order__c": 39
       },
       {
         "attributes": {
@@ -746,7 +754,7 @@
         "Expected__c": "Bookmark is correct",
         "ExtId__c": "a00L000000937ZhIAI",
         "Message__c": "Validating: Chrome: Bookmark: Survey",
-        "Operation__c": "Chrome Bookmark",
+        "Operation__c": "Bookmark",
         "Order__c": 40,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -782,7 +790,7 @@
         "Expected__c": "Bookmark is correct",
         "ExtId__c": "a00L000000937aEIAQ",
         "Message__c": "Validating: Chrome: Bookmark: TrailheaDX",
-        "Operation__c": "Chrome Bookmark",
+        "Operation__c": "Bookmark",
         "Order__c": 41,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -818,7 +826,7 @@
         "Expected__c": "Bookmark is correct",
         "ExtId__c": "a00L000000937aFIAQ",
         "Message__c": "Validating: Chrome: Bookmark: Trailmix Wed (2006)",
-        "Operation__c": "Chrome Bookmark",
+        "Operation__c": "Bookmark",
         "Order__c": 42,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -854,7 +862,7 @@
         "Expected__c": "Bookmark is correct",
         "ExtId__c": "a00L000000937ZyIAI",
         "Message__c": "Validating: Chrome: Bookmark: Trailmix Wed (2008)",
-        "Operation__c": "Chrome Bookmark",
+        "Operation__c": "Bookmark",
         "Order__c": 43,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -890,7 +898,7 @@
         "Expected__c": "Bookmark is correct",
         "ExtId__c": "a00L000000937aDIAQ",
         "Message__c": "Validating: Chrome: Bookmark: Trailmix Wed (2010/12)",
-        "Operation__c": "Chrome Bookmark",
+        "Operation__c": "Bookmark",
         "Order__c": 44,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -926,7 +934,7 @@
         "Expected__c": "Bookmark is correct",
         "ExtId__c": "a00L000000937ZuIAI",
         "Message__c": "Validating: Chrome: Bookmark: Trailmix Thu (2006)",
-        "Operation__c": "Chrome Bookmark",
+        "Operation__c": "Bookmark",
         "Order__c": 45,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -962,7 +970,7 @@
         "Expected__c": "Bookmark is correct",
         "ExtId__c": "a00L000000937aHIAQ",
         "Message__c": "Validating: Chrome: Bookmark: Trailmix Thu (2008)",
-        "Operation__c": "Chrome Bookmark",
+        "Operation__c": "Bookmark",
         "Order__c": 46,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -998,7 +1006,7 @@
         "Expected__c": "Bookmark is correct",
         "ExtId__c": "a00L000000937aGIAQ",
         "Message__c": "Validating: Chrome: Bookmark: Trailmix Thu (2010/12)",
-        "Operation__c": "Chrome Bookmark",
+        "Operation__c": "Bookmark",
         "Order__c": 47,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -1034,7 +1042,7 @@
         "Expected__c": "Bookmark is correct",
         "ExtId__c": "a00L000000937aJIAQ",
         "Message__c": "Validating: Chrome: Bookmark: SFDC Certification",
-        "Operation__c": "Chrome Bookmark",
+        "Operation__c": "Bookmark",
         "Order__c": 48,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -1070,7 +1078,7 @@
         "Expected__c": "Bookmark is correct",
         "ExtId__c": "a00L000000937a3IAA",
         "Message__c": "Validating: Chrome: Bookmark: Mimeo Ebook",
-        "Operation__c": "Chrome Bookmark",
+        "Operation__c": "Bookmark",
         "Order__c": 49,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -1106,7 +1114,7 @@
         "Expected__c": "Bookmark is correct",
         "ExtId__c": "a00L000000937a7IAA",
         "Message__c": "Validating: Chrome: Bookmark: Kahoot!",
-        "Operation__c": "Chrome Bookmark",
+        "Operation__c": "Bookmark",
         "Order__c": 50,
         "JSON_Actions__r": {
           "totalSize": 1,

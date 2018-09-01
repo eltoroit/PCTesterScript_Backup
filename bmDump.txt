@@ -1,0 +1,218 @@
+[
+    {
+        "Title": "[BAR][Salesforce Login]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://login.salesforce.com/",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Bootcamp Survey]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://www.surveymonkey.com/r/DF18Bootcamps",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Salesforce Certification]",
+        "hasFF": false,
+        "hasChrome": true,
+        "Url": "https://www.webassessor.com/salesforce",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Marketing Cloud Login]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "http://mc.exacttarget.com/",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Pardot Login]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "http://pi.pardot.com/",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Mimeo Ebook]",
+        "hasFF": false,
+        "hasChrome": true,
+        "Url": "https://salesforce.mimeo.digital/",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Tuesday][Continental 1/2/3][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl123-tuesday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Tuesday][Continental 4][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl4-tuesday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Tuesday][Continental 5][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl5-tuesday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Tuesday][Continental 6][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl6-tuesday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Tuesday][Continental 7/8/9][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl789-tuesday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Wednesday][Continental 1/2/3][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl123-wednesday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Wednesday][Continental 4][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl4-wednesday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Wednesday][Continental 5][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl5-wednesday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Wednesday][Continental 6][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl6-wednesday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Wednesday][Continental 7/8/9][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl789-wednesday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Thursday][Continental 1/2/3][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl123-thursday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Thursday][Continental 4][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl4-thursday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Thursday][Continental 5][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl5-thursday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Thursday][Continental 6][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl6-thursday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Thursday][Continental 7/8/9][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl789-thursday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Friday][Continental 1/2/3][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl123-friday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Friday][Continental 4][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl4-friday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Friday][Continental 5][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl5-friday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Friday][Continental 6][Trailmixes | Salesforce Trailhead]",
+        "hasFF": true,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl6-friday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Friday][Continental 7/8/9][Trailmixes | Salesforce Trailhead]",
+        "hasFF": false,
+        "hasChrome": true,
+        "Url": "https://trailhead.salesforce.com/users/00550000007GH2eAAG/trailmixes/df18-cntl789-friday-projects",
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "Title": "[BAR][Mimeo Login]",
+        "hasFF": true,
+        "hasChrome": false,
+        "Url": "https://salesforce.mimeo.digital/",
+        "checkFF": true,
+        "checkChrome": true
+    }
+]

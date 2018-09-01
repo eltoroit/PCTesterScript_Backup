@@ -1,7 +1,8 @@
 "use strict";
 
-let clearScreenCode = "\x1B[2J";
+var showLineNumbers = false;
 
+let clearScreenCode = "\x1B[2J";
 
 // Color Modes
 let colorReset = "\x1b[0m";
@@ -36,8 +37,8 @@ let colorBgWhite = "\x1b[47m";
 module.exports = {
     getTrace: function (offset) {
         if (!offset) offset = 0;
-        var localDebug = true;
-        if (localDebug) {
+        
+        if (showLineNumbers) {
             try {
                 throw new Error();
             } catch (e) {

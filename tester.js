@@ -12,16 +12,33 @@ const http = require('http');
 const https = require('https');
 const log = require('./colorLogs.js');
 
-// Skip manual checks
+// Configure execution...
 var debug = false;
 var verbose = false;
 var timerDelay = 250;
 var executeManualChecks = false;
+var testType  = "TEST";
+if (testType=="PROD") {
+	var debug = false;
+	var verbose = false;
+	var executeManualChecks = true;
+} else if (testType=="TEST") {
+	var debug = true;
+	var verbose = true;
+	var executeManualChecks = false;
+}
 
+// Data structure
 var errors = [];
 var errorCodes = {};
 var idxInstructions;
 var instructions = [];
+
+// Bookmarks
+var bm = {};
+var bmPretendPath = "./bmPretend.txt";
+const bmChromePath = "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks";
+const bmFirefoxPath = ["C:\\Users\\Admin\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\","*.default","places.sqlite"];
 
 function reportError(instruction) {
 	if (debug) log.debug('ERROR FOR: ' + log.getPrettyJson(instruction));
@@ -175,75 +192,214 @@ function openUrl(urlToCheck, callback) {
 	});
 	reqWS.end();
 }
-function ChromeBookmark(instruction) {
-	if (verbose) log.info("Verifying Bookmark in Chrome: " + instruction.AppName__c);
 
-	// if (debug) log.debug("Reading JSON_Action__c");
-	var JSON_Action;
-	JSON_Action = instruction.JSON_Actions__r;
-	if (JSON_Action.totalSize != 1) throw new Error("Multiple JSON Actions are not allowed!");
-	JSON_Action = JSON_Action.records[0];
 
-	// if (debug) log.debug("Reading bookmarks file");
-	var fileContents = loadJsonFile(instruction.Command__c);
-	var data = fileContents;
-	var paths = JSON_Action.Path__c.split(":");
-
-	if (debug) log.debug("Processing bookmarks file: " + JSON_Action.Path__c);
-	for (var i = 0; i < paths.length; i++) {
-		var path = paths[i];
-		if (path != "") {
-			if (path[0] == "[") {
-				// Remove [ and ]
-				path = path.substring(1, path.length - 1);
-				// Split it
-				path = path.split("=");
-				var key = path[0];
-				var value = path[1];
-				if (data && data.length > 0) {
-					for (var j = 0; j < data.length; j++) {
-						var d = data[j];
-						if (d[key].trim().toUpperCase() == value.trim().toUpperCase()) {
-							data = d;
-						}
-					}
-				} else {
-					log.error("DATA IS NOT CORRECT (1)");
-					reportError(instruction);
-				}
-			} else {
-				var s1 = JSON.stringify(data).length;
-				data = data[path];
-				var s2 = JSON.stringify(data).length;
-				if (s1 <= s2) {
-					log.error("DATA IS NOT CORRECT(2)");
-					reportError(instruction);
-				}
-			}
-		}
+function findBookmarks_Chrome_Children(node, path) {
+	var thisPath;
+	
+	if (node.name == "Bookmarks bar") {
+		thisPath = "[BAR]";
+	} else {
+		thisPath = path + "[" + node.name + "]";
 	}
-	if (debug) log.debug("Found bookmark: " + log.getPrettyJson(data));
+	if (node.url) {
+		var barNode = bm.Bar[thisPath];
+		if (!barNode) barNode = {};
+		barNode.Chrome = node.url;
+		bm.Bar[thisPath] = barNode;
 
-	if (debug) log.debug("Opening bookmark");
-	var url = data[JSON_Action.Key__c];
-	if (url === JSON_Action.Value__c) {
-		openUrl(url, function (isSuccess, error) {
-			if (!isSuccess) {
-				instruction.hasErrors = true;
-				instruction.returned = error;
-				reportError(instruction);
-				nextInstruction();
+		bm.Chrome[thisPath] = node.url;
+	}
+	if (node.children) {
+		for (var i = 0; i < node.children.length; i++) {
+			findBookmarks_Chrome_Children(
+				node.children[i], thisPath);
+		}
+	}	
+}
+function findBookmarks_Chrome() {
+	bm.FF = {};
+	bm.Bar = {};
+	bm.Chrome = {};
+	
+	var data = loadFileJson(bmChromePath);
+	findBookmarks_Chrome_Children(
+		data["roots"]["bookmark_bar"], "");
+}
+function findBookmarks_Firefox() {
+	var tmp = {};
+	var record = {};
+	var sqlitepath = "";
+
+	tmp.TitlesByRow = {};
+	tmp.TitlesByName = {};
+	tmp.URLs = {};
+	
+	// Find sqlite path
+	sqlitepath = bmFirefoxPath[0];
+	var files = fs.readdirSync(sqlitepath);
+	if (files.length == 1) {
+		sqlitepath += "\\" + files[0] + "\\" + bmFirefoxPath[2];
+		console.log("Path: " + sqlitepath);
+	} else {
+		throw new Error("Multiple profiles for Firefox found");
+	}
+	
+	// Execute sqlite3 to get data
+	var cmd = "";
+	cmd += 'sqlite3 -header -line ';
+	cmd += '"' + sqlitepath + '" ';
+	cmd += '"SELECT b.id, b.parent, b.title as bTitle, p.title as pTitle, p.url FROM moz_bookmarks AS b LEFT JOIN moz_places AS p ON b.fk = p.id"';
+	cmd += '> ./bmFF_LINE.txt';
+	
+	var process = exec(cmd, function (error, stdout, stderr) {
+		if (error) throw new Error(error);
+	
+		// Process results
+		var lineReader = require('readline').createInterface({
+		  input: require('fs').createReadStream('./bmFF_LINE.txt')
+		});
+
+		lineReader.on('line', function (line) {
+			if (line == "") {
+				if (record.bTitle == "Bookmarks Toolbar") {
+					record.bTitle = "BAR";
+				}
+				if (tmp.TitlesByRow[record.id]) {
+					throw new Error("Record already defined");
+				} else {
+					tmp.TitlesByRow[record.id] = "";
+				}
+				if (record.url) tmp.URLs[record.id] = record.url;
+				if (record.bTitle) {
+					var title = "";
+					if (record.parent) {
+						title = tmp.TitlesByRow[record.parent];
+					}
+					title += "[" + record.bTitle + "]";
+					if (tmp.TitlesByName[title]) {
+						throw new Error("Duplicate record: [" + record.bTitle + "]");
+					}
+					tmp.TitlesByRow[record.id] = title;
+					tmp.TitlesByName[title] = record.id;
+				}
+			
+				record = {};
 			} else {
-				log.success("VALID: Bookmark in Chrome: " + instruction.AppName__c);
-				nextInstruction();
+				var parts = line.split('=');
+				record[parts[0].trim()] = parts[1].trim();
 			}
 		});
+	
+		lineReader.on('close', function () {
+			// Merge the data
+			for (var path in tmp.TitlesByName) {
+				if (path.startsWith("[BAR]")) {
+					if (tmp.TitlesByName.hasOwnProperty(path)) {
+						var rowId = tmp.TitlesByName[path];
+						var url = tmp.URLs[rowId];
+						if (url) {
+							var barNode = bm.Bar[path];
+							if (!barNode) barNode = {};
+							barNode.FF = url;
+							bm.Bar[path] = barNode;
+							
+							bm.FF[path] = url;
+						}
+					}
+				}
+			}
+			
+			// Check bm.Bar
+			var bmBarNew = [];
+			var bmBarTemp = bm.Bar;
+			
+			for (var path in bmBarTemp) {
+				if (bmBarTemp.hasOwnProperty(path)) {
+					var nodeNew = {};
+					var nodeTemp = bmBarTemp[path];
+					
+					nodeNew.Title = path;
+					nodeNew.hasFF = false;
+					nodeNew.hasChrome = false;
+					
+					if (nodeTemp.FF && nodeTemp.Chrome && (nodeTemp.FF != nodeTemp.Chrome)) {
+						throw new Error("FF and Chrome urls are different");
+					}
+					if (nodeTemp.FF) {
+						nodeNew.Url = nodeTemp.FF;
+						nodeNew.hasFF = true;
+					}
+					if (nodeTemp.Chrome) {
+						nodeNew.Url = nodeTemp.Chrome;
+						nodeNew.hasChrome = true;
+					}
+					
+					// Assume we are going to be checking both URLs
+					nodeNew.checkFF = true;
+					nodeNew.checkChrome = true;
+					
+					bmBarNew.push(nodeNew);
+				}
+			}
+			bm.Bar = bmBarNew;
+			
+			// Write to files
+			fs.writeFile("./bmDump.txt", JSON.stringify(bm.Bar, null, 4), function(err) {
+				if(err) throw new Error(err);
+				console.log("The file [" + "./bmDump.txt" + "] was saved!");
+			}); 
+
+			fs.writeFile("./bm.txt", JSON.stringify(bm, null, 4), function(err) {
+				if(err) throw new Error(err);
+				console.log("The file [" + "./bm.txt" + "] was saved!");
+			});
+			
+			// Validate them
+			validateBookmarks_Process();
+		});
+	});
+}
+function validateBookmarks_Process() {
+	var bmChecks = loadFileJson("./bmCheck.txt");
+	
+	bmChecks.forEach(function(bmCheck) {
+		var foundUrl;
+		var expectedUrl = bmCheck.Url;
+		
+		if (bmCheck.checkFF) {
+			foundUrl = bm.FF[bmCheck.Title];
+			if (expectedUrl !== foundUrl) {
+				console.log("BAD: Bookmark does not match. Title *[FF]" + bmCheck.Title + "*,  Expected [" + expectedUrl + "], found [" + foundUrl + "]");
+			}
+		}
+		
+		if (bmCheck.checkChrome) {
+			foundUrl = bm.Chrome[bmCheck.Title];
+			if (expectedUrl !== foundUrl) {
+				console.log("BAD: Bookmark does not match. Title *[Chrome]" + bmCheck.Title + "*,  Expected [" + expectedUrl + "], found [" + foundUrl + "]");
+			}
+		}
+	});
+}
+function validateBookmarks(instruction) {
+	if (verbose) log.info("Verifying Bookmarks");
+
+	
+	if (doesFileExist(bmPretendPath)) {
+		log.info("Bookmarks information read from file [" + bmPretendPath + "]");
+		bm = loadFileJson(bmPretendPath);
+		validateBookmarks_Process();	
 	} else {
-		instruction.returned = url;
-		reportError(instruction);
-		nextInstruction();
+		// validateBookmarks_Process is not called from here directly because it is going to work asynchronously... invk=oked from findBookmarks_Firefox.
+		// Do not reverse the order here. First Chrome, then Firefox.
+		findBookmarks_Chrome();
+		findBookmarks_Firefox();
 	}
 }
+
+
+
 function jsonFile_Edit(instruction) {
 	if (verbose) log.info("Editing JSON File: " + instruction.AppName__c);
 
@@ -254,7 +410,7 @@ function jsonFile_Edit(instruction) {
 	JSON_Action = JSON_Action.records[0];
 
 	if (debug) log.debug("Reading JSON file");
-	var fileContents = loadJsonFile(instruction.Command__c);
+	var fileContents = loadFileJson(instruction.Command__c);
 	var data = fileContents;
 	var paths = JSON_Action.Path__c.split(":");
 
@@ -306,20 +462,20 @@ function jsonFile_Edit(instruction) {
 		}
 	});
 }
-function loadJsonFile(path) {
+function loadFileJson(path) {
+	return JSON.parse(loadFile(path));
+}
+function doesFileExist(path) {
+	var exists = false;
+	try { exists = (fs.statSync(path).size > 0) } catch (ex) {}
+
+	return exists;
+}
+function loadFile(path) {
 	if (verbose) log.debug("Reading file: " + path);
 
-	var stats;
-	var hasErrors = false;
-	try {
-		stats = fs.statSync(path);
-		hasErrors = (stats.size == 0);
-	} catch (ex) {
-		log.debug("Error checking file: " + log.getPrettyJson(ex));
-		hasErrors = true;
-	}
-
-	if (hasErrors) {
+	if (!doesFileExist(path)) {
+		log.error("Files does not exist: " + path);
 		try {
 			fs.writeFileSync(path, '{}');
 		} catch (ex) {
@@ -327,7 +483,7 @@ function loadJsonFile(path) {
 		}
 	}
 
-	return JSON.parse(fs.readFileSync(path, 'utf8'));
+	return fs.readFileSync(path, 'utf8');
 }
 function nextInstruction() {
 	setTimeout(executeInstruction, timerDelay);
@@ -370,10 +526,10 @@ function executeInstruction() {
 			checkExact(instruction);
 			break;
 		case "Check Path":
-			checkPath(instruction);
+		    checkPath(instruction);
 			break;
-		case "Chrome Bookmark":
-			ChromeBookmark(instruction);
+		case "Bookmark":
+		    validateBookmarks(instruction);
 			break;
 		case "Clear":
 			// Clear screen
@@ -485,10 +641,91 @@ function menuChooseEvent(data) {
 	forEver();
 }
 
+
 log.clearScreen();
-log.promptMsg('Version: 2018-08-24 @ 18:15:00 PM EST');
-fs.readFile('data.json', "utf8", function (err, data) {
-	if (err) throw err;
-	var data = JSON.parse(data);
-	var event = menuChooseEvent(data);
-});
+log.promptMsg('Version: 2018-09-01 @ 11:29:00 AM EST');
+if (doesFileExist(bmPretendPath)) {
+	log.error("BOOKMARKS ARE NOT PROCESSED FROM THE BROWSERS!!! Bookmarks are procesed from file [" + bmPretendPath + "]. Delete the file is this is a real test");
+}
+menuChooseEvent(loadFileJson('./data.json'));
+
+
+
+
+
+/*
+
+
+
+
+function ChromeBookmark(instruction) {
+	if (verbose) log.info("Verifying Bookmark in Chrome: " + instruction.AppName__c);
+
+	// if (debug) log.debug("Reading JSON_Action__c");
+	var JSON_Action;
+	JSON_Action = instruction.JSON_Actions__r;
+	if (JSON_Action.totalSize != 1) throw new Error("Multiple JSON Actions are not allowed!");
+	JSON_Action = JSON_Action.records[0];
+
+	// if (debug) log.debug("Reading bookmarks file");
+	var fileContents = loadJsonFile(instruction.Command__c);
+	var data = fileContents;
+	var paths = JSON_Action.Path__c.split(":");
+
+	if (debug) log.debug("Processing bookmarks file: " + JSON_Action.Path__c);
+	for (var i = 0; i < paths.length; i++) {
+		var path = paths[i];
+		if (path != "") {
+			if (path[0] == "[") {
+				// Remove [ and ]
+				path = path.substring(1, path.length - 1);
+				// Split it
+				path = path.split("=");
+				var key = path[0];
+				var value = path[1];
+				if (data && data.length > 0) {
+					for (var j = 0; j < data.length; j++) {
+						var d = data[j];
+						if (d[key].trim().toUpperCase() == value.trim().toUpperCase()) {
+							data = d;
+						}
+					}
+				} else {
+					log.error("DATA IS NOT CORRECT (1)");
+					reportError(instruction);
+				}
+			} else {
+				var s1 = JSON.stringify(data).length;
+				data = data[path];
+				var s2 = JSON.stringify(data).length;
+				if (s1 <= s2) {
+					log.error("DATA IS NOT CORRECT(2)");
+					reportError(instruction);
+				}
+			}
+		}
+	}
+	if (debug) log.debug("Found bookmark: " + log.getPrettyJson(data));
+
+	if (debug) log.debug("Opening bookmark");
+	var url = data[JSON_Action.Key__c];
+	if (url === JSON_Action.Value__c) {
+		openUrl(url, function (isSuccess, error) {
+			if (!isSuccess) {
+				instruction.hasErrors = true;
+				instruction.returned = error;
+				reportError(instruction);
+				nextInstruction();
+			} else {
+				log.success("VALID: Bookmark in Chrome: " + instruction.AppName__c);
+				nextInstruction();
+			}
+		});
+	} else {
+		instruction.returned = url;
+		reportError(instruction);
+		nextInstruction();
+	}
+}
+
+*/
