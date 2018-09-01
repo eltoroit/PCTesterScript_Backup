@@ -1,6 +1,7 @@
 "use strict";
 
-var showLineNumbers = false;
+var showLineNumbers = true;
+var traceColonOffset = 1; // 1: Mac, 2: Windows
 
 let clearScreenCode = "\x1B[2J";
 
@@ -37,18 +38,19 @@ let colorBgWhite = "\x1b[47m";
 module.exports = {
     getTrace: function (offset) {
         if (!offset) offset = 0;
-        
+
         if (showLineNumbers) {
             try {
                 throw new Error();
             } catch (e) {
                 if (typeof e.stack === 'string') {
                     var lines = e.stack.split('\n');
-                    return "[" + lines[3 + offset].split(':')[2] + "]: ";
+                    // console.log(colorBgBlack + colorBright + colorFgMagenta  + lines[3 + offset] + colorReset);
+                    return "[" + lines[3 + offset].split(':')[traceColonOffset] + "]: ";
                 } else {
                     return "";
                 }
-            }    
+            }
         } else {
             return "";
         }
@@ -58,7 +60,7 @@ module.exports = {
         console.log(colorBgBlack + colorBright + colorFgRed + this.getTrace() + msg + colorReset);
     },
     debug: function (msg) {
-        console.log(colorBgBlack + colorDim + colorFgGray + this.getTrace() + msg + colorReset);
+        console.log(colorBgBlack + colorBright + colorFgGray + this.getTrace() + msg + colorReset);
     },
     info: function (msg) {
         console.log(colorBgBlack + colorBright + colorFgWhite + this.getTrace() + msg + colorReset);

@@ -16,16 +16,22 @@ const log = require('./colorLogs.js');
 var debug = false;
 var verbose = false;
 var timerDelay = 250;
+var checkUrlExists = true;
+var resultsTofile = true;
 var executeManualChecks = false;
-var testType  = "TEST";
-if (testType=="PROD") {
-	var debug = false;
-	var verbose = false;
-	var executeManualChecks = true;
-} else if (testType=="TEST") {
-	var debug = true;
-	var verbose = true;
-	var executeManualChecks = false;
+var testType = "TEST";
+if (testType == "PROD") {
+	debug = false;
+	verbose = false;
+	resultsTofile = true;
+	checkUrlExists = true;
+	executeManualChecks = true;
+} else if (testType == "TEST") {
+	debug = true;
+	verbose = true;
+	resultsTofile = false;
+	checkUrlExists = false;
+	executeManualChecks = false;
 }
 
 // Data structure
@@ -36,15 +42,23 @@ var instructions = [];
 
 // Bookmarks
 var bm = {};
-var bmPretendPath = "./bmPretend.txt";
+bm.FF = {};
+bm.Bar = {};
+bm.Chrome = {};
+const bmPretendPath = "./bmPretend.txt";
+const bmCheckPath = "./bmCheck.txt";
 const bmChromePath = "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks";
-const bmFirefoxPath = ["C:\\Users\\Admin\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\","*.default","places.sqlite"];
+const bmFirefoxPath = ["C:\\Users\\Admin\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\", "*.default", "places.sqlite"];
 
 function reportError(instruction) {
 	if (debug) log.debug('ERROR FOR: ' + log.getPrettyJson(instruction));
 	errors.push(instruction);
 	log.error("*** *** ERROR", 1);
 	log.error(log.getPrettyJson(instruction), 1);
+}
+function reportErrorMessage(msg) {
+	errors.push(msg);
+	log.error(log.getPrettyJson(msg), 1);
 }
 function promptYesNo(instruction) {
 	log.promptMsg(instruction.Message__c);
@@ -95,7 +109,8 @@ function spawnCommand(instruction) {
 		throw ex;
 	}
 	process.on('error', function (err) {
-		console.log('child process exited with an error: ' + err);
+		var msg = 'child process exited with an error: ' + err;
+		reportErrorMessage(msg);
 	});
 	setTimeout(function () {
 		promptYesNo(instruction);
@@ -165,38 +180,46 @@ function checkPath(instruction) {
 	executeCommand(instruction);
 }
 function openUrl(urlToCheck, callback) {
-	var outputData = "";
-	var options = url.parse(urlToCheck);
-	options.method = 'GET';
+	if (checkUrlExists) {
 
-	var reqClient;
-	if (options.protocol.toUpperCase() === "HTTPS:") {
-		reqClient = https;
+		var reqClient;
+		var outputData = "";
+		var options = url.parse(urlToCheck);
+
+		if (verbose) log.info("Opening URL: " + urlToCheck);
+		options.method = 'GET';
+		if (options.protocol.toUpperCase() === "HTTPS:") {
+			reqClient = https;
+		} else {
+			reqClient = http;
+		}
+	
+		var reqWS = reqClient.request(options, function (resWS) {
+			resWS.setEncoding('utf8');
+			resWS.on('data', function (chunk) { outputData += chunk; });
+			resWS.on('end', function () {
+				var output = { body: outputData, statusCode: resWS.statusCode }
+				if (debug) log.debug(output.body.substring(0, 250));
+				callback(true);
+			})
+		});
+	
+		reqWS.on('error', function (e) {
+			if (debug) log.debug(('problem with request: ', e));
+			reportErrorMessage(e);
+			callback(false, e);
+		});
+		reqWS.end();
 	} else {
-		reqClient = http;
+		if (debug) log.debug("URL [" + urlToCheck + "] was not validated");
+		callback(true);
 	}
-
-	var reqWS = reqClient.request(options, function (resWS) {
-		resWS.setEncoding('utf8');
-		resWS.on('data', function (chunk) { outputData += chunk; });
-		resWS.on('end', function () {
-			var output = { body: outputData, statusCode: resWS.statusCode }
-			if (debug) log.debug(output.body.substring(0, 250));
-			callback(true);
-		})
-	});
-
-	reqWS.on('error', function (e) {
-		if (debug) log.debug(('problem with request: ', e));
-		callback(false, e);
-	});
-	reqWS.end();
 }
 
 
 function findBookmarks_Chrome_Children(node, path) {
 	var thisPath;
-	
+
 	if (node.name == "Bookmarks bar") {
 		thisPath = "[BAR]";
 	} else {
@@ -215,18 +238,18 @@ function findBookmarks_Chrome_Children(node, path) {
 			findBookmarks_Chrome_Children(
 				node.children[i], thisPath);
 		}
-	}	
+	}
 }
 function findBookmarks_Chrome() {
-	bm.FF = {};
-	bm.Bar = {};
-	bm.Chrome = {};
-	
+	if (verbose) log.info("Finding Chrome bookmarks");
+
 	var data = loadFileJson(bmChromePath);
 	findBookmarks_Chrome_Children(
 		data["roots"]["bookmark_bar"], "");
 }
 function findBookmarks_Firefox() {
+	if (verbose) log.info("Finding Firefox bookmarks");
+
 	var tmp = {};
 	var record = {};
 	var sqlitepath = "";
@@ -234,30 +257,31 @@ function findBookmarks_Firefox() {
 	tmp.TitlesByRow = {};
 	tmp.TitlesByName = {};
 	tmp.URLs = {};
-	
+
 	// Find sqlite path
 	sqlitepath = bmFirefoxPath[0];
 	var files = fs.readdirSync(sqlitepath);
 	if (files.length == 1) {
 		sqlitepath += "\\" + files[0] + "\\" + bmFirefoxPath[2];
-		console.log("Path: " + sqlitepath);
+		log.debug("Searching for Firefox bookmars: sqlite path: " + sqlitepath);
 	} else {
-		throw new Error("Multiple profiles for Firefox found");
+		var msg = "Searching for Firefox bookmars: Multiple profiles for Firefox found";
+		reportErrorMessage(msg);
 	}
-	
+
 	// Execute sqlite3 to get data
 	var cmd = "";
 	cmd += 'sqlite3 -header -line ';
 	cmd += '"' + sqlitepath + '" ';
 	cmd += '"SELECT b.id, b.parent, b.title as bTitle, p.title as pTitle, p.url FROM moz_bookmarks AS b LEFT JOIN moz_places AS p ON b.fk = p.id"';
 	cmd += '> ./bmFF_LINE.txt';
-	
+
 	var process = exec(cmd, function (error, stdout, stderr) {
-		if (error) throw new Error(error);
-	
+		if (error) reportErrorMessage(error);
+
 		// Process results
 		var lineReader = require('readline').createInterface({
-		  input: require('fs').createReadStream('./bmFF_LINE.txt')
+			input: require('fs').createReadStream('./bmFF_LINE.txt')
 		});
 
 		lineReader.on('line', function (line) {
@@ -266,11 +290,13 @@ function findBookmarks_Firefox() {
 					record.bTitle = "BAR";
 				}
 				if (tmp.TitlesByRow[record.id]) {
-					throw new Error("Record already defined");
+					reportErrorMessage("Searching for Firefox bookmars: *" + record.id + "* was already defined");
 				} else {
 					tmp.TitlesByRow[record.id] = "";
 				}
-				if (record.url) tmp.URLs[record.id] = record.url;
+				if (record.url) {
+					tmp.URLs[record.id] = record.url;
+				}
 				if (record.bTitle) {
 					var title = "";
 					if (record.parent) {
@@ -278,19 +304,19 @@ function findBookmarks_Firefox() {
 					}
 					title += "[" + record.bTitle + "]";
 					if (tmp.TitlesByName[title]) {
-						throw new Error("Duplicate record: [" + record.bTitle + "]");
+						reportErrorMessage("Searching for Firefox bookmars: Duplicate record: [" + record.bTitle + "]");
 					}
 					tmp.TitlesByRow[record.id] = title;
 					tmp.TitlesByName[title] = record.id;
 				}
-			
+
 				record = {};
 			} else {
 				var parts = line.split('=');
 				record[parts[0].trim()] = parts[1].trim();
 			}
 		});
-	
+
 		lineReader.on('close', function () {
 			// Merge the data
 			for (var path in tmp.TitlesByName) {
@@ -303,93 +329,127 @@ function findBookmarks_Firefox() {
 							if (!barNode) barNode = {};
 							barNode.FF = url;
 							bm.Bar[path] = barNode;
-							
+
 							bm.FF[path] = url;
 						}
 					}
 				}
 			}
-			
+
 			// Check bm.Bar
 			var bmBarNew = [];
 			var bmBarTemp = bm.Bar;
-			
+
 			for (var path in bmBarTemp) {
 				if (bmBarTemp.hasOwnProperty(path)) {
 					var nodeNew = {};
 					var nodeTemp = bmBarTemp[path];
-					
+
 					nodeNew.Title = path;
-					nodeNew.hasFF = false;
-					nodeNew.hasChrome = false;
-					
-					if (nodeTemp.FF && nodeTemp.Chrome && (nodeTemp.FF != nodeTemp.Chrome)) {
-						throw new Error("FF and Chrome urls are different");
-					}
-					if (nodeTemp.FF) {
-						nodeNew.Url = nodeTemp.FF;
-						nodeNew.hasFF = true;
-					}
-					if (nodeTemp.Chrome) {
-						nodeNew.Url = nodeTemp.Chrome;
-						nodeNew.hasChrome = true;
-					}
-					
-					// Assume we are going to be checking both URLs
+
+					// Check if the url is defined in each browser
+					nodeNew.hasFF = (nodeTemp.FF) ? true : false;
+					nodeNew.hasChrome = (nodeTemp.Chrome) ? true : false;
+
+					// Assume we are going to be checking all browsers
 					nodeNew.checkFF = true;
 					nodeNew.checkChrome = true;
-					
+
 					bmBarNew.push(nodeNew);
 				}
 			}
 			bm.Bar = bmBarNew;
-			
-			// Write to files
-			fs.writeFile("./bmDump.txt", JSON.stringify(bm.Bar, null, 4), function(err) {
-				if(err) throw new Error(err);
-				console.log("The file [" + "./bmDump.txt" + "] was saved!");
-			}); 
 
-			fs.writeFile("./bm.txt", JSON.stringify(bm, null, 4), function(err) {
-				if(err) throw new Error(err);
-				console.log("The file [" + "./bm.txt" + "] was saved!");
+			// Write to files
+			fs.writeFile("./bmDump.txt", JSON.stringify(bm.Bar, null, 4), function (err) {
+				if (err) {
+					reportErrorMessage("Searching for Firefox bookmars");
+					reportErrorMessage(err);
+				}
+
+				if (debug) log.info("The file [" + "./bmDump.txt" + "] was saved!");
 			});
-			
+
+			fs.writeFile("./bm.txt", JSON.stringify(bm, null, 4), function (err) {
+				if (err) {
+					reportErrorMessage("Searching for Firefox bookmars");
+					reportErrorMessage(err);
+				}
+
+				if (debug) log.info("The file [" + "./bm.txt" + "] was saved!");
+			});
+
 			// Validate them
 			validateBookmarks_Process();
 		});
 	});
 }
 function validateBookmarks_Process() {
-	var bmChecks = loadFileJson("./bmCheck.txt");
-	
-	bmChecks.forEach(function(bmCheck) {
-		var foundUrl;
+	if (verbose) log.info("Validating Bookmarks");
+
+	var errorCount = 0;
+	var bmChecks = loadFileJson(bmCheckPath);
+
+	bmChecks.forEach(function (bmCheck) {
+		var hasErrors = false;
+		var urlFF = bm.FF[bmCheck.Title];
+		var urlChrome = bm.Chrome[bmCheck.Title];
 		var expectedUrl = bmCheck.Url;
-		
+
 		if (bmCheck.checkFF) {
-			foundUrl = bm.FF[bmCheck.Title];
-			if (expectedUrl !== foundUrl) {
-				console.log("BAD: Bookmark does not match. Title *[FF]" + bmCheck.Title + "*,  Expected [" + expectedUrl + "], found [" + foundUrl + "]");
+			if (expectedUrl !== urlFF) {
+				errorCount++;
+				hasErrors = true;
+				var msg = "BAD: Bookmark does not match (1). Title *[FF]" + bmCheck.Title + "*,  Expected [" + expectedUrl + "], found [" + urlFF + "]";
+				reportErrorMessage(msg);
 			}
 		}
-		
+
 		if (bmCheck.checkChrome) {
-			foundUrl = bm.Chrome[bmCheck.Title];
-			if (expectedUrl !== foundUrl) {
-				console.log("BAD: Bookmark does not match. Title *[Chrome]" + bmCheck.Title + "*,  Expected [" + expectedUrl + "], found [" + foundUrl + "]");
+			if (expectedUrl !== urlChrome) {
+				errorCount++;
+				hasErrors = true;
+				var msg = "BAD: Bookmark does not match (2). Title *[Chrome]" + bmCheck.Title + "*,  Expected [" + expectedUrl + "], found [" + urlChrome + "]";
+				reportErrorMessage(msg);
 			}
+		}
+
+		if (bmCheck.checkFF && bmCheck.checkChrome) {
+			if (urlFF != urlChrome) {
+				errorCount++;
+				hasErrors = true;
+				var msg = "BAD: Bookmark does not match (3). Title *" + bmCheck.Title + "*,  Firefox [" + urlFF + "], found [" + urlChrome + "]";
+				reportErrorMessage(msg);
+			}
+		}
+
+		if (!hasErrors) {
+			openUrl(expectedUrl, function (isSuccess, error) {
+				if (!isSuccess) {
+					errorCount++;
+					instruction.hasErrors = true;
+					instruction.returned = error;
+					reportError(instruction);
+				} else {
+					if (verbose) log.success("VALID: Bookmark *" + bmCheck.Title + "*, URL [" + expectedUrl + "]");
+				}
+			});
 		}
 	});
+
+	if (errorCount > 0) {
+		var msg = "* " + errorCount + "* errors found checking for bookmarks";
+		reportErrorMessage(msg);
+	}
+	nextInstruction();
 }
 function validateBookmarks(instruction) {
-	if (verbose) log.info("Verifying Bookmarks");
+	if (verbose) log.info("Validating all bookmarks for all browsers");
 
-	
 	if (doesFileExist(bmPretendPath)) {
-		log.info("Bookmarks information read from file [" + bmPretendPath + "]");
+		log.error("Bookmarks information read from file [" + bmPretendPath + "]");
 		bm = loadFileJson(bmPretendPath);
-		validateBookmarks_Process();	
+		validateBookmarks_Process();
 	} else {
 		// validateBookmarks_Process is not called from here directly because it is going to work asynchronously... invk=oked from findBookmarks_Firefox.
 		// Do not reverse the order here. First Chrome, then Firefox.
@@ -433,7 +493,7 @@ function jsonFile_Edit(instruction) {
 						}
 					}
 				} else {
-					log.error("DATA IS NOT CORRECT (3)");
+					reportErrorMessage("DATA IS NOT CORRECT (3)");
 					reportError(instruction);
 				}
 			} else {
@@ -441,7 +501,7 @@ function jsonFile_Edit(instruction) {
 				data = data[path];
 				var s2 = JSON.stringify(data).length;
 				if (s1 <= s2) {
-					log.error("DATA IS NOT CORRECT(4)");
+					reportErrorMessage("DATA IS NOT CORRECT(4)");
 					reportError(instruction);
 				}
 			}
@@ -467,7 +527,7 @@ function loadFileJson(path) {
 }
 function doesFileExist(path) {
 	var exists = false;
-	try { exists = (fs.statSync(path).size > 0) } catch (ex) {}
+	try { exists = (fs.statSync(path).size > 0) } catch (ex) { }
 
 	return exists;
 }
@@ -475,11 +535,11 @@ function loadFile(path) {
 	if (verbose) log.debug("Reading file: " + path);
 
 	if (!doesFileExist(path)) {
-		log.error("Files does not exist: " + path);
+		reportErrorMessage("Files does not exist: " + path);
 		try {
 			fs.writeFileSync(path, '{}');
 		} catch (ex) {
-			log.error("Error creating file: " + path);
+			reportErrorMessage("Error creating file: " + path);
 		}
 	}
 
@@ -504,7 +564,7 @@ function executeInstruction() {
 			// Check every record has an AppName__c
 			if (!instruction.AppName__c) {
 				var msg = "Instruction #" + idxInstructions + ". Does not have a valid AppName__c. " + log.getPrettyJson(instruction);
-				log.error(msg);
+				reportErrorMessage(msg);
 				throw msg;
 			}
 
@@ -512,8 +572,8 @@ function executeInstruction() {
 			instruction.AppName__c = instruction.AppName__c.toUpperCase();
 			if (errorCodes[instruction.AppName__c]) {
 				var msg = "Instruction #" + idxInstructions + ". You can not reuse AppName__c. " + log.getPrettyJson(instruction);
-				log.error(msg);
-				throw msg;
+				reportErrorMessage(msg);
+				throw new Error(msg);
 			}
 			errorCodes[instruction.AppName__c] = instruction;
 	}
@@ -526,10 +586,10 @@ function executeInstruction() {
 			checkExact(instruction);
 			break;
 		case "Check Path":
-		    checkPath(instruction);
+			checkPath(instruction);
 			break;
 		case "Bookmark":
-		    validateBookmarks(instruction);
+			validateBookmarks(instruction);
 			break;
 		case "Clear":
 			// Clear screen
@@ -571,7 +631,7 @@ function executeInstruction() {
 				if (executeManualChecks) {
 					log.error("Switching debug mode ON");
 					debug = true;
-					verbose = true;	
+					verbose = true;
 				}
 			}
 			log.info(instruction.Command__c);
@@ -641,12 +701,28 @@ function menuChooseEvent(data) {
 	forEver();
 }
 
-
 log.clearScreen();
 log.promptMsg('Version: 2018-09-01 @ 11:29:00 AM EST');
 if (doesFileExist(bmPretendPath)) {
-	log.error("BOOKMARKS ARE NOT PROCESSED FROM THE BROWSERS!!! Bookmarks are procesed from file [" + bmPretendPath + "]. Delete the file is this is a real test");
+	log.error("BOOKMARKS ARE NOT PROCESSED FROM THE BROWSERS!!!");
+	log.error("Bookmarks are procesed from file [" + bmPretendPath + "]");
+	log.error("Delete the file is this is a real test!");
 }
+if (doesFileExist(bmCheckPath)) {
+	var bmChecks = loadFileJson(bmCheckPath);
+	if (!(bmChecks.length > 0)) {
+		log.error("BOOKMARKS CAN NOT PROCESSED!!!");
+		var msg = "Invalid bookmarks checker configuration file [" + bmCheckPath + "]!";
+		log.error(msg);
+		throw new Error(msg);
+	}
+} else {
+	log.error("BOOKMARKS CAN NOT PROCESSED!!!");
+	var msg = "Bookmarks checker configuration file [" + bmCheckPath + "] does not exist!";
+	log.error(msg);
+	throw new Error(msg);
+}
+
 menuChooseEvent(loadFileJson('./data.json'));
 
 
@@ -656,6 +732,24 @@ menuChooseEvent(loadFileJson('./data.json'));
 /*
 
 
+					if (nodeTemp.FF && nodeTemp.Chrome && (nodeTemp.FF != nodeTemp.Chrome)) {
+						throw new Error("FF and Chrome urls are different");
+					}
+
+					if (nodeTemp.FF) {
+						//nodeNew.Url = nodeTemp.FF;
+						nodeNew.hasFF = true;
+					}
+					if (nodeTemp.Chrome) {
+						//nodeNew.Url = nodeTemp.Chrome;
+						nodeNew.hasChrome = true;
+					}
+					
+					// Assume we are going to be checking both URLs
+					nodeNew.checkFF = true;
+					nodeNew.checkChrome = true;
+					
+					bmBarNew.push(nodeNew);
 
 
 function ChromeBookmark(instruction) {
