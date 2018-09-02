@@ -200,7 +200,7 @@ function openUrl(urlToCheck, callback) {
 		} else {
 			reqClient = http;
 		}
-	
+
 		var reqWS = reqClient.request(options, function (resWS) {
 			resWS.setEncoding('utf8');
 			resWS.on('data', function (chunk) { outputData += chunk; });
@@ -210,7 +210,7 @@ function openUrl(urlToCheck, callback) {
 				callback(true);
 			})
 		});
-	
+
 		reqWS.on('error', function (e) {
 			if (debug) log.debug(('problem with request: ', e));
 			reportErrorMessage(e);
@@ -437,7 +437,7 @@ function validateBookmarks_Process() {
 					errorCount++;
 					hasErrors = true;
 					var msg = "Bookmark error (4). Url can't be accessed. Title *" + bmCheck.Title + "*,  Expected [" + expectedUrl + "]";
-					reportErrorMessage(msg);	
+					reportErrorMessage(msg);
 				} else {
 					if (verbose) log.success("VALID: Bookmark *" + bmCheck.Title + "*, URL [" + expectedUrl + "]");
 				}
@@ -629,13 +629,15 @@ function executeInstruction() {
 			}
 			break;
 		case "Write":
-			if (instruction.Command__c == "=== === === AUTOMATED CHECKS === === ===") {
+			/*
+		    if (instruction.Command__c == "=== === === AUTOMATED CHECKS === === ===") {
 				if (executeManualChecks) {
 					log.error("Switching debug mode ON");
 					debug = true;
 					verbose = true;
 				}
 			}
+			*/
 			log.info(instruction.Command__c);
 			nextInstruction();
 			break;
