@@ -1,6 +1,6 @@
 "use strict";
 
-var showLineNumbers = true;
+var showLineNumbers = false;
 
 let clearScreenCode = "\x1B[2J";
 
