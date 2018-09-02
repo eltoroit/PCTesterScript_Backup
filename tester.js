@@ -404,6 +404,8 @@ function validateBookmarks_Process() {
 		var urlChrome = bm.Chrome[bmCheck.Title];
 		var expectedUrl = bmCheck.Url;
 
+		log.info("Bookmark: " + bmCheck.Title);
+
 		if (bmCheck.checkFF && bmCheck.checkChrome) {
 			if ((urlFF != urlChrome) && urlFF && urlChrome) {
 				errorCount++;
