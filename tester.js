@@ -19,7 +19,7 @@ var timerDelay = 250;
 var checkUrlExists = true;
 var resultsTofile = true;
 var executeManualChecks = false;
-var testType = "TEST";
+var testType = "PROD";
 if (testType == "PROD") {
 	debug = false;
 	verbose = false;
@@ -396,11 +396,20 @@ function validateBookmarks_Process() {
 		var urlChrome = bm.Chrome[bmCheck.Title];
 		var expectedUrl = bmCheck.Url;
 
+		if (bmCheck.checkFF && bmCheck.checkChrome) {
+			if ((urlFF != urlChrome) && urlFF && urlChrome) {
+				errorCount++;
+				hasErrors = true;
+				var msg = "Bookmark error (1). Urls are different for Firefox and Chrome. Title *" + bmCheck.Title + "*,  Firefox [" + urlFF + "], Chrome [" + urlChrome + "]";
+				reportErrorMessage(msg);
+			}
+		}
+
 		if (bmCheck.checkFF) {
 			if (expectedUrl !== urlFF) {
 				errorCount++;
 				hasErrors = true;
-				var msg = "BAD: Bookmark does not match (1). Title *[FF]" + bmCheck.Title + "*,  Expected [" + expectedUrl + "], found [" + urlFF + "]";
+				var msg = "Bookmark error (2). Url in Firefox is not the expected value. Title *" + bmCheck.Title + "*,  Expected [" + expectedUrl + "], found [" + urlFF + "]";
 				reportErrorMessage(msg);
 			}
 		}
@@ -409,16 +418,7 @@ function validateBookmarks_Process() {
 			if (expectedUrl !== urlChrome) {
 				errorCount++;
 				hasErrors = true;
-				var msg = "BAD: Bookmark does not match (2). Title *[Chrome]" + bmCheck.Title + "*,  Expected [" + expectedUrl + "], found [" + urlChrome + "]";
-				reportErrorMessage(msg);
-			}
-		}
-
-		if (bmCheck.checkFF && bmCheck.checkChrome) {
-			if (urlFF != urlChrome) {
-				errorCount++;
-				hasErrors = true;
-				var msg = "BAD: Bookmark does not match (3). Title *" + bmCheck.Title + "*,  Firefox [" + urlFF + "], found [" + urlChrome + "]";
+				var msg = "Bookmark error (3). Url in Chrome is not the expected value. Title *" + bmCheck.Title + "*,  Expected [" + expectedUrl + "], found [" + urlChrome + "]";
 				reportErrorMessage(msg);
 			}
 		}
@@ -427,9 +427,9 @@ function validateBookmarks_Process() {
 			openUrl(expectedUrl, function (isSuccess, error) {
 				if (!isSuccess) {
 					errorCount++;
-					instruction.hasErrors = true;
-					instruction.returned = error;
-					reportError(instruction);
+					hasErrors = true;
+					var msg = "Bookmark error (4). Url can't be accessed. Title *" + bmCheck.Title + "*,  Expected [" + expectedUrl + "]";
+					reportErrorMessage(msg);	
 				} else {
 					if (verbose) log.success("VALID: Bookmark *" + bmCheck.Title + "*, URL [" + expectedUrl + "]");
 				}
@@ -437,10 +437,6 @@ function validateBookmarks_Process() {
 		}
 	});
 
-	if (errorCount > 0) {
-		var msg = "* " + errorCount + "* errors found checking for bookmarks";
-		reportErrorMessage(msg);
-	}
 	nextInstruction();
 }
 function validateBookmarks(instruction) {

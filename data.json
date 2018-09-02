@@ -26,12 +26,12 @@
         },
         "Id": "a003F000001OT0gQAG",
         "Name": "ACT-0090",
-        "AppName__c": "Bookmarks",
+        "AppName__c": "Checking all bookmarks",
         "Enabled__c": true,
-        "ErrorMessage__c": "Could not validate: Bookmarks",
+        "ErrorMessage__c": "Could not validate: Checking all bookmarks",
         "Expected__c": "Bookmarks are correct",
         "ExtId__c": "a003F000001OT0gQAG",
-        "Message__c": "Validating: Bookmarks",
+        "Message__c": "Validating: Checking all bookmarks",
         "Operation__c": "Bookmark",
         "Order__c": 39
       }
@@ -729,12 +729,12 @@
         },
         "Id": "a003F000001OT0gQAG",
         "Name": "ACT-0090",
-        "AppName__c": "Bookmarks",
+        "AppName__c": "Checking all bookmarks",
         "Enabled__c": true,
-        "ErrorMessage__c": "Could not validate: Bookmarks",
+        "ErrorMessage__c": "Could not validate: Checking all bookmarks",
         "Expected__c": "Bookmarks are correct",
         "ExtId__c": "a003F000001OT0gQAG",
-        "Message__c": "Validating: Bookmarks",
+        "Message__c": "Validating: Checking all bookmarks",
         "Operation__c": "Bookmark",
         "Order__c": 39
       }

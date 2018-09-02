@@ -20,7 +20,7 @@
         "hasFF": false,
         "hasChrome": true,
         "Url": "https://www.webassessor.com/salesforce",
-        "checkFF": true,
+        "checkFF": false,
         "checkChrome": true
     },
     {
