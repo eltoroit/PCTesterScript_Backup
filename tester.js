@@ -26,17 +26,11 @@ if (testType == "PROD") {
 	resultsTofile = true;
 	checkUrlExists = true;
 	executeManualChecks = true;
-} else if (testType == "TEST1") {
-	debug = false;
-	verbose = false;
-	resultsTofile = true;
-	checkUrlExists = true;
-	executeManualChecks = false;
-} else if (testType == "TEST2") {
+} else if (testType == "TEST") {
 	debug = true;
 	verbose = true;
 	resultsTofile = false;
-	checkUrlExists = false;
+	checkUrlExists = true;
 	executeManualChecks = false;
 }
 
@@ -188,35 +182,15 @@ function checkPath(instruction) {
 // Bookmarks -- START
 function openUrl(urlToCheck, callback) {
 	if (checkUrlExists) {
+		var process = spawnSync("curl", [urlToCheck]);
+		if (verbose) log.debug(process.stderr);
+		if (debug) log.debug(JSON.stringify(process.stdout.toString('utf8')).substring(0, 250));
 
-		var reqClient;
-		var outputData = "";
-		var options = url.parse(urlToCheck);
-
-		if (verbose) log.info("Opening URL: " + urlToCheck);
-		options.method = 'GET';
-		if (options.protocol.toUpperCase() === "HTTPS:") {
-			reqClient = https;
+		if (process.status == 0) {
+			callback(true);
 		} else {
-			reqClient = http;
+			callback(false, "Invalid url: " + urlToCheck);
 		}
-
-		var reqWS = reqClient.request(options, function (resWS) {
-			resWS.setEncoding('utf8');
-			resWS.on('data', function (chunk) { outputData += chunk; });
-			resWS.on('end', function () {
-				var output = { body: outputData, statusCode: resWS.statusCode }
-				if (debug) log.debug(output.body.substring(0, 250));
-				callback(true);
-			})
-		});
-
-		reqWS.on('error', function (e) {
-			if (debug) log.debug(('problem with request: ', e));
-			reportErrorMessage(e);
-			callback(false, e);
-		});
-		reqWS.end();
 	} else {
 		if (debug) log.debug("URL [" + urlToCheck + "] was not validated");
 		callback(true);
@@ -399,6 +373,7 @@ function validateBookmarks_Process() {
 	var bmChecks = loadFileJson(bmCheckPath);
 
 	bmChecks.forEach(function (bmCheck) {
+
 		var hasErrors = false;
 		var urlFF = bm.FF[bmCheck.Title];
 		var urlChrome = bm.Chrome[bmCheck.Title];
