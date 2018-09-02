@@ -19,7 +19,7 @@ var timerDelay = 250;
 var checkUrlExists = true;
 var resultsTofile = true;
 var executeManualChecks = false;
-var testType = "TEST1";
+var testType = "PROD";
 if (testType == "PROD") {
 	debug = false;
 	verbose = false;
@@ -726,102 +726,3 @@ if (doesFileExist(bmCheckPath)) {
 }
 
 menuChooseEvent(loadFileJson('./data.json'));
-
-
-
-
-
-/*
-
-
-					if (nodeTemp.FF && nodeTemp.Chrome && (nodeTemp.FF != nodeTemp.Chrome)) {
-						throw new Error("FF and Chrome urls are different");
-					}
-
-					if (nodeTemp.FF) {
-						//nodeNew.Url = nodeTemp.FF;
-						nodeNew.hasFF = true;
-					}
-					if (nodeTemp.Chrome) {
-						//nodeNew.Url = nodeTemp.Chrome;
-						nodeNew.hasChrome = true;
-					}
-					
-					// Assume we are going to be checking both URLs
-					nodeNew.checkFF = true;
-					nodeNew.checkChrome = true;
-					
-					bmBarNew.push(nodeNew);
-
-
-function ChromeBookmark(instruction) {
-	if (verbose) log.info("Verifying Bookmark in Chrome: " + instruction.AppName__c);
-
-	// if (debug) log.debug("Reading JSON_Action__c");
-	var JSON_Action;
-	JSON_Action = instruction.JSON_Actions__r;
-	if (JSON_Action.totalSize != 1) throw new Error("Multiple JSON Actions are not allowed!");
-	JSON_Action = JSON_Action.records[0];
-
-	// if (debug) log.debug("Reading bookmarks file");
-	var fileContents = loadJsonFile(instruction.Command__c);
-	var data = fileContents;
-	var paths = JSON_Action.Path__c.split(":");
-
-	if (debug) log.debug("Processing bookmarks file: " + JSON_Action.Path__c);
-	for (var i = 0; i < paths.length; i++) {
-		var path = paths[i];
-		if (path != "") {
-			if (path[0] == "[") {
-				// Remove [ and ]
-				path = path.substring(1, path.length - 1);
-				// Split it
-				path = path.split("=");
-				var key = path[0];
-				var value = path[1];
-				if (data && data.length > 0) {
-					for (var j = 0; j < data.length; j++) {
-						var d = data[j];
-						if (d[key].trim().toUpperCase() == value.trim().toUpperCase()) {
-							data = d;
-						}
-					}
-				} else {
-					log.error("DATA IS NOT CORRECT (1)");
-					reportError(instruction);
-				}
-			} else {
-				var s1 = JSON.stringify(data).length;
-				data = data[path];
-				var s2 = JSON.stringify(data).length;
-				if (s1 <= s2) {
-					log.error("DATA IS NOT CORRECT(2)");
-					reportError(instruction);
-				}
-			}
-		}
-	}
-	if (debug) log.debug("Found bookmark: " + log.getPrettyJson(data));
-
-	if (debug) log.debug("Opening bookmark");
-	var url = data[JSON_Action.Key__c];
-	if (url === JSON_Action.Value__c) {
-		openUrl(url, function (isSuccess, error) {
-			if (!isSuccess) {
-				instruction.hasErrors = true;
-				instruction.returned = error;
-				reportError(instruction);
-				nextInstruction();
-			} else {
-				log.success("VALID: Bookmark in Chrome: " + instruction.AppName__c);
-				nextInstruction();
-			}
-		});
-	} else {
-		instruction.returned = url;
-		reportError(instruction);
-		nextInstruction();
-	}
-}
-
-*/
