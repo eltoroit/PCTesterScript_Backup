@@ -179,6 +179,7 @@ function checkPath(instruction) {
 	}
 	executeCommand(instruction);
 }
+// Bookmarks -- START
 function openUrl(urlToCheck, callback) {
 	if (checkUrlExists) {
 
@@ -215,8 +216,6 @@ function openUrl(urlToCheck, callback) {
 		callback(true);
 	}
 }
-
-
 function findBookmarks_Chrome_Children(node, path) {
 	var thisPath;
 
@@ -263,7 +262,7 @@ function findBookmarks_Firefox() {
 	var files = fs.readdirSync(sqlitepath);
 	if (files.length == 1) {
 		sqlitepath += "\\" + files[0] + "\\" + bmFirefoxPath[2];
-		log.debug("Searching for Firefox bookmars: sqlite path: " + sqlitepath);
+		if (debug) log.debug("Searching for Firefox bookmars: sqlite path: " + sqlitepath);
 	} else {
 		var msg = "Searching for Firefox bookmars: Multiple profiles for Firefox found";
 		reportErrorMessage(msg);
@@ -278,6 +277,9 @@ function findBookmarks_Firefox() {
 
 	var process = exec(cmd, function (error, stdout, stderr) {
 		if (error) reportErrorMessage(error);
+
+		// Add one more line
+		fs.appendFileSync("./bmFF_LINE.txt", "\r\n");
 
 		// Process results
 		var lineReader = require('readline').createInterface({
@@ -453,9 +455,7 @@ function validateBookmarks(instruction) {
 		findBookmarks_Firefox();
 	}
 }
-
-
-
+// Bookmarks -- END
 function jsonFile_Edit(instruction) {
 	if (verbose) log.info("Editing JSON File: " + instruction.AppName__c);
 
