@@ -1,7 +1,6 @@
 "use strict";
 
 var showLineNumbers = true;
-var traceColonOffset = 1; // 1: Mac, 2: Windows
 
 let clearScreenCode = "\x1B[2J";
 
@@ -44,9 +43,14 @@ module.exports = {
                 throw new Error();
             } catch (e) {
                 if (typeof e.stack === 'string') {
+                    var linePart = 1;
+
                     var lines = e.stack.split('\n');
-                    // console.log(colorBgBlack + colorBright + colorFgMagenta  + lines[3 + offset] + colorReset);
-                    return "[" + lines[3 + offset].split(':')[traceColonOffset] + "]: ";
+                    var line = lines[3 + offset];
+
+                    console.log(colorBgBlack + colorBright + colorFgMagenta  + line + colorReset);
+                    if (!line.indexOf("C:\\")) linePart++;
+                    return "[" + line.split(':')[linePart] + "]: ";
                 } else {
                     return "";
                 }
