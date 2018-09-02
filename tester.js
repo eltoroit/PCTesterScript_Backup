@@ -19,14 +19,20 @@ var timerDelay = 250;
 var checkUrlExists = true;
 var resultsTofile = true;
 var executeManualChecks = false;
-var testType = "PROD";
+var testType = "TEST1";
 if (testType == "PROD") {
 	debug = false;
 	verbose = false;
 	resultsTofile = true;
 	checkUrlExists = true;
 	executeManualChecks = true;
-} else if (testType == "TEST") {
+} else if (testType == "TEST1") {
+	debug = false;
+	verbose = false;
+	resultsTofile = true;
+	checkUrlExists = true;
+	executeManualChecks = false;
+} else if (testType == "TEST2") {
 	debug = true;
 	verbose = true;
 	resultsTofile = false;
