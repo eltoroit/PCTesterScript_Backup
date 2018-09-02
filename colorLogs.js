@@ -49,7 +49,7 @@ module.exports = {
                     var line = lines[3 + offset];
 
                     console.log(colorBgBlack + colorBright + colorFgMagenta  + line + colorReset);
-                    if (!line.indexOf("C:\\")) linePart++;
+                    if (line.toLowerCase().indexOf("c:\\th\\") > 0) linePart++;
                     return "[" + line.split(':')[linePart] + "]: ";
                 } else {
                     return "";
