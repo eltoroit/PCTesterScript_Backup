@@ -1,5 +1,6 @@
 "use strict";
 
+var showTimestamp = true;
 var showLineNumbers = false;
 
 let clearScreenCode = "\x1B[2J";
@@ -35,9 +36,29 @@ let colorBgCyan = "\x1b[46m";
 let colorBgWhite = "\x1b[47m";
 
 module.exports = {
-    getTrace: function (offset) {
+	getTime: function() {
+		var date = new Date();
+        var hour = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        var milliseconds = date.getMilliseconds();
+		var strTime = '[' +
+			((hour < 10) ? '0' + hour: hour) + ':' +
+			((minutes < 10) ? '0' + minutes: minutes) + ':' +
+			((seconds < 10) ? '0' + seconds: seconds) + '.' + ('00' + milliseconds).slice(-3) +
+		']';
+		
+		return strTime;
+    },
+    getTrace: function(offset) {
+		var prefix;
+		
         if (!offset) offset = 0;
 
+		prefix = "";
+		if (showTimestamp) {
+			prefix += this.getTime();
+		}
         if (showLineNumbers) {
             try {
                 throw new Error();
@@ -48,16 +69,13 @@ module.exports = {
                     var lines = e.stack.split('\n');
                     var line = lines[3 + offset];
 
-                    console.log(colorBgBlack + colorBright + colorFgMagenta  + line + colorReset);
+                    // console.log(colorBgBlack + colorBright + colorFgMagenta  + line + colorReset);
                     if (line.toLowerCase().indexOf("c:\\th\\") > 0) linePart++;
-                    return "[" + line.split(':')[linePart] + "]: ";
-                } else {
-                    return "";
+                    prefix += "[" + line.split(':')[linePart] + "]";
                 }
             }
-        } else {
-            return "";
         }
+		return prefix + ": ";
     },
     error: function (msg, offset) {
         if (!offset) offset = 0;
