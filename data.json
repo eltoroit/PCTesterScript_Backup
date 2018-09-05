@@ -29,11 +29,10 @@
         "AppName__c": "Logout SFDX",
         "Command__c": "sfdx force:auth:logout --all --noprompt",
         "Enabled__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Logout SFDX\"",
-        "Expected__c": "Application runs with no errors",
+        "ErrorMessage__c": "Could not validate: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
         "ExtId__c": "a003F000001OUoiQAG",
-        "Message__c": "Opening Application: \"Logout SFDX\". Was this succesful?",
-        "Operation__c": "Open Application",
+        "Message__c": "Validating: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
+        "Operation__c": "Check Contains",
         "Order__c": 40
       },
       {
@@ -46,11 +45,10 @@
         "AppName__c": "Logout Heroku",
         "Command__c": "heroku logout",
         "Enabled__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Logout Heroku\"",
-        "Expected__c": "Application runs with no errors",
+        "ErrorMessage__c": "Could not validate: Logout Heroku (heroku logout)",
         "ExtId__c": "a003F000001OUoxQAG",
-        "Message__c": "Opening Application: \"Logout Heroku\". Was this succesful?",
-        "Operation__c": "Open Application",
+        "Message__c": "Validating: Logout Heroku (heroku logout)",
+        "Operation__c": "Check Contains",
         "Order__c": 41
       }
     ],
@@ -766,11 +764,10 @@
         "AppName__c": "Logout SFDX",
         "Command__c": "sfdx force:auth:logout --all --noprompt",
         "Enabled__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Logout SFDX\"",
-        "Expected__c": "Application runs with no errors",
+        "ErrorMessage__c": "Could not validate: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
         "ExtId__c": "a003F000001OUoiQAG",
-        "Message__c": "Opening Application: \"Logout SFDX\". Was this succesful?",
-        "Operation__c": "Open Application",
+        "Message__c": "Validating: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
+        "Operation__c": "Check Contains",
         "Order__c": 40
       },
       {
@@ -783,11 +780,10 @@
         "AppName__c": "Logout Heroku",
         "Command__c": "heroku logout",
         "Enabled__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Logout Heroku\"",
-        "Expected__c": "Application runs with no errors",
+        "ErrorMessage__c": "Could not validate: Logout Heroku (heroku logout)",
         "ExtId__c": "a003F000001OUoxQAG",
-        "Message__c": "Opening Application: \"Logout Heroku\". Was this succesful?",
-        "Operation__c": "Open Application",
+        "Message__c": "Validating: Logout Heroku (heroku logout)",
+        "Operation__c": "Check Contains",
         "Order__c": 41
       }
     ]
