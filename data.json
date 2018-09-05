@@ -11,29 +11,47 @@
     {
       "attributes": {
         "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a023F000002y7VKQAY"
+        "url": "/services/data/v42.0/sobjects/Event__c/a023F000002y8TYQAY"
       },
-      "Id": "a023F000002y7VKQAY",
-      "Name": "Test Bookmarks"
+      "Id": "a023F000002y8TYQAY",
+      "Name": "Logout Apps"
     }
   ],
   "actionsByEvent": {
-    "a023F000002y7VKQAY": [
+    "a023F000002y8TYQAY": [
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a003F000001OT0gQAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F000001OUoiQAG"
         },
-        "Id": "a003F000001OT0gQAG",
-        "Name": "ACT-0090",
-        "AppName__c": "Checking all bookmarks",
+        "Id": "a003F000001OUoiQAG",
+        "Name": "ACT-0101",
+        "AppName__c": "Logout SFDX",
+        "Command__c": "sfdx force:auth:logout --all --noprompt",
         "Enabled__c": true,
-        "ErrorMessage__c": "Could not validate: Checking all bookmarks",
-        "Expected__c": "Bookmarks are correct",
-        "ExtId__c": "a003F000001OT0gQAG",
-        "Message__c": "Validating: Checking all bookmarks",
-        "Operation__c": "Bookmark",
-        "Order__c": 39
+        "ErrorMessage__c": "Unable to open application: \"Logout SFDX\"",
+        "Expected__c": "Application runs with no errors",
+        "ExtId__c": "a003F000001OUoiQAG",
+        "Message__c": "Opening Application: \"Logout SFDX\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 40
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F000001OUoxQAG"
+        },
+        "Id": "a003F000001OUoxQAG",
+        "Name": "ACT-0104",
+        "AppName__c": "Logout Heroku",
+        "Command__c": "heroku logout",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Logout Heroku\"",
+        "Expected__c": "Application runs with no errors",
+        "ExtId__c": "a003F000001OUoxQAG",
+        "Message__c": "Opening Application: \"Logout Heroku\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 41
       }
     ],
     "a023F000002y60rQAA": [
@@ -737,6 +755,40 @@
         "Message__c": "Validating: Checking all bookmarks",
         "Operation__c": "Bookmark",
         "Order__c": 39
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F000001OUoiQAG"
+        },
+        "Id": "a003F000001OUoiQAG",
+        "Name": "ACT-0101",
+        "AppName__c": "Logout SFDX",
+        "Command__c": "sfdx force:auth:logout --all --noprompt",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Logout SFDX\"",
+        "Expected__c": "Application runs with no errors",
+        "ExtId__c": "a003F000001OUoiQAG",
+        "Message__c": "Opening Application: \"Logout SFDX\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 40
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F000001OUoxQAG"
+        },
+        "Id": "a003F000001OUoxQAG",
+        "Name": "ACT-0104",
+        "AppName__c": "Logout Heroku",
+        "Command__c": "heroku logout",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Logout Heroku\"",
+        "Expected__c": "Application runs with no errors",
+        "ExtId__c": "a003F000001OUoxQAG",
+        "Message__c": "Opening Application: \"Logout Heroku\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 41
       }
     ]
   }
