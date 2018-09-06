@@ -608,12 +608,10 @@ function executeInstruction() {
 		case "Write":
 		    // Force debug mode...
 		    if (instruction.Command__c == "=== === === AUTOMATED CHECKS === === ===") {
-				// if (executeManualChecks) {
-					log.error("Switching debug mode ON");
-					debug = false;
-					verbose = false;
-					log.setDebug(true);
-				// }
+				log.debug("Switching debug mode ON");
+				debug = false;
+				verbose = false;
+				log.setDebug(true);
 			}
 			log.info(instruction.Command__c);
 			nextInstruction();
