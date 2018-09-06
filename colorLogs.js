@@ -1,6 +1,6 @@
 "use strict";
 
-var showTimestamp = true;
+var showTimestamp = false;
 var showLineNumbers = false;
 
 let clearScreenCode = "\x1B[2J";
@@ -36,6 +36,10 @@ let colorBgCyan = "\x1b[46m";
 let colorBgWhite = "\x1b[47m";
 
 module.exports = {
+	setDebug: function(isDebug) {
+		showTimestamp = isDebug;
+		showLineNumbers = isDebug;
+	},
 	getTime: function() {
 		var date = new Date();
         var hour = date.getHours();
@@ -75,7 +79,7 @@ module.exports = {
                 }
             }
         }
-		return prefix + ": ";
+		return prefix + (prefix.length > 1 ? ": " : "");
     },
     error: function (msg, offset) {
         if (!offset) offset = 0;

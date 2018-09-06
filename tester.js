@@ -29,7 +29,7 @@ if (testType == "PROD") {
 } else if (testType == "TEST") {
 	debug = true;
 	verbose = true;
-	resultsTofile = false;
+	resultsTofile = true;
 	checkUrlExists = true;
 	executeManualChecks = false;
 }
@@ -606,15 +606,15 @@ function executeInstruction() {
 			}
 			break;
 		case "Write":
-			/*
+		    // Force debug mode...
 		    if (instruction.Command__c == "=== === === AUTOMATED CHECKS === === ===") {
-				if (executeManualChecks) {
+				// if (executeManualChecks) {
 					log.error("Switching debug mode ON");
-					debug = true;
-					verbose = true;
-				}
+					debug = false;
+					verbose = false;
+					log.setDebug(true);
+				// }
 			}
-			*/
 			log.info(instruction.Command__c);
 			nextInstruction();
 			break;
