@@ -136,7 +136,7 @@
         "Id": "a003F000001OT0ZQAW",
         "Name": "ACT-0083",
         "AppName__c": "Desktop: Data Loader",
-        "Command__c": "C:\\Users\\Admin\\Desktop\\Dataloader.lnk",
+        "Command__c": "C:\\Users\\Admin\\Desktop\\Data Loader.lnk",
         "Enabled__c": true,
         "ErrorMessage__c": "Unable to open application: \"Desktop: Data Loader\"",
         "Expected__c": "Application was opened from shortcut",
