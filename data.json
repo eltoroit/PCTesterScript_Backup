@@ -399,7 +399,7 @@
         "Command__c": "code --version",
         "Enabled__c": true,
         "ErrorMessage__c": "Could not validate: VS Code Version (code --version)",
-        "Expected__c": "1.25.1",
+        "Expected__c": "1.26.1",
         "ExtId__c": "a003F000001OT0aQAG",
         "Message__c": "Validating: VS Code Version (code --version)",
         "Operation__c": "Check Contains",
