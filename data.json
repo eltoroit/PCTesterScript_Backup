@@ -373,24 +373,6 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a003F000001OT0AQAW"
-        },
-        "Id": "a003F000001OT0AQAW",
-        "Name": "ACT-0058",
-        "AppName__c": "SFDX Update",
-        "Command__c": "sfdx update",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Could not validate: SFDX Update (sfdx update)",
-        "Expected__c": "sfdx-cli: Updating CLI... already on latest version",
-        "ExtId__c": "a003F000001OT0AQAW",
-        "Fix__c": "Please install SFDX from here: https://sfdc.co/sfdx_cli_win64",
-        "Message__c": "Validating: SFDX Update (sfdx update)",
-        "Operation__c": "Check Contains",
-        "Order__c": 20
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a003F000001OT0aQAG"
         },
         "Id": "a003F000001OT0aQAG",
