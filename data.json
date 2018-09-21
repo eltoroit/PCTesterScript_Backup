@@ -33,6 +33,20 @@
       {
         "attributes": {
           "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D000001QwiIQAS"
+        },
+        "Id": "a001D000001QwiIQAS",
+        "Name": "ACT-0032",
+        "AppName__c": "AUTOMATED TESTS",
+        "Command__c": "=== === === AUTOMATED CHECKS === === ===",
+        "Enabled__c": true,
+        "ExtId__c": "a001D000001QwiIQAS",
+        "Operation__c": "Write",
+        "Order__c": 12
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a001D000001QwiPQAS"
         },
         "Id": "a001D000001QwiPQAS",
