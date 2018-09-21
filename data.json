@@ -42,6 +42,81 @@
       {
         "attributes": {
           "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D000001QwhrQAC"
+        },
+        "Id": "a001D000001QwhrQAC",
+        "Name": "ACT-0005",
+        "AppName__c": "Clear Screen",
+        "Enabled__c": true,
+        "ExtId__c": "a001D000001QwhrQAC",
+        "Operation__c": "Clear",
+        "Order__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D000001Qwi4QAC"
+        },
+        "Id": "a001D000001Qwi4QAC",
+        "Name": "ACT-0018",
+        "AppName__c": "Say Hi",
+        "Command__c": "Application Tester built by Andres Perez (ELTORO.IT)",
+        "Enabled__c": true,
+        "ExtId__c": "a001D000001Qwi4QAC",
+        "Operation__c": "Write",
+        "Order__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D000001Qwi9QAC"
+        },
+        "Id": "a001D000001Qwi9QAC",
+        "Name": "ACT-0023",
+        "AppName__c": "MANUAL CHECKS",
+        "Command__c": "=== === === MANUAL CHECKS === === ===",
+        "Enabled__c": true,
+        "ExtId__c": "a001D000001Qwi9QAC",
+        "Operation__c": "Write",
+        "Order__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D000001Qwi0QAC"
+        },
+        "Id": "a001D000001Qwi0QAC",
+        "Name": "ACT-0014",
+        "AppName__c": "Firefox + Salesforce is homepage",
+        "Command__c": "C:\\Users\\Public\\Desktop\\Firefox.lnk",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Firefox + Salesforce is homepage\"",
+        "Expected__c": "Application was opened from shortcut",
+        "ExtId__c": "a001D000001Qwi0QAC",
+        "Message__c": "Opening Application: \"Firefox + Salesforce is homepage\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 8
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D000001Qwi2QAC"
+        },
+        "Id": "a001D000001Qwi2QAC",
+        "Name": "ACT-0016",
+        "AppName__c": "Chrome + Salesforce is homepage",
+        "Command__c": "\"C:\\Users\\Public\\Desktop\\Google Chrome.lnk\"",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Chrome + Salesforce is homepage\"",
+        "Expected__c": "Application was opened from shortcut",
+        "ExtId__c": "a001D000001Qwi2QAC",
+        "Message__c": "Opening Application: \"Chrome + Salesforce is homepage\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 9
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a001D000001QwiIQAS"
         },
         "Id": "a001D000001QwiIQAS",
