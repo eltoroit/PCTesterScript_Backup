@@ -47,6 +47,24 @@
       {
         "attributes": {
           "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D000001QwhtQAC"
+        },
+        "Id": "a001D000001QwhtQAC",
+        "Name": "ACT-0007",
+        "AppName__c": "SFDX Update",
+        "Command__c": "sfdx update",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: SFDX Update (sfdx update)",
+        "Expected__c": "sfdx-cli: Updating CLI... already on latest version",
+        "ExtId__c": "a001D000001QwhtQAC",
+        "Fix__c": "Please install SFDX from here: https://sfdc.co/sfdx_cli_win64",
+        "Message__c": "Validating: SFDX Update (sfdx update)",
+        "Operation__c": "Check Contains",
+        "Order__c": 20
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a001D000001QwiPQAS"
         },
         "Id": "a001D000001QwiPQAS",
@@ -78,6 +96,20 @@
       }
     ],
     "a021D000000h3uOQAQ": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D000001QwiIQAS"
+        },
+        "Id": "a001D000001QwiIQAS",
+        "Name": "ACT-0032",
+        "AppName__c": "AUTOMATED TESTS",
+        "Command__c": "=== === === AUTOMATED CHECKS === === ===",
+        "Enabled__c": true,
+        "ExtId__c": "a001D000001QwiIQAS",
+        "Operation__c": "Write",
+        "Order__c": 12
+      },
       {
         "attributes": {
           "type": "Action__c",
