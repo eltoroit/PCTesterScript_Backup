@@ -606,8 +606,8 @@ function executeInstruction() {
 			}
 			break;
 		case "Write":
-		    // Force debug mode...
-		    if (instruction.Command__c == "=== === === AUTOMATED CHECKS === === ===") {
+			// Force debug mode...
+			if (instruction.Command__c == "=== === === AUTOMATED CHECKS === === ===") {
 				log.debug("Switching debug mode ON");
 				debug = false;
 				verbose = false;
@@ -617,7 +617,7 @@ function executeInstruction() {
 			nextInstruction();
 			break;
 		case "Done":
-		    log.setDebug(false);
+			log.setDebug(false);
 			var filePath = "Errors-" + (new Date().getTime()) + ".json";
 			try {
 				fs.unlinkSync(filePath);
@@ -682,8 +682,9 @@ function menuChooseEvent(data) {
 	forEver();
 }
 
+const data = loadFileJson('./data.json');
 log.clearScreen();
-log.promptMsg('Version: 2018-09-05 @ 08:36:00 PM EST');
+log.promptMsg(`Version: ${data.now}`);
 if (doesFileExist(bmPretendPath)) {
 	log.error("BOOKMARKS ARE NOT PROCESSED FROM THE BROWSERS!!!");
 	log.error("Bookmarks are procesed from file [" + bmPretendPath + "]");
@@ -704,4 +705,4 @@ if (doesFileExist(bmCheckPath)) {
 	throw new Error(msg);
 }
 
-menuChooseEvent(loadFileJson('./data.json'));
+menuChooseEvent(data);
