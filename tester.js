@@ -274,7 +274,7 @@ function findBookmarks_Firefox() {
 
 		lineReader.on('line', function (line) {
 			if (line == "") {
-				if (record.bTitle == "Bookmarks Toolbar") {
+				if (record.bTitle == "toolbar") {
 					record.bTitle = "BAR";
 				}
 				if (tmp.TitlesByRow[record.id]) {
