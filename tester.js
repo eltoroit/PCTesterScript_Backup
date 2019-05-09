@@ -340,6 +340,11 @@ function findBookmarks_Firefox() {
 
 					nodeNew.Title = path;
 
+					// Put existing URLs
+					nodeNew.urlChrome = nodeTemp.Chrome;
+					nodeNew.urlFirefox = nodeTemp.FF;
+					nodeNew.urlRequired = (nodeNew.urlChrome === nodeNew.urlFirefox) ? nodeNew.urlChrome : "NO_IDEA";
+
 					// Check if the url is defined in each browser
 					nodeNew.hasFF = (nodeTemp.FF) ? true : false;
 					nodeNew.hasChrome = (nodeTemp.Chrome) ? true : false;
