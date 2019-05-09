@@ -3,6 +3,7 @@
         "Title": "[BAR][Login | Salesforce]",
         "hasFF": false,
         "hasChrome": true,
+		"Url": "https://login.salesforce.com/",
         "checkFF": true,
         "checkChrome": true
     },
