@@ -228,8 +228,8 @@ function findBookmarks_Chrome() {
 	var data = loadFileJson(bmChromePath);
 	findBookmarks_Chrome_Children(
 		data["roots"]["bookmark_bar"], "");
-	if (debug) log.debug("Chrome Bookmarks (1): ");
-	if (debug) log.debug(JSON.stringify(bm, null, 4));
+	if (verbose) log.debug("Chrome Bookmarks (1): ");
+	if (verbose) log.debug(JSON.stringify(bm, null, 4));
 }
 function findBookmarks_Firefox() {
 	if (verbose) log.info("Finding Firefox bookmarks");
@@ -259,7 +259,7 @@ function findBookmarks_Firefox() {
 	cmd += '"' + sqlitepath + '" ';
 	cmd += '"SELECT b.id, b.parent, b.title as bTitle, p.title as pTitle, p.url FROM moz_bookmarks AS b LEFT JOIN moz_places AS p ON b.fk = p.id"';
 	cmd += '> ./bmFF_LINE.txt';
-	if (debug) log.debug("Execting command: " + cmd);
+	if (verbose) log.debug("Execting command: " + cmd);
 
 	var process = exec(cmd, function (error, stdout, stderr) {
 		if (error) reportErrorMessage(error);
@@ -306,8 +306,8 @@ function findBookmarks_Firefox() {
 		});
 
 		lineReader.on('close', function () {
-			if (debug) log.debug("Firefox Bookmarks... (2): ");
-			if (debug) log.debug(JSON.stringify(tmp, null, 4));
+			if (verbose) log.debug("Firefox Bookmarks... (2): ");
+			if (verbose) log.debug(JSON.stringify(tmp, null, 4));
 
 			// Merge the data
 			for (var path in tmp.TitlesByName) {
@@ -327,8 +327,8 @@ function findBookmarks_Firefox() {
 				}
 			}
 
-			if (debug) log.debug("Merged Bookmarks... (3): ");
-			if (debug) log.debug(JSON.stringify(bm, null, 4));
+			if (verbose) log.debug("Merged Bookmarks... (3): ");
+			if (verbose) log.debug(JSON.stringify(bm, null, 4));
 
 			// Check bm.Bar
 			var bmBarNew = [];
