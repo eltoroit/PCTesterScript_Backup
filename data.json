@@ -1,5 +1,5 @@
 {
-  "now": "2019-05-09T17:02:18.319Z",
+  "now": "2019-05-09T17:05:10.479Z",
   "events": [
     {
       "attributes": {
@@ -330,7 +330,7 @@
         "Command__c": "code --version",
         "Enabled__c": true,
         "ErrorMessage__c": "Could not validate: VS Code Version (code --version)",
-        "Expected__c": "1.26.1",
+        "Expected__c": "1.33.1",
         "Message__c": "Validating: VS Code Version (code --version)",
         "Operation__c": "Check Contains",
         "Order__c": 22,
