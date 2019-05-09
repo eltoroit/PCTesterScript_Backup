@@ -343,7 +343,7 @@ function findBookmarks_Firefox() {
 					// Put existing URLs
 					nodeNew.urlChrome = nodeTemp.Chrome;
 					nodeNew.urlFirefox = nodeTemp.FF;
-					nodeNew.url = (nodeNew.urlChrome === nodeNew.urlFirefox) ? nodeNew.urlChrome : "NO_IDEA";
+					nodeNew.urlExpected = (nodeNew.urlChrome === nodeNew.urlFirefox) ? nodeNew.urlChrome : "NO_IDEA";
 
 					// Check if the url is defined in each browser
 					nodeNew.hasFF = (nodeTemp.FF) ? true : false;
@@ -396,7 +396,7 @@ function validateBookmarks_Process() {
 		var hasErrors = false;
 		var urlFF = bm.FF[bmCheck.Title];
 		var urlChrome = bm.Chrome[bmCheck.Title];
-		var expectedUrl = bmCheck.Url;
+		var expectedUrl = bmCheck.urlExpected;
 
 		log.info("Bookmark: " + bmCheck.Title);
 
