@@ -212,7 +212,6 @@ function findBookmarks_Chrome_Children(node, path) {
 		if (!barNode) barNode = {};
 		barNode.Chrome = node.url;
 		bm.Bar[thisPath] = barNode;
-
 		bm.Chrome[thisPath] = node.url;
 	}
 	if (node.children) {
@@ -327,7 +326,7 @@ function findBookmarks_Firefox() {
 				}
 			}
 
-			if (verbose) log.debug("Merged Bookmarks... (3): ");
+			if (verbose) log.debug("Merged Bookmarks (A)... (3): ");
 			if (verbose) log.debug(JSON.stringify(bm, null, 4));
 
 			// Check bm.Bar
@@ -353,6 +352,9 @@ function findBookmarks_Firefox() {
 				}
 			}
 			bm.Bar = bmBarNew;
+
+			if (verbose) log.debug("Merged Bookmarks (B)... (4): ");
+			if (verbose) log.debug(JSON.stringify(bm, null, 4));
 
 			// Write to files
 			fs.writeFile("./bmDump.txt", JSON.stringify(bm.Bar, null, 4), function (err) {
