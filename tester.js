@@ -13,13 +13,15 @@ const https = require('https');
 const log = require('./colorLogs.js');
 
 // Configure execution...
+var testType = "TEST";
+var timerDelay = 250;
+
+// Depending on execution (TEST | PROD)
 var debug = false;
 var verbose = false;
-var timerDelay = 250;
 var checkUrlExists = true;
 var resultsTofile = true;
 var executeManualChecks = false;
-var testType = "TEST";
 if (testType == "PROD") {
 	debug = false;
 	verbose = false;
@@ -179,6 +181,7 @@ function checkPath(instruction) {
 	}
 	executeCommand(instruction);
 }
+
 // Bookmarks -- START
 function openUrl(urlToCheck, callback) {
 	if (checkUrlExists) {
@@ -439,6 +442,7 @@ function validateBookmarks(instruction) {
 	}
 }
 // Bookmarks -- END
+
 function jsonFile_Edit(instruction) {
 	if (verbose) log.info("Editing JSON File: " + instruction.AppName__c);
 
@@ -609,9 +613,9 @@ function executeInstruction() {
 			// Force debug mode...
 			if (instruction.Command__c == "=== === === AUTOMATED CHECKS === === ===") {
 				log.debug("Switching debug mode ON");
-				debug = false;
-				verbose = false;
-				log.setDebug(true);
+				// debug = false;
+				// verbose = false;
+				// log.setDebug(true);
 			}
 			log.info(instruction.Command__c);
 			nextInstruction();
@@ -645,6 +649,7 @@ function executeInstruction() {
 function menuChooseEvent(data) {
 	var events = data.events;
 
+	log.setDebug(debug);
 	log.info("Application Tester built by Andres Perez (ELTORO.IT) to help validate the computer's setup");
 	log.info("");
 	log.info("Please select the test you want to run");
