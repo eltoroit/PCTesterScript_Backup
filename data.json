@@ -1,5 +1,5 @@
 {
-  "now": "2019-05-09T10:09:46.268Z",
+  "now": "2019-05-09T15:42:15.005Z",
   "events": [
     {
       "attributes": {
@@ -36,7 +36,7 @@
         "ExtId__c": "a001F000000sUCmQAM",
         "Message__c": "Validating: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
         "Operation__c": "Check Contains",
-        "Order__c": 41,
+        "Order__c": 44,
         "Count_Events__c": 1
       },
       {
@@ -53,7 +53,7 @@
         "ExtId__c": "a001F000000sUCnQAM",
         "Message__c": "Validating: Logout Heroku (heroku logout)",
         "Operation__c": "Check Contains",
-        "Order__c": 42,
+        "Order__c": 45,
         "Count_Events__c": 1
       }
     ],
@@ -231,24 +231,6 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a001F000000sUD0QAM"
-        },
-        "Id": "a001F000000sUD0QAM",
-        "Name": "ACT-0023",
-        "AppName__c": "Chrome: Plugin",
-        "Command__c": "Chrome Plugin to split screen",
-        "Enabled__c": true,
-        "ErrorMessage__c": "User could not validate: Chrome Plugin to split screen",
-        "Expected__c": "User validated: Chrome Plugin to split screen",
-        "ExtId__c": "a001F000000sUD0QAM",
-        "Message__c": "User validated: Chrome Plugin to split screen",
-        "Operation__c": "Manual",
-        "Order__c": 11,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a001F000000sUCqQAM"
         },
         "Id": "a001F000000sUCqQAM",
@@ -325,34 +307,15 @@
         "Id": "a001F000000sUChQAM",
         "Name": "ACT-0004",
         "AppName__c": "SoapUI",
-        "Command__c": "C:\\Program Files\\SmartBear\\SoapUI-5.4.0-EB\\bin\\SoapUI-5.4.0-EB.exe",
+        "Command__c": "C:\\Program Files (x86)\\SmartBear\\SoapUI-5.5.0\\bin\\SoapUI-5.5.0.exe",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "SoapUI-5.4.0-EB.exe",
+        "Expected__c": "SoapUI-5.5.0.exe",
         "ExtId__c": "a001F000000sUChQAM",
         "Fix__c": "SoapUI is missing, install from here: http://www.softpedia.com/get/Internet/Other-Internet-Related/soapUI.shtml",
-        "Message__c": "Checking path: C:\\Program Files\\SmartBear\\SoapUI-5.4.0-EB\\bin\\SoapUI-5.4.0-EB.exe",
+        "Message__c": "Checking path: C:\\Program Files (x86)\\SmartBear\\SoapUI-5.5.0\\bin\\SoapUI-5.5.0.exe",
         "Operation__c": "Check Path",
         "Order__c": 16,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a001F000000sUCzQAM"
-        },
-        "Id": "a001F000000sUCzQAM",
-        "Name": "ACT-0022",
-        "AppName__c": "Chrome: Plugin Resize",
-        "Command__c": "c:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "package.json",
-        "ExtId__c": "a001F000000sUCzQAM",
-        "Fix__c": "Please install plugin from here: https://chrome.google.com/webstore/detail/tab-resize-split-screen-l/bkpenclhmiealbebdopglffmfdiilejc",
-        "Message__c": "Checking path: c:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
-        "Operation__c": "Check Path",
-        "Order__c": 17,
         "Count_Events__c": 1
       },
       {
@@ -399,14 +362,14 @@
         },
         "Id": "a001F000000sUCdQAM",
         "Name": "ACT-0000",
-        "AppName__c": "VS Code Plugin (1/7)",
-        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-43*",
+        "AppName__c": "VS Code Plugin (1)",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-45.13.0*",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "salesforce.salesforcedx-vscode-43",
+        "Expected__c": "salesforce.salesforcedx-vscode-45.13.0",
         "ExtId__c": "a001F000000sUCdQAM",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-43*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-45.13.0*",
         "Operation__c": "Check Path",
         "Order__c": 23,
         "Count_Events__c": 1
@@ -418,14 +381,14 @@
         },
         "Id": "a001F000000sUCwQAM",
         "Name": "ACT-0019",
-        "AppName__c": "VS Code Plugin (2/7)",
-        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-43*",
+        "AppName__c": "VS Code Plugin (2)",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-45.13.0*",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "salesforce.salesforcedx-vscode-apex-43",
+        "Expected__c": "salesforce.salesforcedx-vscode-apex-45.13.0",
         "ExtId__c": "a001F000000sUCwQAM",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-43*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-45.13.0*",
         "Operation__c": "Check Path",
         "Order__c": 24,
         "Count_Events__c": 1
@@ -437,14 +400,14 @@
         },
         "Id": "a001F000000sUCrQAM",
         "Name": "ACT-0014",
-        "AppName__c": "VS Code Plugin (3/7)",
-        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-43*",
+        "AppName__c": "VS Code Plugin (3)",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-45.13.0*",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "salesforce.salesforcedx-vscode-apex-debugger-43",
+        "Expected__c": "salesforce.salesforcedx-vscode-apex-debugger-45.13.0",
         "ExtId__c": "a001F000000sUCrQAM",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-43*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-45.13.0*",
         "Operation__c": "Check Path",
         "Order__c": 25,
         "Count_Events__c": 1
@@ -456,14 +419,14 @@
         },
         "Id": "a001F000000sUCyQAM",
         "Name": "ACT-0021",
-        "AppName__c": "VS Code Plugin (4/7)",
-        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-43*",
+        "AppName__c": "VS Code Plugin (4)",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-45.13.0*",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "salesforce.salesforcedx-vscode-core-43",
+        "Expected__c": "salesforce.salesforcedx-vscode-core-45.13.0",
         "ExtId__c": "a001F000000sUCyQAM",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-43*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-45.13.0*",
         "Operation__c": "Check Path",
         "Order__c": 26,
         "Count_Events__c": 1
@@ -475,14 +438,14 @@
         },
         "Id": "a001F000000sUCsQAM",
         "Name": "ACT-0015",
-        "AppName__c": "VS Code Plugin (5/7)",
-        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-43*",
+        "AppName__c": "VS Code Plugin (5)",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-45.13.0*",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "salesforce.salesforcedx-vscode-lightning-43",
+        "Expected__c": "salesforce.salesforcedx-vscode-lightning-45.13.0",
         "ExtId__c": "a001F000000sUCsQAM",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-43*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-45.13.0*",
         "Operation__c": "Check Path",
         "Order__c": 27,
         "Count_Events__c": 1
@@ -494,14 +457,14 @@
         },
         "Id": "a001F000000sUD7QAM",
         "Name": "ACT-0030",
-        "AppName__c": "VS Code Plugin (6/7)",
-        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-43*",
+        "AppName__c": "VS Code Plugin (6)",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-45.13*",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "salesforce.salesforcedx-vscode-visualforce-43",
+        "Expected__c": "salesforce.salesforcedx-vscode-visualforce-45.13",
         "ExtId__c": "a001F000000sUD7QAM",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-43*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-45.13*",
         "Operation__c": "Check Path",
         "Order__c": 28,
         "Count_Events__c": 1
@@ -513,14 +476,14 @@
         },
         "Id": "a001F000000sUCiQAM",
         "Name": "ACT-0005",
-        "AppName__c": "VS Code Plugin (7/7)",
-        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-43*",
+        "AppName__c": "VS Code Plugin (7)",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-45.13.0*",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "salesforce.salesforcedx-vscode-apex-replay-debugger-43",
+        "Expected__c": "salesforce.salesforcedx-vscode-apex-replay-debugger-45.13.0",
         "ExtId__c": "a001F000000sUCiQAM",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-43*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-45.13.0*",
         "Operation__c": "Check Path",
         "Order__c": 29,
         "Count_Events__c": 1
@@ -539,7 +502,7 @@
         "ExtId__c": "a001F000000sUDFQA2",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
         "Operation__c": "JSON File - Edit",
-        "Order__c": 30,
+        "Order__c": 33,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -575,7 +538,7 @@
         "ExtId__c": "a001F000000sUCpQAM",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
         "Operation__c": "JSON File - Edit",
-        "Order__c": 31,
+        "Order__c": 34,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -608,12 +571,12 @@
         "Command__c": "git --version",
         "Enabled__c": true,
         "ErrorMessage__c": "Could not validate: Git 2.18 (git --version)",
-        "Expected__c": "git version 2.18",
+        "Expected__c": "git version 2.21",
         "ExtId__c": "a001F000000sUDCQA2",
         "Fix__c": "Download from here: https://git-scm.com/download/win",
         "Message__c": "Validating: Git 2.18 (git --version)",
         "Operation__c": "Check Contains",
-        "Order__c": 32,
+        "Order__c": 35,
         "Count_Events__c": 1
       },
       {
@@ -630,7 +593,7 @@
         "ExtId__c": "a001F000000sUD9QAM",
         "Message__c": "Validating: Git config email (git config --global user.email \"you@example.com\")",
         "Operation__c": "Check Contains",
-        "Order__c": 33,
+        "Order__c": 36,
         "Count_Events__c": 1
       },
       {
@@ -647,7 +610,7 @@
         "ExtId__c": "a001F000000sUD1QAM",
         "Message__c": "Validating: Git config name (git config --global user.name \"Your Name\")",
         "Operation__c": "Check Contains",
-        "Order__c": 34,
+        "Order__c": 37,
         "Count_Events__c": 1
       },
       {
@@ -661,11 +624,11 @@
         "Command__c": "\"C:\\Program Files\\7-Zip\\7z.exe\" -version",
         "Enabled__c": true,
         "ErrorMessage__c": "Could not validate: 7-Zip (\"C:\\Program Files\\7-Zip\\7z.exe\" -version)",
-        "Expected__c": "7-Zip 18.01 (x64)",
+        "Expected__c": "7-Zip 18.06 (x64)",
         "ExtId__c": "a001F000000sUD5QAM",
         "Message__c": "Validating: 7-Zip (\"C:\\Program Files\\7-Zip\\7z.exe\" -version)",
         "Operation__c": "Check Contains",
-        "Order__c": 37,
+        "Order__c": 40,
         "Count_Events__c": 1
       },
       {
@@ -679,11 +642,11 @@
         "Command__c": "node --version",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "v9.6.1",
+        "Expected__c": "v10.15.3",
         "ExtId__c": "a001F000000sUDDQA2",
         "Message__c": "Checking exact: node --version",
         "Operation__c": "Check Exact",
-        "Order__c": 38,
+        "Order__c": 41,
         "Count_Events__c": 1
       },
       {
@@ -700,7 +663,7 @@
         "ExtId__c": "a001F000000sUCjQAM",
         "Message__c": "Validating: Checking all bookmarks",
         "Operation__c": "Bookmark",
-        "Order__c": 40,
+        "Order__c": 43,
         "Count_Events__c": 1
       }
     ]
