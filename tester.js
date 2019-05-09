@@ -227,8 +227,8 @@ function findBookmarks_Chrome() {
 	var data = loadFileJson(bmChromePath);
 	findBookmarks_Chrome_Children(
 		data["roots"]["bookmark_bar"], "");
-	if (verbose) log.debug("Chrome Bookmarks (1): ");
-	if (verbose) log.debug(JSON.stringify(bm, null, 4));
+	// if (verbose) log.debug("Chrome Bookmarks (1): ");
+	// if (verbose) log.debug(JSON.stringify(bm, null, 4));
 }
 function findBookmarks_Firefox() {
 	if (verbose) log.info("Finding Firefox bookmarks");
@@ -305,8 +305,8 @@ function findBookmarks_Firefox() {
 		});
 
 		lineReader.on('close', function () {
-			if (verbose) log.debug("Firefox Bookmarks... (2): ");
-			if (verbose) log.debug(JSON.stringify(tmp, null, 4));
+			// if (verbose) log.debug("Firefox Bookmarks... (2): ");
+			// if (verbose) log.debug(JSON.stringify(tmp, null, 4));
 
 			// Merge the data
 			for (var path in tmp.TitlesByName) {
@@ -326,19 +326,22 @@ function findBookmarks_Firefox() {
 				}
 			}
 
-			if (verbose) log.debug("Merged Bookmarks (A)... (3): ");
-			if (verbose) log.debug(JSON.stringify(bm, null, 4));
+			// if (verbose) log.debug("Merged Bookmarks (A)... (3): ");
+			// if (verbose) log.debug(JSON.stringify(bm, null, 4));
 
 			// Check bm.Bar
 			var bmBarNew = [];
+			var bmCounter = 0;
 			var bmBarTemp = bm.Bar;
 
 			for (var path in bmBarTemp) {
 				if (bmBarTemp.hasOwnProperty(path)) {
 					var nodeNew = {};
 					var nodeTemp = bmBarTemp[path];
+					bmCounter++;
 
-					nodeNew.Title = path;
+					nodeNew.id = bmCounter;
+					nodeNew.title = path;
 
 					// Put existing URLs
 					nodeNew.urlChrome = nodeTemp.Chrome;
@@ -358,8 +361,8 @@ function findBookmarks_Firefox() {
 			}
 			bm.Bar = bmBarNew;
 
-			if (verbose) log.debug("Merged Bookmarks (B)... (4): ");
-			if (verbose) log.debug(JSON.stringify(bm, null, 4));
+			// if (verbose) log.debug("Merged Bookmarks (B)... (4): ");
+			// if (verbose) log.debug(JSON.stringify(bm, null, 4));
 
 			// Write to files
 			fs.writeFile("./bmDump.txt", JSON.stringify(bm.Bar, null, 4), function (err) {
@@ -394,17 +397,17 @@ function validateBookmarks_Process() {
 	bmChecks.forEach(function (bmCheck) {
 
 		var hasErrors = false;
-		var urlFF = bm.FF[bmCheck.Title];
-		var urlChrome = bm.Chrome[bmCheck.Title];
+		var urlFF = bm.FF[bmCheck.title];
+		var urlChrome = bm.Chrome[bmCheck.title];
 		var expectedUrl = bmCheck.urlExpected;
 
-		log.info("Bookmark: " + bmCheck.Title);
+		log.info("Bookmark: " + bmCheck.title);
 
 		if (bmCheck.checkFF && bmCheck.checkChrome) {
 			if ((urlFF != urlChrome) && urlFF && urlChrome) {
 				errorCount++;
 				hasErrors = true;
-				var msg = "Bookmark error (1). Urls are different for Firefox and Chrome. Title *" + bmCheck.Title + "*,  Firefox [" + urlFF + "], Chrome [" + urlChrome + "]";
+				var msg = "Bookmark error (1). Urls are different for Firefox and Chrome. Title *" + bmCheck.title + "*,  Firefox [" + urlFF + "], Chrome [" + urlChrome + "]";
 				reportErrorMessage(msg);
 			}
 		}
@@ -413,7 +416,7 @@ function validateBookmarks_Process() {
 			if (expectedUrl !== urlFF) {
 				errorCount++;
 				hasErrors = true;
-				var msg = "Bookmark error (2). Url in Firefox is not the expected value. Title *" + bmCheck.Title + "*,  Expected [" + expectedUrl + "], found [" + urlFF + "]";
+				var msg = "Bookmark error (2). Url in Firefox is not the expected value. Title *" + bmCheck.title + "*,  Expected [" + expectedUrl + "], found [" + urlFF + "]";
 				reportErrorMessage(msg);
 			}
 		}
@@ -422,7 +425,7 @@ function validateBookmarks_Process() {
 			if (expectedUrl !== urlChrome) {
 				errorCount++;
 				hasErrors = true;
-				var msg = "Bookmark error (3). Url in Chrome is not the expected value. Title *" + bmCheck.Title + "*,  Expected [" + expectedUrl + "], found [" + urlChrome + "]";
+				var msg = "Bookmark error (3). Url in Chrome is not the expected value. Title *" + bmCheck.title + "*,  Expected [" + expectedUrl + "], found [" + urlChrome + "]";
 				reportErrorMessage(msg);
 			}
 		}
@@ -432,10 +435,10 @@ function validateBookmarks_Process() {
 				if (!isSuccess) {
 					errorCount++;
 					hasErrors = true;
-					var msg = "Bookmark error (4). Url can't be accessed. Title *" + bmCheck.Title + "*,  Expected [" + expectedUrl + "]";
+					var msg = "Bookmark error (4). Url can't be accessed. Title *" + bmCheck.title + "*,  Expected [" + expectedUrl + "]";
 					reportErrorMessage(msg);
 				} else {
-					if (verbose) log.success("VALID: Bookmark *" + bmCheck.Title + "*, URL [" + expectedUrl + "]");
+					if (verbose) log.success("VALID: Bookmark *" + bmCheck.title + "*, URL [" + expectedUrl + "]");
 				}
 			});
 		}
