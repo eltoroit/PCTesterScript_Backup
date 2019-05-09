@@ -343,7 +343,7 @@ function findBookmarks_Firefox() {
 					// Put existing URLs
 					nodeNew.urlChrome = nodeTemp.Chrome;
 					nodeNew.urlFirefox = nodeTemp.FF;
-					nodeNew.urlRequired = (nodeNew.urlChrome === nodeNew.urlFirefox) ? nodeNew.urlChrome : "NO_IDEA";
+					nodeNew.url = (nodeNew.urlChrome === nodeNew.urlFirefox) ? nodeNew.urlChrome : "NO_IDEA";
 
 					// Check if the url is defined in each browser
 					nodeNew.hasFF = (nodeTemp.FF) ? true : false;
