@@ -613,9 +613,9 @@ function executeInstruction() {
 			// Force debug mode...
 			if (instruction.Command__c == "=== === === AUTOMATED CHECKS === === ===") {
 				log.debug("Switching debug mode ON");
-				// debug = false;
-				// verbose = false;
-				// log.setDebug(true);
+				debug = true;
+				verbose = true;
+				log.setDebug(true);
 			}
 			log.info(instruction.Command__c);
 			nextInstruction();
