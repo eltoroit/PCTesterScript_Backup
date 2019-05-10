@@ -410,7 +410,7 @@ function validateBookmarks_Process() {
 			if ((urlFF != urlChrome) && urlFF && urlChrome) {
 				errorCount++;
 				hasErrors = true;
-				var msg = "Bookmark error (1). Urls are different for Firefox and Chrome. Title *" + bmCheck.title + "*,  Firefox [" + urlFF + "], Chrome [" + urlChrome + "]";
+				var msg = "Bookmark error (1). Urls are different for Firefox and Chrome. Title (" + bmCheck.id + ") *" + bmCheck.title + "*,  Firefox [" + urlFF + "], Chrome [" + urlChrome + "]";
 				reportErrorMessage(msg);
 			}
 		}
@@ -419,7 +419,7 @@ function validateBookmarks_Process() {
 			if (expectedUrl !== urlFF) {
 				errorCount++;
 				hasErrors = true;
-				var msg = "Bookmark error (2). Url in Firefox is not the expected value. Title *" + bmCheck.title + "*,  Expected [" + expectedUrl + "], found [" + urlFF + "]";
+				var msg = "Bookmark error (2). Url in Firefox is not the expected value. Title (" + bmCheck.id + ") *" + bmCheck.title + "*,  Expected [" + expectedUrl + "], found [" + urlFF + "]";
 				reportErrorMessage(msg);
 			}
 		}
@@ -428,7 +428,7 @@ function validateBookmarks_Process() {
 			if (expectedUrl !== urlChrome) {
 				errorCount++;
 				hasErrors = true;
-				var msg = "Bookmark error (3). Url in Chrome is not the expected value. Title *" + bmCheck.title + "*,  Expected [" + expectedUrl + "], found [" + urlChrome + "]";
+				var msg = "Bookmark error (3). Url in Chrome is not the expected value. Title (" + bmCheck.id + ") *" + bmCheck.title + "*,  Expected [" + expectedUrl + "], found [" + urlChrome + "]";
 				reportErrorMessage(msg);
 			}
 		}
@@ -438,7 +438,7 @@ function validateBookmarks_Process() {
 				if (!isSuccess) {
 					errorCount++;
 					hasErrors = true;
-					var msg = "Bookmark error (4). Url can't be accessed. Title *" + bmCheck.title + "*,  Expected [" + expectedUrl + "]";
+					var msg = "Bookmark error (4). Url can't be accessed. Title (" + bmCheck.id + ") *" + bmCheck.title + "*,  Expected [" + expectedUrl + "]";
 					reportErrorMessage(msg);
 				} else {
 					if (verbose) log.success("VALID: Bookmark *" + bmCheck.title + "*, URL [" + expectedUrl + "]");
