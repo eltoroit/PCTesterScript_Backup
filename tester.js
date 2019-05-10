@@ -47,8 +47,11 @@ var bm = {};
 bm.FF = {};
 bm.Bar = {};
 bm.Chrome = {};
+
 const bmPretendPath = "./bmPretend.txt";
 const bmCheckPath = "./bmCheck.txt";
+const bmDumpPath = "./bmDump.txt";
+const bmTempFFLinePath = "./bmTempFF_LINE.txt";
 const bmChromePath = "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks";
 const bmFirefoxPath = ["C:\\Users\\Admin\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\", "*.default", "places.sqlite"];
 
@@ -257,18 +260,18 @@ function findBookmarks_Firefox() {
 	cmd += 'sqlite3 -header -line ';
 	cmd += '"' + sqlitepath + '" ';
 	cmd += '"SELECT b.id, b.parent, b.title as bTitle, p.title as pTitle, p.url FROM moz_bookmarks AS b LEFT JOIN moz_places AS p ON b.fk = p.id"';
-	cmd += '> ./bmFF_LINE.txt';
+	cmd += '> ' + bmTempFFLinePath;
 	if (verbose) log.debug("Execting command: " + cmd);
 
 	var process = exec(cmd, function (error, stdout, stderr) {
 		if (error) reportErrorMessage(error);
 
 		// Add one more line
-		fs.appendFileSync("./bmFF_LINE.txt", "\r\n");
+		fs.appendFileSync(bmTempFFLinePath, "\r\n");
 
 		// Process results
 		var lineReader = require('readline').createInterface({
-			input: require('fs').createReadStream('./bmFF_LINE.txt')
+			input: require('fs').createReadStream(bmTempFFLinePath)
 		});
 
 		lineReader.on('line', function (line) {
@@ -365,22 +368,22 @@ function findBookmarks_Firefox() {
 			// if (verbose) log.debug(JSON.stringify(bm, null, 4));
 
 			// Write to files
-			fs.writeFile("./bmDump.txt", JSON.stringify(bm.Bar, null, 4), function (err) {
+			fs.writeFile(bmDumpPath, JSON.stringify(bm.Bar, null, 4), function (err) {
 				if (err) {
 					reportErrorMessage("Searching for Firefox bookmars");
 					reportErrorMessage(err);
 				}
 
-				if (debug) log.info("The file [" + "./bmDump.txt" + "] was saved!");
+				if (debug) log.info("The file [" + bmDumpPath + "] was saved!");
 			});
 
-			fs.writeFile("./bm.txt", JSON.stringify(bm, null, 4), function (err) {
+			fs.writeFile(bmPretendPath, JSON.stringify(bm, null, 4), function (err) {
 				if (err) {
 					reportErrorMessage("Searching for Firefox bookmars");
 					reportErrorMessage(err);
 				}
 
-				if (debug) log.info("The file [" + "./bm.txt" + "] was saved!");
+				if (debug) log.info("The file [" + bmPretendPath + "] was saved!");
 			});
 
 			// Validate them
