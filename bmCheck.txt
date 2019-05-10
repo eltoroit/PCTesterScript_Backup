@@ -1,6 +1,7 @@
 [
     {
-        "Title": "[BAR][Login | Salesforce]",
+        "id": "BM_1",
+        "title": "[BAR][Login | Salesforce]",
         "urlChrome": "https://login.salesforce.com/",
         "urlFirefox": "https://login.salesforce.com/",
         "urlExpected": "https://login.salesforce.com/",
@@ -10,7 +11,8 @@
         "checkChrome": true
     },
     {
-        "Title": "[BAR][Bootcamps - TrailheaDX 2019 Survey]",
+        "id": "BM_2",
+        "title": "[BAR][Bootcamps - TrailheaDX 2019 Survey]",
         "urlChrome": "https://www.surveymonkey.com/r/TDX19Bootcamp",
         "urlFirefox": "https://www.surveymonkey.com/r/TDX19Bootcamp",
         "urlExpected": "https://www.surveymonkey.com/r/TDX19Bootcamp",
@@ -20,7 +22,8 @@
         "checkChrome": true
     },
     {
-        "Title": "[BAR][Marketing Cloud Login]",
+        "id": "BM_3",
+        "title": "[BAR][Marketing Cloud Login]",
         "urlChrome": "https://mc.login.exacttarget.com/hub-cas/login?service=https%3a%2f%2fmc.exacttarget.com%2fcloud%2flogin.html%3fhash%3dOrEn1bG9nZ2VkLWluSXc9PQ2",
         "urlExpected": "NO_IDEA",
         "hasFF": false,
@@ -29,7 +32,8 @@
         "checkChrome": true
     },
     {
-        "Title": "[BAR][TrailheaDX 19]",
+        "id": "BM_4",
+        "title": "[BAR][TrailheaDX 19]",
         "urlChrome": "https://www.salesforce.com/trailheadx/",
         "urlFirefox": "https://www.salesforce.com/trailheadx/",
         "urlExpected": "https://www.salesforce.com/trailheadx/",
@@ -39,7 +43,8 @@
         "checkChrome": true
     },
     {
-        "Title": "[BAR][Mimeo Digital]",
+        "id": "BM_5",
+        "title": "[BAR][Mimeo Digital]",
         "urlChrome": "https://salesforce.mimeo.digital/login",
         "urlFirefox": "https://salesforce.mimeo.digital/login",
         "urlExpected": "https://salesforce.mimeo.digital/login",
@@ -49,7 +54,8 @@
         "checkChrome": true
     },
     {
-        "Title": "[BAR][Trailmix Room 2020][Wednesday Room 2020]",
+        "id": "BM_6",
+        "title": "[BAR][Trailmix Room 2020][Wednesday Room 2020]",
         "urlChrome": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2020-wednesday-projects",
         "urlFirefox": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2020-wednesday-projects",
         "urlExpected": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2020-wednesday-projects",
@@ -59,7 +65,8 @@
         "checkChrome": true
     },
     {
-        "Title": "[BAR][Trailmix Room 2020][Thursday Room 2020]",
+        "id": "BM_7",
+        "title": "[BAR][Trailmix Room 2020][Thursday Room 2020]",
         "urlChrome": "https://trailhead.salesforce.com/en/users/tacademy/trailmixes/tdx-19-moscone-2020-thursday-projects",
         "urlFirefox": "https://trailhead.salesforce.com/en/users/tacademy/trailmixes/tdx-19-moscone-2020-thursday-projects",
         "urlExpected": "https://trailhead.salesforce.com/en/users/tacademy/trailmixes/tdx-19-moscone-2020-thursday-projects",
@@ -69,7 +76,8 @@
         "checkChrome": true
     },
     {
-        "Title": "[BAR][Trailmix Room 2022][Wednesday Room 2022]",
+        "id": "BM_8",
+        "title": "[BAR][Trailmix Room 2022][Wednesday Room 2022]",
         "urlChrome": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2022-wednesday-projects",
         "urlFirefox": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2022-wednesday-projects",
         "urlExpected": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2022-wednesday-projects",
@@ -79,7 +87,8 @@
         "checkChrome": true
     },
     {
-        "Title": "[BAR][Trailmix Room 2022][Thursday Room 2022]",
+        "id": "BM_9",
+        "title": "[BAR][Trailmix Room 2022][Thursday Room 2022]",
         "urlChrome": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2022-thursday-projects",
         "urlFirefox": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2022-thursday-projects",
         "urlExpected": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2022-thursday-projects",
@@ -89,7 +98,8 @@
         "checkChrome": true
     },
     {
-        "Title": "[BAR][Trailmix Room 2024/2026][Wednesday Room 2024/2026]",
+        "id": "BM_10",
+        "title": "[BAR][Trailmix Room 2024/2026][Wednesday Room 2024/2026]",
         "urlChrome": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2024-2026-wednesday-projects",
         "urlFirefox": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2024-2026-wednesday-projects",
         "urlExpected": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2024-2026-wednesday-projects",
@@ -99,7 +109,8 @@
         "checkChrome": true
     },
     {
-        "Title": "[BAR][Trailmix Room 2024/2026][Thursday Room 2024/2026]",
+        "id": "BM_11",
+        "title": "[BAR][Trailmix Room 2024/2026][Thursday Room 2024/2026]",
         "urlChrome": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2024-2026-thursday-projects",
         "urlFirefox": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2024-2026-thursday-projects",
         "urlExpected": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2024-2026-thursday-projects",
@@ -109,7 +120,8 @@
         "checkChrome": true
     },
     {
-        "Title": "[BAR][Schedule your Salesforce Certification Exam]",
+        "id": "BM_12",
+        "title": "[BAR][Schedule your Salesforce Certification Exam]",
         "urlChrome": "https://www.webassessor.com/salesforce",
         "urlExpected": "NO_IDEA",
         "hasFF": false,
@@ -118,7 +130,8 @@
         "checkChrome": true
     },
     {
-        "Title": "[BAR][Login | Salesforce Marketing Cloud]",
+        "id": "BM_13",
+        "title": "[BAR][Login | Salesforce Marketing Cloud]",
         "urlFirefox": "https://mc.login.exacttarget.com/hub-cas/login?service",
         "urlExpected": "NO_IDEA",
         "hasFF": true,
