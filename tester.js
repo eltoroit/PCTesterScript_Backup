@@ -13,7 +13,7 @@ const https = require('https');
 const log = require('./colorLogs.js');
 
 // Configure execution...
-var testType = "TEST";
+var testType = "PROD";
 var timerDelay = 250;
 
 // Depending on execution (TEST | PROD)
