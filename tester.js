@@ -340,7 +340,7 @@ function findBookmarks_Firefox() {
 					var nodeTemp = bmBarTemp[path];
 					bmCounter++;
 
-					nodeNew.id = bmCounter;
+					nodeNew.id = "BM_" + bmCounter;
 					nodeNew.title = path;
 
 					// Put existing URLs
