@@ -1,0 +1,14 @@
+{
+    "now": "2019-05-10T01:05:35.334Z",
+    "orgSource": null,
+    "orgDestination": null,
+    "sObjectsData": [],
+    "sObjectsMetadata": [],
+    "rootFolder": null,
+    "includeAllCustom": false,
+    "stopOnErrors": true,
+    "ignoreFields": null,
+    "maxRecordsEach": -1,
+    "deleteDestination": false,
+    "pollingTimeout": 100000
+}
