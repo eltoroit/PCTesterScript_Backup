@@ -1,5 +1,5 @@
 {
-  "now": "2019-05-14T17:04:35.177Z",
+  "now": "2019-05-14T17:49:18.950Z",
   "events": [
     {
       "attributes": {
@@ -273,12 +273,12 @@
         "Id": "a00f000000BrK7FAAV",
         "Name": "ACT-0046",
         "AppName__c": "B2C Commerce Cloud (1)",
-        "Command__c": "C:\\Users\\Admin\\Documents\\ntoforall\\.project",
+        "Command__c": "C:\\Users\\Admin\\Documents\\ntoforall*",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": ".project",
+        "Expected__c": "ntoforall",
         "Fix__c": "B2C Commerce Cloud (1) folder is missing",
-        "Message__c": "Checking path: C:\\Users\\Admin\\Documents\\ntoforall\\.project",
+        "Message__c": "Checking path: C:\\Users\\Admin\\Documents\\ntoforall*",
         "Operation__c": "Check Path",
         "Order__c": 16,
         "Count_Events__c": 1
@@ -309,12 +309,12 @@
         "Id": "a00f000000BrK7PAAV",
         "Name": "ACT-0048",
         "AppName__c": "B2C Commerce Cloud (3)",
-        "Command__c": "C:\\Users\\Admin\\DigitalServerCon*",
+        "Command__c": "C:\\Users\\Admin\\DigitalServerConnect*",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "DigitalServerConnect",
         "Fix__c": "B2C Commerce Cloud folder (3)  is missing",
-        "Message__c": "Checking path: C:\\Users\\Admin\\DigitalServerCon*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\DigitalServerConnect*",
         "Operation__c": "Check Path",
         "Order__c": 18,
         "Count_Events__c": 1
