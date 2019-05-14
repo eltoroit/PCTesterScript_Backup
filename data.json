@@ -1,5 +1,5 @@
 {
-  "now": "2019-05-14T15:26:49.014Z",
+  "now": "2019-05-14T15:43:41.300Z",
   "events": [
     {
       "attributes": {
@@ -139,7 +139,7 @@
         "Id": "a00f000000BrDKsAAN",
         "Name": "ACT-0038",
         "AppName__c": "Desktop: Data Loader",
-        "Command__c": "\"C:\\users\\admin\\desktop\\Dataloader 45.0.0.lnk\"",
+        "Command__c": "C:\\Users\\Admin\\Desktop\\Dataloader 45.0.0.lnk",
         "Enabled__c": true,
         "ErrorMessage__c": "Unable to open application: \"Desktop: Data Loader\"",
         "Expected__c": "Application was opened from shortcut",
@@ -190,13 +190,30 @@
         "Id": "a00f000000BrDKhAAN",
         "Name": "ACT-0027",
         "AppName__c": "Chrome + Salesforce is homepage",
-        "Command__c": "\"C:\\Users\\Public\\Desktop\\Google Chrome.lnk\"",
+        "Command__c": "C:\\Users\\Public\\Desktop\\Google Chrome.lnk",
         "Enabled__c": true,
         "ErrorMessage__c": "Unable to open application: \"Chrome + Salesforce is homepage\"",
         "Expected__c": "Application was opened from shortcut",
         "Message__c": "Opening Application: \"Chrome + Salesforce is homepage\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 9,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00f000000BrJRCAA3"
+        },
+        "Id": "a00f000000BrJRCAA3",
+        "Name": "ACT-0045",
+        "AppName__c": "Eclipse Neon",
+        "Command__c": "C:\\Users\\Admin\\Desktop\\Eclipse Java Neon.lnk",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Eclipse Neon\"",
+        "Expected__c": "Application was opened from shortcut",
+        "Message__c": "Opening Application: \"Eclipse Neon\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 12,
         "Count_Events__c": 1
       },
       {
@@ -212,23 +229,6 @@
         "ErrorMessage__c": "Unable to open application: \"VS Code\"",
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 12,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00f000000BrJRCAA3"
-        },
-        "Id": "a00f000000BrJRCAA3",
-        "Name": "ACT-0045",
-        "AppName__c": "Eclipse Neon",
-        "Command__c": "\"C:\\Users\\Public\\Desktop\\Eclipse Java Neon.lnk\"",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Eclipse Neon\"",
-        "Expected__c": "Application was opened from shortcut",
-        "Message__c": "Opening Application: \"Eclipse Neon\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 13,
         "Count_Events__c": 1
