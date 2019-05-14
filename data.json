@@ -1,5 +1,5 @@
 {
-  "now": "2019-05-14T15:43:41.300Z",
+  "now": "2019-05-14T16:11:23.633Z",
   "events": [
     {
       "attributes": {
@@ -139,7 +139,7 @@
         "Id": "a00f000000BrDKsAAN",
         "Name": "ACT-0038",
         "AppName__c": "Desktop: Data Loader",
-        "Command__c": "C:\\Users\\Admin\\Desktop\\Dataloader 45.0.0.lnk",
+        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Dataloader 45.0.0.lnk\"",
         "Enabled__c": true,
         "ErrorMessage__c": "Unable to open application: \"Desktop: Data Loader\"",
         "Expected__c": "Application was opened from shortcut",
@@ -156,7 +156,7 @@
         "Id": "a00f000000BrDKIAA3",
         "Name": "ACT-0002",
         "AppName__c": "Desktop: Notepad++",
-        "Command__c": "C:\\Users\\Public\\Desktop\\Notepad++.lnk",
+        "Command__c": "\"C:\\Users\\Public\\Desktop\\Notepad++.lnk\"",
         "Enabled__c": true,
         "ErrorMessage__c": "Unable to open application: \"Desktop: Notepad++\"",
         "Expected__c": "Application was opened from shortcut",
@@ -173,7 +173,7 @@
         "Id": "a00f000000BrDKfAAN",
         "Name": "ACT-0025",
         "AppName__c": "Firefox + Salesforce is homepage",
-        "Command__c": "C:\\Users\\Public\\Desktop\\Firefox.lnk",
+        "Command__c": "\"C:\\Users\\Public\\Desktop\\Firefox.lnk\"",
         "Enabled__c": true,
         "ErrorMessage__c": "Unable to open application: \"Firefox + Salesforce is homepage\"",
         "Expected__c": "Application was opened from shortcut",
@@ -190,7 +190,7 @@
         "Id": "a00f000000BrDKhAAN",
         "Name": "ACT-0027",
         "AppName__c": "Chrome + Salesforce is homepage",
-        "Command__c": "C:\\Users\\Public\\Desktop\\Google Chrome.lnk",
+        "Command__c": "\"C:\\Users\\Public\\Desktop\\Google Chrome.lnk\"",
         "Enabled__c": true,
         "ErrorMessage__c": "Unable to open application: \"Chrome + Salesforce is homepage\"",
         "Expected__c": "Application was opened from shortcut",
@@ -207,7 +207,7 @@
         "Id": "a00f000000BrJRCAA3",
         "Name": "ACT-0045",
         "AppName__c": "Eclipse Neon",
-        "Command__c": "C:\\Users\\Admin\\Desktop\\Eclipse Java Neon.lnk",
+        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Eclipse Java Neon.lnk\"",
         "Enabled__c": true,
         "ErrorMessage__c": "Unable to open application: \"Eclipse Neon\"",
         "Expected__c": "Application was opened from shortcut",
