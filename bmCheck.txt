@@ -30,7 +30,7 @@
   },
   {
     "id": "BM_4",
-    "title": "[BAR][TrailheaDX 19]",
+    "title": "[BAR][TrailheaDX '19]",
     "urlExpected": "https://www.salesforce.com/trailheadx/",
     "hasFF": true,
     "hasChrome": true,
