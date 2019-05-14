@@ -1,5 +1,5 @@
 {
-  "now": "2019-05-14T16:11:23.633Z",
+  "now": "2019-05-14T16:40:27.537Z",
   "events": [
     {
       "attributes": {
@@ -273,12 +273,12 @@
         "Id": "a00f000000BrK7FAAV",
         "Name": "ACT-0046",
         "AppName__c": "B2C Commerce Cloud (1)",
-        "Command__c": "C:\\Users\\Admin\\Documents\\ntoforall",
+        "Command__c": "C:\\Users\\Admin\\Documents\\ntoforall\\.project",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "ntoforall",
+        "Expected__c": ".project",
         "Fix__c": "B2C Commerce Cloud (1) folder is missing",
-        "Message__c": "Checking path: C:\\Users\\Admin\\Documents\\ntoforall",
+        "Message__c": "Checking path: C:\\Users\\Admin\\Documents\\ntoforall\\.project",
         "Operation__c": "Check Path",
         "Order__c": 16,
         "Count_Events__c": 1
@@ -291,12 +291,12 @@
         "Id": "a00f000000BrK7KAAV",
         "Name": "ACT-0047",
         "AppName__c": "B2C Commerce Cloud (2)",
-        "Command__c": "C:\\Users\\Admin\\tdxworkspace",
+        "Command__c": "C:\\Users\\Admin\\tdxworkspace\\.metadata\\version.ini",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "tdxworkspace",
+        "Expected__c": "version.ini",
         "Fix__c": "B2C Commerce Cloud folder (2)  is missing",
-        "Message__c": "Checking path: C:\\Users\\Admin\\tdxworkspace",
+        "Message__c": "Checking path: C:\\Users\\Admin\\tdxworkspace\\.metadata\\version.ini",
         "Operation__c": "Check Path",
         "Order__c": 17,
         "Count_Events__c": 1
@@ -309,12 +309,12 @@
         "Id": "a00f000000BrK7PAAV",
         "Name": "ACT-0048",
         "AppName__c": "B2C Commerce Cloud (3)",
-        "Command__c": "C:\\Users\\Admin\\DigitalServerConnect",
+        "Command__c": "C:\\Users\\Admin\\DigitalServerCon*",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "DigitalServerConnect",
         "Fix__c": "B2C Commerce Cloud folder (3)  is missing",
-        "Message__c": "Checking path: C:\\Users\\Admin\\DigitalServerConnect",
+        "Message__c": "Checking path: C:\\Users\\Admin\\DigitalServerCon*",
         "Operation__c": "Check Path",
         "Order__c": 18,
         "Count_Events__c": 1
