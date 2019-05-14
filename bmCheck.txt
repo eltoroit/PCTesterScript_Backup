@@ -1,3 +1,5 @@
+
+
 [
   {
     "id": "BM_1",
@@ -10,9 +12,9 @@
   },
   {
     "id": "BM_2",
-    "title": "[BAR][ Marketing Cloud Login]",
-    "urlExpected": "NO_IDEA",
-    "hasFF": false,
+    "title": "[BAR][Marketing Cloud Login]",
+    "urlExpected": "https://mc.exacttarget.com/",
+    "hasFF": true,
     "hasChrome": true,
     "checkFF": true,
     "checkChrome": true
@@ -29,8 +31,8 @@
   {
     "id": "BM_4",
     "title": "[BAR][TrailheaDX 19]",
-    "urlExpected": "NO_IDEA",
-    "hasFF": false,
+    "urlExpected": "https://www.salesforce.com/trailheadx/",
+    "hasFF": true,
     "hasChrome": true,
     "checkFF": true,
     "checkChrome": true
@@ -47,37 +49,37 @@
   {
     "id": "BM_6",
     "title": "[BAR][Commerce Cloud gists][Top Seller Tile: Meta Definition]",
-    "urlExpected": "NO_IDEA",
+    "urlExpected": "https://gist.github.com/jorgehernandezSF/44bad5a8333a32be60343748001de45b",
     "hasFF": false,
     "hasChrome": true,
-    "checkFF": true,
+    "checkFF": false,
     "checkChrome": true
   },
   {
     "id": "BM_7",
     "title": "[BAR][Commerce Cloud gists][Top Seller Tile: Rendering Script]",
-    "urlExpected": "NO_IDEA",
+    "urlExpected": "https://gist.github.com/jorgehernandezSF/c2a4d27b01f144420663fb0c1415d532",
     "hasFF": false,
     "hasChrome": true,
-    "checkFF": true,
+    "checkFF": false,
     "checkChrome": true
   },
   {
     "id": "BM_8",
     "title": "[BAR][Commerce Cloud gists][Top Seller Tile: ISML template]",
-    "urlExpected": "NO_IDEA",
+    "urlExpected": "https://gist.github.com/jorgehernandezSF/f01193e56b8952253a4d36dab1783fe8",
     "hasFF": false,
     "hasChrome": true,
-    "checkFF": true,
+    "checkFF": false,
     "checkChrome": true
   },
   {
     "id": "BM_9",
     "title": "[BAR][Commerce Cloud gists][SFRA Controller: Replace Home Page]",
-    "urlExpected": "NO_IDEA",
+    "urlExpected": "https://gist.github.com/jorgehernandezSF/df071b1b5667b6fecf444bb4ce575015",
     "hasFF": false,
     "hasChrome": true,
-    "checkFF": true,
+    "checkFF": false,
     "checkChrome": true
   },
   {
@@ -137,28 +139,10 @@
   {
     "id": "BM_16",
     "title": "[BAR][Salesforce Certification]",
-    "urlExpected": "NO_IDEA",
+    "urlExpected": "https://www.webassessor.com/salesforce",
     "hasFF": false,
     "hasChrome": true,
-    "checkFF": true,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_17",
-    "title": "[BAR][Marketing Cloud Login]",
-    "urlExpected": "NO_IDEA",
-    "hasFF": true,
-    "hasChrome": false,
-    "checkFF": true,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_18",
-    "title": "[BAR][TrailheaDX '19]",
-    "urlExpected": "NO_IDEA",
-    "hasFF": true,
-    "hasChrome": false,
-    "checkFF": true,
+    "checkFF": false,
     "checkChrome": true
   }
 ]
