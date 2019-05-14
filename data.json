@@ -1,5 +1,5 @@
 {
-  "now": "2019-05-14T18:16:33.839Z",
+  "now": "2019-05-14T22:55:16.849Z",
   "events": [
     {
       "attributes": {
@@ -738,6 +738,150 @@
         "Message__c": "Validating: Checking all bookmarks",
         "Operation__c": "Bookmark",
         "Order__c": 47,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00f000000BrKIGAA3"
+        },
+        "Id": "a00f000000BrKIGAA3",
+        "Name": "ACT-0049",
+        "AppName__c": "SalesforceSans Font (1)",
+        "Command__c": "SalesforceSans Font (1)",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: SalesforceSans Font (1)",
+        "Operation__c": "Check Path",
+        "Order__c": 50,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00f000000BrKILAA3"
+        },
+        "Id": "a00f000000BrKILAA3",
+        "Name": "ACT-0050",
+        "AppName__c": "SalesforceSans Font (2)",
+        "Command__c": "SalesforceSans Font (2)",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: SalesforceSans Font (2)",
+        "Operation__c": "Check Path",
+        "Order__c": 51,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00f000000BrKIQAA3"
+        },
+        "Id": "a00f000000BrKIQAA3",
+        "Name": "ACT-0051",
+        "AppName__c": "SalesforceSans Font (3)",
+        "Command__c": "SalesforceSans Font (3)",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: SalesforceSans Font (3)",
+        "Operation__c": "Check Path",
+        "Order__c": 52,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00f000000BrKIRAA3"
+        },
+        "Id": "a00f000000BrKIRAA3",
+        "Name": "ACT-0052",
+        "AppName__c": "SalesforceSans Font (4)",
+        "Command__c": "SalesforceSans Font (4)",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: SalesforceSans Font (4)",
+        "Operation__c": "Check Path",
+        "Order__c": 53,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00f000000BrKIVAA3"
+        },
+        "Id": "a00f000000BrKIVAA3",
+        "Name": "ACT-0053",
+        "AppName__c": "SalesforceSans Font (5)",
+        "Command__c": "SalesforceSans Font (5)",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: SalesforceSans Font (5)",
+        "Operation__c": "Check Path",
+        "Order__c": 54,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00f000000BrKIaAAN"
+        },
+        "Id": "a00f000000BrKIaAAN",
+        "Name": "ACT-0054",
+        "AppName__c": "SalesforceSans Font (6)",
+        "Command__c": "SalesforceSans Font (6)",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: SalesforceSans Font (6)",
+        "Operation__c": "Check Path",
+        "Order__c": 55,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00f000000BrKIfAAN"
+        },
+        "Id": "a00f000000BrKIfAAN",
+        "Name": "ACT-0055",
+        "AppName__c": "SalesforceSans Font (7)",
+        "Command__c": "SalesforceSans Font (7)",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: SalesforceSans Font (7)",
+        "Operation__c": "Check Path",
+        "Order__c": 56,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00f000000BrKIkAAN"
+        },
+        "Id": "a00f000000BrKIkAAN",
+        "Name": "ACT-0056",
+        "AppName__c": "SalesforceSans Font (8)",
+        "Command__c": "SalesforceSans Font (8)",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: SalesforceSans Font (8)",
+        "Operation__c": "Check Path",
+        "Order__c": 57,
         "Count_Events__c": 1
       }
     ]
