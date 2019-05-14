@@ -1,7 +1,7 @@
 [
     {
         "id": "BM_1",
-        "title": "[BAR][Login | Salesforce]",
+        "title": "[BAR][Salesforce Login]",
         "urlChrome": "https://login.salesforce.com/",
         "urlFirefox": "https://login.salesforce.com/",
         "urlExpected": "https://login.salesforce.com/",
@@ -12,7 +12,17 @@
     },
     {
         "id": "BM_2",
-        "title": "[BAR][Bootcamps - TrailheaDX 2019 Survey]",
+        "title": "[BAR][ Marketing Cloud Login]",
+        "urlChrome": "https://mc.login.exacttarget.com/hub-cas/login?service=https%3a%2f%2fmc.exacttarget.com%2fcloud%2flogin.html%3fhash%3dOrEn1bG9nZ2VkLWluSXc9PQ2",
+        "urlExpected": "NO_IDEA",
+        "hasFF": false,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_3",
+        "title": "[BAR][Bootcamp Session Survey]",
         "urlChrome": "https://www.surveymonkey.com/r/TDX19Bootcamp",
         "urlFirefox": "https://www.surveymonkey.com/r/TDX19Bootcamp",
         "urlExpected": "https://www.surveymonkey.com/r/TDX19Bootcamp",
@@ -22,9 +32,9 @@
         "checkChrome": true
     },
     {
-        "id": "BM_3",
-        "title": "[BAR][Marketing Cloud Login]",
-        "urlChrome": "https://mc.login.exacttarget.com/hub-cas/login?service=https%3a%2f%2fmc.exacttarget.com%2fcloud%2flogin.html%3fhash%3dOrEn1bG9nZ2VkLWluSXc9PQ2",
+        "id": "BM_4",
+        "title": "[BAR][TrailheaDX 19]",
+        "urlChrome": "https://www.salesforce.com/trailheadx/",
         "urlExpected": "NO_IDEA",
         "hasFF": false,
         "hasChrome": true,
@@ -32,19 +42,8 @@
         "checkChrome": true
     },
     {
-        "id": "BM_4",
-        "title": "[BAR][TrailheaDX 19]",
-        "urlChrome": "https://www.salesforce.com/trailheadx/",
-        "urlFirefox": "https://www.salesforce.com/trailheadx/",
-        "urlExpected": "https://www.salesforce.com/trailheadx/",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
         "id": "BM_5",
-        "title": "[BAR][Mimeo Digital]",
+        "title": "[BAR][Mimeo eBook]",
         "urlChrome": "https://salesforce.mimeo.digital/login",
         "urlFirefox": "https://salesforce.mimeo.digital/login",
         "urlExpected": "https://salesforce.mimeo.digital/login",
@@ -55,7 +54,47 @@
     },
     {
         "id": "BM_6",
-        "title": "[BAR][Trailmix Room 2020][Wednesday Room 2020]",
+        "title": "[BAR][Commerce Cloud gists][Top Seller Tile: Meta Definition]",
+        "urlChrome": "https://gist.github.com/jorgehernandezSF/44bad5a8333a32be60343748001de45b",
+        "urlExpected": "NO_IDEA",
+        "hasFF": false,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_7",
+        "title": "[BAR][Commerce Cloud gists][Top Seller Tile: Rendering Script]",
+        "urlChrome": "https://gist.github.com/jorgehernandezSF/c2a4d27b01f144420663fb0c1415d532",
+        "urlExpected": "NO_IDEA",
+        "hasFF": false,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_8",
+        "title": "[BAR][Commerce Cloud gists][Top Seller Tile: ISML template]",
+        "urlChrome": "https://gist.github.com/jorgehernandezSF/f01193e56b8952253a4d36dab1783fe8",
+        "urlExpected": "NO_IDEA",
+        "hasFF": false,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_9",
+        "title": "[BAR][Commerce Cloud gists][SFRA Controller: Replace Home Page]",
+        "urlChrome": "https://gist.github.com/jorgehernandezSF/df071b1b5667b6fecf444bb4ce575015",
+        "urlExpected": "NO_IDEA",
+        "hasFF": false,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_10",
+        "title": "[BAR][Trailmix Room 2020][Wednesday]",
         "urlChrome": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2020-wednesday-projects",
         "urlFirefox": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2020-wednesday-projects",
         "urlExpected": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2020-wednesday-projects",
@@ -65,8 +104,8 @@
         "checkChrome": true
     },
     {
-        "id": "BM_7",
-        "title": "[BAR][Trailmix Room 2020][Thursday Room 2020]",
+        "id": "BM_11",
+        "title": "[BAR][Trailmix Room 2020][Thursday]",
         "urlChrome": "https://trailhead.salesforce.com/en/users/tacademy/trailmixes/tdx-19-moscone-2020-thursday-projects",
         "urlFirefox": "https://trailhead.salesforce.com/en/users/tacademy/trailmixes/tdx-19-moscone-2020-thursday-projects",
         "urlExpected": "https://trailhead.salesforce.com/en/users/tacademy/trailmixes/tdx-19-moscone-2020-thursday-projects",
@@ -76,8 +115,8 @@
         "checkChrome": true
     },
     {
-        "id": "BM_8",
-        "title": "[BAR][Trailmix Room 2022][Wednesday Room 2022]",
+        "id": "BM_12",
+        "title": "[BAR][Trailmix Room 2022][Wednesday]",
         "urlChrome": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2022-wednesday-projects",
         "urlFirefox": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2022-wednesday-projects",
         "urlExpected": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2022-wednesday-projects",
@@ -87,8 +126,8 @@
         "checkChrome": true
     },
     {
-        "id": "BM_9",
-        "title": "[BAR][Trailmix Room 2022][Thursday Room 2022]",
+        "id": "BM_13",
+        "title": "[BAR][Trailmix Room 2022][Thursday]",
         "urlChrome": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2022-thursday-projects",
         "urlFirefox": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2022-thursday-projects",
         "urlExpected": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2022-thursday-projects",
@@ -98,8 +137,8 @@
         "checkChrome": true
     },
     {
-        "id": "BM_10",
-        "title": "[BAR][Trailmix Room 2024/2026][Wednesday Room 2024/2026]",
+        "id": "BM_14",
+        "title": "[BAR][Trailmix Room 2024/2026][Wednesday]",
         "urlChrome": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2024-2026-wednesday-projects",
         "urlFirefox": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2024-2026-wednesday-projects",
         "urlExpected": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2024-2026-wednesday-projects",
@@ -109,8 +148,8 @@
         "checkChrome": true
     },
     {
-        "id": "BM_11",
-        "title": "[BAR][Trailmix Room 2024/2026][Thursday Room 2024/2026]",
+        "id": "BM_15",
+        "title": "[BAR][Trailmix Room 2024/2026][Thursday]",
         "urlChrome": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2024-2026-thursday-projects",
         "urlFirefox": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2024-2026-thursday-projects",
         "urlExpected": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2024-2026-thursday-projects",
@@ -120,8 +159,8 @@
         "checkChrome": true
     },
     {
-        "id": "BM_12",
-        "title": "[BAR][Schedule your Salesforce Certification Exam]",
+        "id": "BM_16",
+        "title": "[BAR][Salesforce Certification]",
         "urlChrome": "https://www.webassessor.com/salesforce",
         "urlExpected": "NO_IDEA",
         "hasFF": false,
@@ -130,9 +169,19 @@
         "checkChrome": true
     },
     {
-        "id": "BM_13",
-        "title": "[BAR][Login | Salesforce Marketing Cloud]",
-        "urlFirefox": "https://mc.login.exacttarget.com/hub-cas/login?service",
+        "id": "BM_17",
+        "title": "[BAR][Marketing Cloud Login]",
+        "urlFirefox": "https://mc.exacttarget.com/",
+        "urlExpected": "NO_IDEA",
+        "hasFF": true,
+        "hasChrome": false,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_18",
+        "title": "[BAR][TrailheaDX '19]",
+        "urlFirefox": "https://www.salesforce.com/trailheadx/",
         "urlExpected": "NO_IDEA",
         "hasFF": true,
         "hasChrome": false,

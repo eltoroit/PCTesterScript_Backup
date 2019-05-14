@@ -1,5 +1,5 @@
 {
-  "now": "2019-05-14T15:06:53.538Z",
+  "now": "2019-05-14T15:26:49.014Z",
   "events": [
     {
       "attributes": {
@@ -35,7 +35,7 @@
         "ErrorMessage__c": "Could not validate: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
         "Message__c": "Validating: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
         "Operation__c": "Check Contains",
-        "Order__c": 45,
+        "Order__c": 48,
         "Count_Events__c": 1
       },
       {
@@ -51,7 +51,7 @@
         "ErrorMessage__c": "Could not validate: Logout Heroku (heroku logout)",
         "Message__c": "Validating: Logout Heroku (heroku logout)",
         "Operation__c": "Check Contains",
-        "Order__c": 46,
+        "Order__c": 49,
         "Count_Events__c": 1
       }
     ],
@@ -268,6 +268,60 @@
       {
         "attributes": {
           "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00f000000BrK7FAAV"
+        },
+        "Id": "a00f000000BrK7FAAV",
+        "Name": "ACT-0046",
+        "AppName__c": "B2C Commerce Cloud (1)",
+        "Command__c": "C:\\Users\\Admin\\Documents\\ntoforall",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "ntoforall",
+        "Fix__c": "B2C Commerce Cloud (1) folder is missing",
+        "Message__c": "Checking path: C:\\Users\\Admin\\Documents\\ntoforall",
+        "Operation__c": "Check Path",
+        "Order__c": 16,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00f000000BrK7KAAV"
+        },
+        "Id": "a00f000000BrK7KAAV",
+        "Name": "ACT-0047",
+        "AppName__c": "B2C Commerce Cloud (2)",
+        "Command__c": "C:\\Users\\Admin\\tdxworkspace",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "tdxworkspace",
+        "Fix__c": "B2C Commerce Cloud folder (2)  is missing",
+        "Message__c": "Checking path: C:\\Users\\Admin\\tdxworkspace",
+        "Operation__c": "Check Path",
+        "Order__c": 17,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00f000000BrK7PAAV"
+        },
+        "Id": "a00f000000BrK7PAAV",
+        "Name": "ACT-0048",
+        "AppName__c": "B2C Commerce Cloud (3)",
+        "Command__c": "C:\\Users\\Admin\\DigitalServerConnect",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "DigitalServerConnect",
+        "Fix__c": "B2C Commerce Cloud folder (3)  is missing",
+        "Message__c": "Checking path: C:\\Users\\Admin\\DigitalServerConnect",
+        "Operation__c": "Check Path",
+        "Order__c": 18,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a00f000000BrDKJAA3"
         },
         "Id": "a00f000000BrDKJAA3",
@@ -280,7 +334,7 @@
         "Fix__c": "Postman is missing, install from here: https://www.getpostman.com/",
         "Message__c": "Checking path: C:\\Users\\Admin\\AppData\\Local\\Postman\\Update.exe",
         "Operation__c": "Check Path",
-        "Order__c": 16,
+        "Order__c": 19,
         "Count_Events__c": 1
       },
       {
@@ -298,7 +352,7 @@
         "Fix__c": "SoapUI is missing, install from here: http://www.softpedia.com/get/Internet/Other-Internet-Related/soapUI.shtml",
         "Message__c": "Checking path: C:\\Program Files (x86)\\SmartBear\\SoapUI-5.5.0\\bin\\SoapUI-5.5.0.exe",
         "Operation__c": "Check Path",
-        "Order__c": 17,
+        "Order__c": 20,
         "Count_Events__c": 1
       },
       {
@@ -316,7 +370,7 @@
         "Fix__c": "Please install SFDX from here: https://sfdc.co/sfdx_cli_win64",
         "Message__c": "Validating: SFDX Update (sfdx update)",
         "Operation__c": "Check Contains",
-        "Order__c": 22,
+        "Order__c": 25,
         "Count_Events__c": 1
       },
       {
@@ -333,7 +387,7 @@
         "Expected__c": "1.33.1",
         "Message__c": "Validating: VS Code Version (code --version)",
         "Operation__c": "Check Contains",
-        "Order__c": 23,
+        "Order__c": 26,
         "Count_Events__c": 1
       },
       {
@@ -351,7 +405,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-45.*",
         "Operation__c": "Check Path",
-        "Order__c": 24,
+        "Order__c": 27,
         "Count_Events__c": 1
       },
       {
@@ -369,7 +423,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-45.*",
         "Operation__c": "Check Path",
-        "Order__c": 25,
+        "Order__c": 28,
         "Count_Events__c": 1
       },
       {
@@ -387,7 +441,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-45.*",
         "Operation__c": "Check Path",
-        "Order__c": 26,
+        "Order__c": 29,
         "Count_Events__c": 1
       },
       {
@@ -405,7 +459,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-45.*",
         "Operation__c": "Check Path",
-        "Order__c": 27,
+        "Order__c": 30,
         "Count_Events__c": 1
       },
       {
@@ -423,7 +477,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-45.*",
         "Operation__c": "Check Path",
-        "Order__c": 28,
+        "Order__c": 31,
         "Count_Events__c": 1
       },
       {
@@ -441,7 +495,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-45.*",
         "Operation__c": "Check Path",
-        "Order__c": 29,
+        "Order__c": 32,
         "Count_Events__c": 1
       },
       {
@@ -459,7 +513,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-45.*",
         "Operation__c": "Check Path",
-        "Order__c": 30,
+        "Order__c": 33,
         "Count_Events__c": 1
       },
       {
@@ -477,7 +531,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-45.*",
         "Operation__c": "Check Path",
-        "Order__c": 31,
+        "Order__c": 34,
         "Count_Events__c": 1
       },
       {
@@ -495,7 +549,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.8.2*",
         "Operation__c": "Check Path",
-        "Order__c": 32,
+        "Order__c": 35,
         "Count_Events__c": 1
       },
       {
@@ -513,7 +567,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.7*",
         "Operation__c": "Check Path",
-        "Order__c": 33,
+        "Order__c": 36,
         "Count_Events__c": 1
       },
       {
@@ -529,7 +583,7 @@
         "ErrorMessage__c": "Invalid response received",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
         "Operation__c": "JSON File - Edit",
-        "Order__c": 34,
+        "Order__c": 37,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -564,7 +618,7 @@
         "ErrorMessage__c": "Invalid response received",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
         "Operation__c": "JSON File - Edit",
-        "Order__c": 35,
+        "Order__c": 38,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -601,7 +655,7 @@
         "Fix__c": "Download from here: https://git-scm.com/download/win",
         "Message__c": "Validating: Git 2.18 (git --version)",
         "Operation__c": "Check Contains",
-        "Order__c": 36,
+        "Order__c": 39,
         "Count_Events__c": 1
       },
       {
@@ -617,7 +671,7 @@
         "ErrorMessage__c": "Could not validate: Git config email (git config --global user.email \"you@example.com\")",
         "Message__c": "Validating: Git config email (git config --global user.email \"you@example.com\")",
         "Operation__c": "Check Contains",
-        "Order__c": 37,
+        "Order__c": 40,
         "Count_Events__c": 1
       },
       {
@@ -633,7 +687,7 @@
         "ErrorMessage__c": "Could not validate: Git config name (git config --global user.name \"Your Name\")",
         "Message__c": "Validating: Git config name (git config --global user.name \"Your Name\")",
         "Operation__c": "Check Contains",
-        "Order__c": 38,
+        "Order__c": 41,
         "Count_Events__c": 1
       },
       {
@@ -650,7 +704,7 @@
         "Expected__c": "7-Zip 18.06 (x64)",
         "Message__c": "Validating: 7-Zip (\"C:\\Program Files\\7-Zip\\7z.exe\" -version)",
         "Operation__c": "Check Contains",
-        "Order__c": 41,
+        "Order__c": 44,
         "Count_Events__c": 1
       },
       {
@@ -667,7 +721,7 @@
         "Expected__c": "v10.15.3",
         "Message__c": "Checking exact: node --version",
         "Operation__c": "Check Exact",
-        "Order__c": 42,
+        "Order__c": 45,
         "Count_Events__c": 1
       },
       {
@@ -683,7 +737,7 @@
         "Expected__c": "Bookmarks are correct",
         "Message__c": "Validating: Checking all bookmarks",
         "Operation__c": "Bookmark",
-        "Order__c": 44,
+        "Order__c": 47,
         "Count_Events__c": 1
       }
     ]
