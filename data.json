@@ -1,5 +1,5 @@
 {
-  "now": "2019-05-15T19:09:03.198Z",
+  "now": "2019-05-15T20:07:51.323Z",
   "events": [
     {
       "attributes": {
@@ -542,12 +542,12 @@
         "Id": "a00f000000BrDKvAAN",
         "Name": "ACT-0041",
         "AppName__c": "VS Code Plugin (9)",
-        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.8.2*",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.9.0*",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "dbaeumer.vscode-eslint-1.8.2",
+        "Expected__c": "dbaeumer.vscode-eslint-1.9.0",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.8.2*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.9.0*",
         "Operation__c": "Check Path",
         "Order__c": 35,
         "Count_Events__c": 1
