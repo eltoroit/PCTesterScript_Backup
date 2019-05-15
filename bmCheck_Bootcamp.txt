@@ -51,7 +51,7 @@
     "hasFF": false,
     "hasChrome": true,
     "checkFF": false,
-    "checkChrome": true
+    "checkChrome": false
   },
   {
     "id": "BM_8",
@@ -60,7 +60,7 @@
     "hasFF": false,
     "hasChrome": true,
     "checkFF": false,
-    "checkChrome": true
+    "checkChrome": false
   },
   {
     "id": "BM_9",
@@ -69,7 +69,7 @@
     "hasFF": false,
     "hasChrome": true,
     "checkFF": false,
-    "checkChrome": true
+    "checkChrome": false
   },
   {
     "id": "BM_10",
@@ -78,7 +78,7 @@
     "hasFF": false,
     "hasChrome": true,
     "checkFF": false,
-    "checkChrome": true
+    "checkChrome": false
   },
   {
     "id": "BM_11",
