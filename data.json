@@ -1,5 +1,5 @@
 {
-  "now": "2019-05-14T23:03:21.667Z",
+  "now": "2019-05-15T19:09:03.198Z",
   "events": [
     {
       "attributes": {
@@ -207,7 +207,7 @@
         "Id": "a00f000000BrJRCAA3",
         "Name": "ACT-0045",
         "AppName__c": "Eclipse Neon",
-        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Eclipse Java Neon.lnk\"",
+        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Eclipse JEE Neon.lnk\"",
         "Enabled__c": true,
         "ErrorMessage__c": "Unable to open application: \"Eclipse Neon\"",
         "Expected__c": "Application was opened from shortcut",
