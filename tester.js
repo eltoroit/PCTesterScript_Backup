@@ -410,7 +410,14 @@ function validateBookmarks_Process() {
 			if ((urlFF != urlChrome) && urlFF && urlChrome) {
 				errorCount++;
 				hasErrors = true;
-				var msg = "Bookmark error (1). Urls are different for Firefox and Chrome. Title (" + bmCheck.id + ") *" + bmCheck.title + "*,  Firefox [" + urlFF + "], Chrome [" + urlChrome + "]";
+				var msg = {
+					errorCode: 1,
+					bmCheckId: bmCheck.id,
+					errorMsg: "Urls are different for Firefox and Chrome.",
+					urlTitle: bmCheck.title,
+					urlFirefox: urlFF,
+					urlChrome: urlChrome
+				}
 				reportErrorMessage(msg);
 			}
 		}
@@ -419,7 +426,14 @@ function validateBookmarks_Process() {
 			if (expectedUrl !== urlFF) {
 				errorCount++;
 				hasErrors = true;
-				var msg = "Bookmark error (2). Url in Firefox is not the expected value. Title (" + bmCheck.id + ") *" + bmCheck.title + "*,  Expected [" + expectedUrl + "], found [" + urlFF + "]";
+				var msg = {
+					errorCode: 1,
+					bmCheckId: bmCheck.id,
+					errorMsg: "Url in Firefox is not the expected value",
+					urlTitle: bmCheck.title,
+					urlExpected: expectedUrl,
+					urlFirefox: urlFF
+				}
 				reportErrorMessage(msg);
 			}
 		}
@@ -428,7 +442,14 @@ function validateBookmarks_Process() {
 			if (expectedUrl !== urlChrome) {
 				errorCount++;
 				hasErrors = true;
-				var msg = "Bookmark error (3). Url in Chrome is not the expected value. Title (" + bmCheck.id + ") *" + bmCheck.title + "*,  Expected [" + expectedUrl + "], found [" + urlChrome + "]";
+				var msg = {
+					errorCode: 3,
+					bmCheckId: bmCheck.id,
+					errorMsg: "Url in Chrome is not the expected value",
+					urlTitle: bmCheck.title,
+					urlExpected: expectedUrl,
+					urlChrome: urlChrome
+				}
 				reportErrorMessage(msg);
 			}
 		}
@@ -438,7 +459,13 @@ function validateBookmarks_Process() {
 				if (!isSuccess) {
 					errorCount++;
 					hasErrors = true;
-					var msg = "Bookmark error (4). Url can't be accessed. Title (" + bmCheck.id + ") *" + bmCheck.title + "*,  Expected [" + expectedUrl + "]";
+					var msg = {
+						errorCode: 4,
+						bmCheckId: bmCheck.id,
+						errorMsg: "Url can't be accessed",
+						urlTitle: bmCheck.title,
+						urlExpected: expectedUrl
+					}
 					reportErrorMessage(msg);
 				} else {
 					if (verbose) log.success("VALID: Bookmark *" + bmCheck.title + "*, URL [" + expectedUrl + "]");
