@@ -1,5 +1,5 @@
 {
-  "now": "2019-05-15T22:23:08.173Z",
+  "now": "2019-05-15T22:36:05.125Z",
   "events": [
     {
       "attributes": {
@@ -336,12 +336,12 @@
         "Id": "a00f000000BrLBnAAN",
         "Name": "ACT-0057",
         "AppName__c": "Java 11",
-        "Command__c": "C:\\Program Files\\Zulu\\zulu-11\\java.exe*",
+        "Command__c": "C:\\Program Files\\Zulu\\zulu-11\\bin\\java.exe*",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "java.exe",
         "Fix__c": "Please ensure Java JDK is installed.",
-        "Message__c": "Checking path: C:\\Program Files\\Zulu\\zulu-11\\java.exe*",
+        "Message__c": "Checking path: C:\\Program Files\\Zulu\\zulu-11\\bin\\java.exe*",
         "Operation__c": "Check Path",
         "Order__c": 17,
         "Count_Events__c": 1
