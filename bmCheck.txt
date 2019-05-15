@@ -45,21 +45,12 @@
     "checkChrome": true
   },
   {
-    "id": "BM_6",
-    "title": "[BAR][B2C Commerce Cloud][Sandbox - Must Add Unique Number at xxx]",
-    "urlExpected": "NO_IDEA",
-    "hasFF": false,
-    "hasChrome": true,
-    "checkFF": true,
-    "checkChrome": true
-  },
-  {
     "id": "BM_7",
     "title": "[BAR][B2C Commerce Cloud][Top Seller Tile: Meta Definition]",
     "urlExpected": "NO_IDEA",
     "hasFF": false,
     "hasChrome": true,
-    "checkFF": true,
+    "checkFF": false,
     "checkChrome": true
   },
   {
@@ -68,7 +59,7 @@
     "urlExpected": "NO_IDEA",
     "hasFF": false,
     "hasChrome": true,
-    "checkFF": true,
+    "checkFF": false,
     "checkChrome": true
   },
   {
@@ -77,7 +68,7 @@
     "urlExpected": "NO_IDEA",
     "hasFF": false,
     "hasChrome": true,
-    "checkFF": true,
+    "checkFF": false,
     "checkChrome": true
   },
   {
@@ -86,7 +77,7 @@
     "urlExpected": "NO_IDEA",
     "hasFF": false,
     "hasChrome": true,
-    "checkFF": true,
+    "checkFF": false,
     "checkChrome": true
   },
   {
