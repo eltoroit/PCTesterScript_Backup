@@ -137,7 +137,7 @@
   {
     "id": "BM_17",
     "title": "[BAR][Salesforce Certification]",
-    "urlExpected": "NO_IDEA",
+    "urlExpected": "https://www.webassessor.com/salesforce",
     "hasFF": false,
     "hasChrome": true,
     "checkFF": false,
