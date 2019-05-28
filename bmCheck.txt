@@ -45,42 +45,6 @@
     "checkChrome": true
   },
   {
-    "id": "BM_7",
-    "title": "[BAR][B2C Commerce Cloud][Top Seller Tile: Meta Definition]",
-    "urlExpected": "https://gist.github.com/jorgehernandezSF/44bad5a8333a32be60343748001de45b",
-    "hasFF": false,
-    "hasChrome": true,
-    "checkFF": false,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_8",
-    "title": "[BAR][B2C Commerce Cloud][Top Seller Tile: Rendering Script]",
-    "urlExpected": "https://gist.github.com/jorgehernandezSF/c2a4d27b01f144420663fb0c1415d532",
-    "hasFF": false,
-    "hasChrome": true,
-    "checkFF": false,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_9",
-    "title": "[BAR][B2C Commerce Cloud][Top Seller Tile: ISML template]",
-    "urlExpected": "https://gist.github.com/jorgehernandezSF/f01193e56b8952253a4d36dab1783fe8",
-    "hasFF": false,
-    "hasChrome": true,
-    "checkFF": false,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_10",
-    "title": "[BAR][B2C Commerce Cloud][SFRA Controller: Replace Home Page]",
-    "urlExpected": "https://gist.github.com/jorgehernandezSF/df071b1b5667b6fecf444bb4ce575015",
-    "hasFF": false,
-    "hasChrome": true,
-    "checkFF": false,
-    "checkChrome": true
-  },
-  {
     "id": "BM_11",
     "title": "[BAR][Trailmix Room 2020][Wednesday]",
     "urlExpected": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-moscone-2020-wednesday-projects",
