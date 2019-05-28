@@ -1,5 +1,5 @@
 {
-  "now": "2019-05-28T21:15:54.821Z",
+  "now": "2019-05-28T21:18:14.808Z",
   "events": [
     {
       "attributes": {
@@ -206,23 +206,6 @@
         "Message__c": "Opening Application: \"Chrome + Salesforce is homepage\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 9,
-        "Count_Events__c": 2
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000v000002LRZEAA4"
-        },
-        "Id": "a000v000002LRZEAA4",
-        "Name": "ACT-0002",
-        "AppName__c": "Eclipse Neon",
-        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Eclipse JEE Neon.lnk\"",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Eclipse Neon\"",
-        "Expected__c": "Application was opened from shortcut",
-        "Message__c": "Opening Application: \"Eclipse Neon\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 11,
         "Count_Events__c": 2
       },
       {
@@ -1001,23 +984,6 @@
         "Message__c": "Opening Application: \"Chrome + Salesforce is homepage\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 9,
-        "Count_Events__c": 2
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000v000002LRZEAA4"
-        },
-        "Id": "a000v000002LRZEAA4",
-        "Name": "ACT-0002",
-        "AppName__c": "Eclipse Neon",
-        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Eclipse JEE Neon.lnk\"",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Eclipse Neon\"",
-        "Expected__c": "Application was opened from shortcut",
-        "Message__c": "Opening Application: \"Eclipse Neon\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 11,
         "Count_Events__c": 2
       },
       {
