@@ -1,5 +1,5 @@
 {
-  "now": "2019-05-28T16:23:34.402Z",
+  "now": "2019-05-28T17:23:07.709Z",
   "events": [
     {
       "attributes": {
@@ -121,7 +121,7 @@
         "Message__c": "User validated: Sticker with computer number?",
         "Operation__c": "Manual",
         "Order__c": 4,
-        "Count_Events__c": 2
+        "Count_Events__c": 1
       },
       {
         "attributes": {
@@ -969,23 +969,6 @@
         "Enabled__c": true,
         "Operation__c": "Write",
         "Order__c": 3,
-        "Count_Events__c": 2
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000v000002LRZwAAO"
-        },
-        "Id": "a000v000002LRZwAAO",
-        "Name": "ACT-0046",
-        "AppName__c": "Sticker",
-        "Command__c": "Sticker with computer number?",
-        "Enabled__c": true,
-        "ErrorMessage__c": "User could not validate: Sticker with computer number?",
-        "Expected__c": "User validated: Sticker with computer number?",
-        "Message__c": "User validated: Sticker with computer number?",
-        "Operation__c": "Manual",
-        "Order__c": 4,
         "Count_Events__c": 2
       },
       {
