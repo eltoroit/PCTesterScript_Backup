@@ -1,5 +1,5 @@
 {
-  "now": "2019-05-28T17:23:07.709Z",
+  "now": "2019-05-28T17:34:56.804Z",
   "events": [
     {
       "attributes": {
@@ -397,24 +397,6 @@
         "Message__c": "Checking path: C:\\Program Files (x86)\\SmartBear\\SoapUI-5.5.0\\bin\\SoapUI-5.5.0.exe",
         "Operation__c": "Check Path",
         "Order__c": 22,
-        "Count_Events__c": 2
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000v000002LRZnAAO"
-        },
-        "Id": "a000v000002LRZnAAO",
-        "Name": "ACT-0037",
-        "AppName__c": "SFDX Update",
-        "Command__c": "sfdx update",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Could not validate: SFDX Update (sfdx update)",
-        "Expected__c": "sfdx-cli: Updating CLI... already on latest version",
-        "Fix__c": "Please install SFDX from here: https://sfdc.co/sfdx_cli_win64",
-        "Message__c": "Validating: SFDX Update (sfdx update)",
-        "Operation__c": "Check Contains",
-        "Order__c": 23,
         "Count_Events__c": 2
       },
       {
@@ -1281,24 +1263,6 @@
         "Message__c": "Checking path: C:\\Program Files (x86)\\SmartBear\\SoapUI-5.5.0\\bin\\SoapUI-5.5.0.exe",
         "Operation__c": "Check Path",
         "Order__c": 22,
-        "Count_Events__c": 2
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000v000002LRZnAAO"
-        },
-        "Id": "a000v000002LRZnAAO",
-        "Name": "ACT-0037",
-        "AppName__c": "SFDX Update",
-        "Command__c": "sfdx update",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Could not validate: SFDX Update (sfdx update)",
-        "Expected__c": "sfdx-cli: Updating CLI... already on latest version",
-        "Fix__c": "Please install SFDX from here: https://sfdc.co/sfdx_cli_win64",
-        "Message__c": "Validating: SFDX Update (sfdx update)",
-        "Operation__c": "Check Contains",
-        "Order__c": 23,
         "Count_Events__c": 2
       },
       {
