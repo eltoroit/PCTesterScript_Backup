@@ -1,5 +1,5 @@
 {
-  "now": "2019-05-28T20:58:51.795Z",
+  "now": "2019-05-28T21:15:54.821Z",
   "events": [
     {
       "attributes": {
@@ -211,23 +211,6 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000v000002LRZtAAO"
-        },
-        "Id": "a000v000002LRZtAAO",
-        "Name": "ACT-0043",
-        "AppName__c": "Chrome: Plugin",
-        "Command__c": "Chrome Plugin to split screen",
-        "Enabled__c": true,
-        "ErrorMessage__c": "User could not validate: Chrome Plugin to split screen",
-        "Expected__c": "User validated: Chrome Plugin to split screen",
-        "Message__c": "User validated: Chrome Plugin to split screen",
-        "Operation__c": "Manual",
-        "Order__c": 10,
-        "Count_Events__c": 2
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a000v000002LRZEAA4"
         },
         "Id": "a000v000002LRZEAA4",
@@ -271,24 +254,6 @@
         "Enabled__c": true,
         "Operation__c": "Write",
         "Order__c": 13,
-        "Count_Events__c": 2
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000v000002LRZsAAO"
-        },
-        "Id": "a000v000002LRZsAAO",
-        "Name": "ACT-0042",
-        "AppName__c": "Chrome: Plugin Resize",
-        "Command__c": "c:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "package.json",
-        "Fix__c": "Please install plugin from here: https://chrome.google.com/webstore/detail/tab-resize-split-screen-l/bkpenclhmiealbebdopglffmfdiilejc",
-        "Message__c": "Checking path: c:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
-        "Operation__c": "Check Path",
-        "Order__c": 14,
         "Count_Events__c": 2
       },
       {
@@ -586,12 +551,12 @@
         "Id": "a000v000002LRZUAA4",
         "Name": "ACT-0018",
         "AppName__c": "VS Code Plugin (10)",
-        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.8*",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.*",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "eamodio.gitlens-9.8.1",
+        "Expected__c": "eamodio.gitlens-9",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
-        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.8*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.*",
         "Operation__c": "Check Path",
         "Order__c": 34,
         "Count_Events__c": 2
@@ -1041,23 +1006,6 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000v000002LRZtAAO"
-        },
-        "Id": "a000v000002LRZtAAO",
-        "Name": "ACT-0043",
-        "AppName__c": "Chrome: Plugin",
-        "Command__c": "Chrome Plugin to split screen",
-        "Enabled__c": true,
-        "ErrorMessage__c": "User could not validate: Chrome Plugin to split screen",
-        "Expected__c": "User validated: Chrome Plugin to split screen",
-        "Message__c": "User validated: Chrome Plugin to split screen",
-        "Operation__c": "Manual",
-        "Order__c": 10,
-        "Count_Events__c": 2
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a000v000002LRZEAA4"
         },
         "Id": "a000v000002LRZEAA4",
@@ -1101,24 +1049,6 @@
         "Enabled__c": true,
         "Operation__c": "Write",
         "Order__c": 13,
-        "Count_Events__c": 2
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000v000002LRZsAAO"
-        },
-        "Id": "a000v000002LRZsAAO",
-        "Name": "ACT-0042",
-        "AppName__c": "Chrome: Plugin Resize",
-        "Command__c": "c:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "package.json",
-        "Fix__c": "Please install plugin from here: https://chrome.google.com/webstore/detail/tab-resize-split-screen-l/bkpenclhmiealbebdopglffmfdiilejc",
-        "Message__c": "Checking path: c:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
-        "Operation__c": "Check Path",
-        "Order__c": 14,
         "Count_Events__c": 2
       },
       {
@@ -1192,42 +1122,6 @@
         "Operation__c": "Check Path",
         "Order__c": 18,
         "Count_Events__c": 2
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000v000002LRZKAA4"
-        },
-        "Id": "a000v000002LRZKAA4",
-        "Name": "ACT-0008",
-        "AppName__c": "B2C Commerce Cloud (1)",
-        "Command__c": "C:\\Users\\Admin\\Documents\\ntoforall*",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "ntoforall",
-        "Fix__c": "B2C Commerce Cloud (1) folder is missing",
-        "Message__c": "Checking path: C:\\Users\\Admin\\Documents\\ntoforall*",
-        "Operation__c": "Check Path",
-        "Order__c": 19,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000v000002LRZHAA4"
-        },
-        "Id": "a000v000002LRZHAA4",
-        "Name": "ACT-0005",
-        "AppName__c": "B2C Commerce Cloud (2)",
-        "Command__c": "C:\\Users\\Admin\\tdxworkspace\\.metadata\\version.ini",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "version.ini",
-        "Fix__c": "B2C Commerce Cloud folder (2)  is missing",
-        "Message__c": "Checking path: C:\\Users\\Admin\\tdxworkspace\\.metadata\\version.ini",
-        "Operation__c": "Check Path",
-        "Order__c": 20,
-        "Count_Events__c": 1
       },
       {
         "attributes": {
@@ -1452,12 +1346,12 @@
         "Id": "a000v000002LRZUAA4",
         "Name": "ACT-0018",
         "AppName__c": "VS Code Plugin (10)",
-        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.8*",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.*",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "eamodio.gitlens-9.8.1",
+        "Expected__c": "eamodio.gitlens-9",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
-        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.8*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.*",
         "Operation__c": "Check Path",
         "Order__c": 34,
         "Count_Events__c": 2
