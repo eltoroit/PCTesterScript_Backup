@@ -14,7 +14,7 @@ const log = require('./colorLogs.js');
 
 // Configure execution...
 var timerDelay = 250;
-var testType = "PROD"; // TEST | PROD
+var testType = "TEST"; // TEST | PROD
 
 // Depending on execution (TEST | PROD)
 var debug = false;
