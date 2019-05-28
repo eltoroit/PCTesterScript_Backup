@@ -133,14 +133,5 @@
     "hasChrome": true,
     "checkFF": true,
     "checkChrome": true
-  },
-  {
-    "id": "BM_17",
-    "title": "[BAR][Salesforce Certification]",
-    "urlExpected": "https://www.webassessor.com/salesforce",
-    "hasFF": false,
-    "hasChrome": true,
-    "checkFF": false,
-    "checkChrome": true
   }
 ]

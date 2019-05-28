@@ -139,8 +139,8 @@
     "title": "[BAR][Salesforce Certification]",
     "urlExpected": "https://www.webassessor.com/salesforce",
     "hasFF": false,
-    "hasChrome": true,
+    "hasChrome": false,
     "checkFF": false,
-    "checkChrome": true
+    "checkChrome": false
   }
 ]

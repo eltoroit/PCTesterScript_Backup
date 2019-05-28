@@ -1,5 +1,5 @@
 {
-  "now": "2019-05-28T17:34:56.804Z",
+  "now": "2019-05-28T20:58:51.795Z",
   "events": [
     {
       "attributes": {
@@ -586,12 +586,12 @@
         "Id": "a000v000002LRZUAA4",
         "Name": "ACT-0018",
         "AppName__c": "VS Code Plugin (10)",
-        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.7*",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.8*",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "eamodio.gitlens-9.7",
+        "Expected__c": "eamodio.gitlens-9.8.1",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
-        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.7*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.8*",
         "Operation__c": "Check Path",
         "Order__c": 34,
         "Count_Events__c": 2
@@ -1452,12 +1452,12 @@
         "Id": "a000v000002LRZUAA4",
         "Name": "ACT-0018",
         "AppName__c": "VS Code Plugin (10)",
-        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.7*",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.8*",
         "Enabled__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "eamodio.gitlens-9.7",
+        "Expected__c": "eamodio.gitlens-9.8.1",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
-        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.7*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-9.8*",
         "Operation__c": "Check Path",
         "Order__c": 34,
         "Count_Events__c": 2
