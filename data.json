@@ -1,15 +1,6 @@
 {
-  "now": "2019-07-05T09:13:08.968Z",
+  "now": "2019-07-06T19:11:40.286Z",
   "events": [
-    {
-      "attributes": {
-        "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a020x000002mABoAAM"
-      },
-      "Id": "a020x000002mABoAAM",
-      "Name": "TDX '19 - Bootcamp",
-      "Order__c": 2
-    },
     {
       "attributes": {
         "type": "Event__c",
@@ -18,44 +9,19 @@
       "Id": "a020x000002mABmAAM",
       "Name": "Logout Apps",
       "Order__c": 3
+    },
+    {
+      "attributes": {
+        "type": "Event__c",
+        "url": "/services/data/v42.0/sobjects/Event__c/a020x000002mAjlAAE"
+      },
+      "Id": "a020x000002mAjlAAE",
+      "Name": "TH Bootcamp Australia - Gold coast (July 2019)",
+      "Order__c": 5
     }
   ],
   "actionsByEvent": {
-    "a020x000002mABmAAM": [
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000x000005e5ziAAA"
-        },
-        "Id": "a000x000005e5ziAAA",
-        "Name": "ACT-0079",
-        "AppName__c": "Logout SFDX",
-        "Command__c": "sfdx force:auth:logout --all --noprompt",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Could not validate: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
-        "Message__c": "Validating: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
-        "Operation__c": "Check Contains",
-        "Order__c": 52,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000x000005e5zjAAA"
-        },
-        "Id": "a000x000005e5zjAAA",
-        "Name": "ACT-0080",
-        "AppName__c": "Logout Heroku",
-        "Command__c": "heroku logout",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Could not validate: Logout Heroku (heroku logout)",
-        "Message__c": "Validating: Logout Heroku (heroku logout)",
-        "Operation__c": "Check Contains",
-        "Order__c": 53,
-        "Count_Events__c": 1
-      }
-    ],
-    "a020x000002mABoAAM": [
+    "a020x000002mAjlAAE": [
       {
         "attributes": {
           "type": "Action__c",
@@ -67,7 +33,7 @@
         "Enabled__c": true,
         "Operation__c": "Clear",
         "Order__c": 1,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -81,7 +47,7 @@
         "Enabled__c": true,
         "Operation__c": "Write",
         "Order__c": 2,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -95,7 +61,7 @@
         "Enabled__c": true,
         "Operation__c": "Write",
         "Order__c": 3,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -112,24 +78,7 @@
         "Message__c": "User validated: Computer background image?",
         "Operation__c": "Manual",
         "Order__c": 5,
-        "Count_Events__c": 2
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000x000005e5zXAAQ"
-        },
-        "Id": "a000x000005e5zXAAQ",
-        "Name": "ACT-0068",
-        "AppName__c": "Desktop: Data Loader",
-        "Command__c": "\"C:\\Users\\Client\\Desktop\\Dataloader 45.0.0.lnk\"",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Desktop: Data Loader\"",
-        "Expected__c": "Application was opened from shortcut",
-        "Message__c": "Opening Application: \"Desktop: Data Loader\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 6,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -146,7 +95,7 @@
         "Message__c": "Opening Application: \"Desktop: Notepad++\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 7,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -163,7 +112,7 @@
         "Message__c": "Opening Application: \"Firefox + Salesforce is homepage\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 8,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -180,7 +129,7 @@
         "Message__c": "Opening Application: \"Chrome + Salesforce is homepage\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 9,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -197,7 +146,7 @@
         "Message__c": "User validated: Chrome Plugin to split screen",
         "Operation__c": "Manual",
         "Order__c": 10,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -214,7 +163,7 @@
         "Message__c": "Opening Application: \"Eclipse Neon\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 12,
-        "Count_Events__c": 1
+        "Count_Events__c": 2
       },
       {
         "attributes": {
@@ -231,7 +180,7 @@
         "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 13,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -245,7 +194,7 @@
         "Enabled__c": true,
         "Operation__c": "Write",
         "Order__c": 14,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -263,7 +212,7 @@
         "Message__c": "Checking path: C:\\Users\\Client\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
         "Operation__c": "Check Path",
         "Order__c": 15,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -281,7 +230,7 @@
         "Message__c": "Validating: Check Java version (java -version)",
         "Operation__c": "Check Contains",
         "Order__c": 16,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -299,7 +248,7 @@
         "Message__c": "Checking path: C:\\Program Files\\Zulu\\zulu-8\\jre\\bin\\java.exe*",
         "Operation__c": "Check Path",
         "Order__c": 17,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -317,7 +266,7 @@
         "Message__c": "Checking path: C:\\Program Files\\Zulu\\zulu-11\\bin\\java.exe*",
         "Operation__c": "Check Path",
         "Order__c": 18,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -335,43 +284,7 @@
         "Message__c": "Checking path: C:\\Windows\\Notepad.exe",
         "Operation__c": "Check Path",
         "Order__c": 19,
-        "Count_Events__c": 2
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000x000005e5zcAAA"
-        },
-        "Id": "a000x000005e5zcAAA",
-        "Name": "ACT-0073",
-        "AppName__c": "Postman",
-        "Command__c": "C:\\Users\\Client\\AppData\\Local\\Postman\\Update.exe",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "Update.exe",
-        "Fix__c": "Postman is missing, install from here: https://www.getpostman.com/",
-        "Message__c": "Checking path: C:\\Users\\Client\\AppData\\Local\\Postman\\Update.exe",
-        "Operation__c": "Check Path",
-        "Order__c": 22,
-        "Count_Events__c": 2
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000x000005e5zdAAA"
-        },
-        "Id": "a000x000005e5zdAAA",
-        "Name": "ACT-0074",
-        "AppName__c": "SoapUI",
-        "Command__c": "C:\\Program Files (x86)\\SmartBear\\SoapUI-5.5.0\\bin\\SoapUI-5.5.0.exe",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "SoapUI-5.5.0.exe",
-        "Fix__c": "SoapUI is missing, install from here: http://www.softpedia.com/get/Internet/Other-Internet-Related/soapUI.shtml",
-        "Message__c": "Checking path: C:\\Program Files (x86)\\SmartBear\\SoapUI-5.5.0\\bin\\SoapUI-5.5.0.exe",
-        "Operation__c": "Check Path",
-        "Order__c": 23,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -389,7 +302,7 @@
         "Message__c": "Validating: SFDX Update (sfdx update)",
         "Operation__c": "Check Contains",
         "Order__c": 24,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -406,7 +319,7 @@
         "Message__c": "Validating: VS Code Version (code --version)",
         "Operation__c": "Check Contains",
         "Order__c": 25,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -424,7 +337,7 @@
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-45.*",
         "Operation__c": "Check Path",
         "Order__c": 26,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -442,7 +355,7 @@
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-45.*",
         "Operation__c": "Check Path",
         "Order__c": 27,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -460,7 +373,7 @@
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-45.*",
         "Operation__c": "Check Path",
         "Order__c": 28,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -478,7 +391,7 @@
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-45.*",
         "Operation__c": "Check Path",
         "Order__c": 29,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -496,7 +409,7 @@
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-45.*",
         "Operation__c": "Check Path",
         "Order__c": 30,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -514,7 +427,7 @@
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-45.*",
         "Operation__c": "Check Path",
         "Order__c": 31,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -532,7 +445,7 @@
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-45.*",
         "Operation__c": "Check Path",
         "Order__c": 32,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -550,7 +463,7 @@
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-45.*",
         "Operation__c": "Check Path",
         "Order__c": 33,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -568,7 +481,7 @@
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.9.0*",
         "Operation__c": "Check Path",
         "Order__c": 34,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -586,7 +499,7 @@
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\eamodio.gitlens-9.*",
         "Operation__c": "Check Path",
         "Order__c": 35,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -602,7 +515,7 @@
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
         "Operation__c": "JSON File - Edit",
         "Order__c": 36,
-        "Count_Events__c": 2,
+        "Count_Events__c": 3,
         "JSON_Actions__r": {
           "totalSize": 1,
           "done": true,
@@ -637,7 +550,7 @@
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
         "Operation__c": "JSON File - Edit",
         "Order__c": 37,
-        "Count_Events__c": 2,
+        "Count_Events__c": 3,
         "JSON_Actions__r": {
           "totalSize": 1,
           "done": true,
@@ -674,7 +587,7 @@
         "Message__c": "Validating: Git 2.18 (git --version)",
         "Operation__c": "Check Contains",
         "Order__c": 38,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -690,7 +603,7 @@
         "Message__c": "Validating: Git config email (git config --global user.email \"you@example.com\")",
         "Operation__c": "Check Contains",
         "Order__c": 39,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -706,7 +619,7 @@
         "Message__c": "Validating: Git config name (git config --global user.name \"Your Name\")",
         "Operation__c": "Check Contains",
         "Order__c": 40,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -723,24 +636,7 @@
         "Message__c": "Validating: 7-Zip (\"C:\\Program Files\\7-Zip\\7z.exe\" -version)",
         "Operation__c": "Check Contains",
         "Order__c": 41,
-        "Count_Events__c": 2
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a000x000005e5zVAAQ"
-        },
-        "Id": "a000x000005e5zVAAQ",
-        "Name": "ACT-0066",
-        "AppName__c": "Node",
-        "Command__c": "node --version",
-        "Enabled__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "v10.15.3",
-        "Message__c": "Checking exact: node --version",
-        "Operation__c": "Check Exact",
-        "Order__c": 42,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -756,7 +652,7 @@
         "Message__c": "Validating: Checking all bookmarks",
         "Operation__c": "Bookmark",
         "Order__c": 43,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -774,7 +670,7 @@
         "Message__c": "Checking path: \"C:\\Users\\Client\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
         "Operation__c": "Check Path",
         "Order__c": 44,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -792,7 +688,7 @@
         "Message__c": "Checking path: \"C:\\Users\\Client\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
         "Operation__c": "Check Path",
         "Order__c": 45,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -810,7 +706,7 @@
         "Message__c": "Checking path: \"C:\\Users\\Client\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
         "Operation__c": "Check Path",
         "Order__c": 46,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -828,7 +724,7 @@
         "Message__c": "Checking path: \"C:\\Users\\Client\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
         "Operation__c": "Check Path",
         "Order__c": 47,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -846,7 +742,7 @@
         "Message__c": "Checking path: \"C:\\Users\\Client\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
         "Operation__c": "Check Path",
         "Order__c": 48,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -864,7 +760,7 @@
         "Message__c": "Checking path: \"C:\\Users\\Client\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
         "Operation__c": "Check Path",
         "Order__c": 49,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -882,7 +778,7 @@
         "Message__c": "Checking path: \"C:\\Users\\Client\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
         "Operation__c": "Check Path",
         "Order__c": 50,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -900,7 +796,41 @@
         "Message__c": "Checking path: \"C:\\Users\\Client\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
         "Operation__c": "Check Path",
         "Order__c": 51,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
+      }
+    ],
+    "a020x000002mABmAAM": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a000x000005e5ziAAA"
+        },
+        "Id": "a000x000005e5ziAAA",
+        "Name": "ACT-0079",
+        "AppName__c": "Logout SFDX",
+        "Command__c": "sfdx force:auth:logout --all --noprompt",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
+        "Message__c": "Validating: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
+        "Operation__c": "Check Contains",
+        "Order__c": 52,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a000x000005e5zjAAA"
+        },
+        "Id": "a000x000005e5zjAAA",
+        "Name": "ACT-0080",
+        "AppName__c": "Logout Heroku",
+        "Command__c": "heroku logout",
+        "Enabled__c": true,
+        "ErrorMessage__c": "Could not validate: Logout Heroku (heroku logout)",
+        "Message__c": "Validating: Logout Heroku (heroku logout)",
+        "Operation__c": "Check Contains",
+        "Order__c": 53,
+        "Count_Events__c": 1
       }
     ]
   }
