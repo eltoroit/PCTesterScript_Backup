@@ -1,18 +1,7 @@
 [
     {
         "id": "BM_1",
-        "title": "[BAR][Salesforce dataloader | Import & Export Data]",
-        "urlChrome": "https://dataloader.io/",
-        "urlFirefox": "https://dataloader.io/",
-        "urlExpected": "https://dataloader.io/",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_2",
-        "title": "[BAR][Login | Salesforce]",
+        "title": "[BAR][Salesforce Login]",
         "urlChrome": "https://login.salesforce.com/",
         "urlFirefox": "https://login.salesforce.com/",
         "urlExpected": "https://login.salesforce.com/",
@@ -22,18 +11,19 @@
         "checkChrome": true
     },
     {
-        "id": "BM_3",
+        "id": "BM_2",
         "title": "[BAR][Marketing Cloud Login]",
-        "urlChrome": "https://mc.login.exacttarget.com/hub-cas/login?service=https%3a%2f%2fmc.exacttarget.com%2fcloud%2flogin.html%3fhash%3dOrEn1bG9nZ2VkLWluSXc9PQ2",
-        "urlExpected": "NO_IDEA",
-        "hasFF": false,
+        "urlChrome": "https://mc.exacttarget.com/",
+        "urlFirefox": "https://mc.exacttarget.com/",
+        "urlExpected": "https://mc.exacttarget.com/",
+        "hasFF": true,
         "hasChrome": true,
         "checkFF": true,
         "checkChrome": true
     },
     {
-        "id": "BM_4",
-        "title": "[BAR][Sign In - Pardot]",
+        "id": "BM_3",
+        "title": "[BAR][Pardot Login]",
         "urlChrome": "https://pi.pardot.com/",
         "urlFirefox": "https://pi.pardot.com/",
         "urlExpected": "https://pi.pardot.com/",
@@ -43,8 +33,19 @@
         "checkChrome": true
     },
     {
+        "id": "BM_4",
+        "title": "[BAR][Dataloader]",
+        "urlChrome": "https://dataloader.io/",
+        "urlFirefox": "https://dataloader.io/",
+        "urlExpected": "https://dataloader.io/",
+        "hasFF": true,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
         "id": "BM_5",
-        "title": "[BAR][Gold Coast Bootcamp 2019 Survey]",
+        "title": "[BAR][Bootcamp Session Survey]",
         "urlChrome": "https://www.surveymonkey.com/r/goldcoastbootcamp",
         "urlFirefox": "https://www.surveymonkey.com/r/goldcoastbootcamp",
         "urlExpected": "https://www.surveymonkey.com/r/goldcoastbootcamp",
@@ -55,7 +56,7 @@
     },
     {
         "id": "BM_6",
-        "title": "[BAR][Trailhead Bootcamp Australia]",
+        "title": "[BAR][Trailhead Bootcamp]",
         "urlChrome": "https://trailhead.salesforce.com/bootcamps/australia",
         "urlFirefox": "https://trailhead.salesforce.com/bootcamps/australia",
         "urlExpected": "https://trailhead.salesforce.com/bootcamps/australia",
@@ -66,10 +67,10 @@
     },
     {
         "id": "BM_7",
-        "title": "[BAR][Mimeo Digital]",
-        "urlChrome": "https://salesforce.mimeo.digital/login",
-        "urlFirefox": "https://salesforce.mimeo.digital/login",
-        "urlExpected": "https://salesforce.mimeo.digital/login",
+        "title": "[BAR][Mimeo EBook]",
+        "urlChrome": "https://salesforce.mimeo.digital/",
+        "urlFirefox": "https://salesforce.mimeo.digital/",
+        "urlExpected": "https://salesforce.mimeo.digital/",
         "hasFF": true,
         "hasChrome": true,
         "checkFF": true,
@@ -77,31 +78,11 @@
     },
     {
         "id": "BM_8",
-        "title": "[BAR][Certification]",
+        "title": "[BAR][Salesforce Certification]",
         "urlChrome": "https://www.webassessor.com/salesforce",
         "urlExpected": "NO_IDEA",
         "hasFF": false,
         "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_9",
-        "title": "[BAR][Login | Salesforce Marketing Cloud]",
-        "urlFirefox": "https://mc.login.exacttarget.com/hub-cas/login?service",
-        "urlExpected": "NO_IDEA",
-        "hasFF": true,
-        "hasChrome": false,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_10",
-        "title": "[BAR][Schedule your Salesforce Certification Exam]",
-        "urlFirefox": "https://www.webassessor.com/salesforce",
-        "urlExpected": "NO_IDEA",
-        "hasFF": true,
-        "hasChrome": false,
         "checkFF": true,
         "checkChrome": true
     }
