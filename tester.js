@@ -48,9 +48,9 @@ bm.FF = {};
 bm.Bar = {};
 bm.Chrome = {};
 
-const bmPretendPath = "./bmPretend.txt";
-const bmCheckPath = "./bmCheck.txt";
-const bmDumpPath = "./bmDump.txt";
+const bmPretendPath = "./bmPretend.json";
+const bmCheckPath = "./bmCheck.json";
+const bmDumpPath = "./bmDump.json";
 const bmTempFFLinePath = "./bmTempFF_LINE.txt";
 const bmChromePath = "C:\\Users\\Client\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks";
 const bmFirefoxPath = ["C:\\Users\\Client\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\", "*.default", "places.sqlite"];
