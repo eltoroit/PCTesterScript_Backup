@@ -1,5 +1,5 @@
 {
-  "now": "2019-07-07T17:29:47.303Z",
+  "now": "2019-07-07T17:58:06.128Z",
   "events": [
     {
       "attributes": {
@@ -866,6 +866,60 @@
         "Operation__c": "Check Path",
         "Order__c": 51,
         "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00P00000046AadIAE"
+        },
+        "Id": "a00P00000046AadIAE",
+        "Name": "ACT-0059",
+        "AppName__c": "Excel (MS Office)",
+        "Command__c": "C:\\Program Files (x86)\\Microsoft Office\\Office16\\EXCEL.EXE",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "EXCEL.EXE",
+        "Fix__c": "Excel (MS Office) is not installed",
+        "Message__c": "Checking path: C:\\Program Files (x86)\\Microsoft Office\\Office16\\EXCEL.EXE",
+        "Operation__c": "Check Path",
+        "Order__c": 60,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00P00000046AaiIAE"
+        },
+        "Id": "a00P00000046AaiIAE",
+        "Name": "ACT-0060",
+        "AppName__c": "Word (MS Office)",
+        "Command__c": "C:\\Program Files (x86)\\Microsoft Office\\Office16\\WINWORD.EXE",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "WINWORD.EXE",
+        "Fix__c": "Word (MS Office) is not installed",
+        "Message__c": "Checking path: C:\\Program Files (x86)\\Microsoft Office\\Office16\\WINWORD.EXE",
+        "Operation__c": "Check Path",
+        "Order__c": 61,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00P00000046AanIAE"
+        },
+        "Id": "a00P00000046AanIAE",
+        "Name": "ACT-0061",
+        "AppName__c": "Powerpoint (MS Office)",
+        "Command__c": "C:\\Program Files (x86)\\Microsoft Office\\Office16\\POWERPNT.EXE",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "POWERPNT.EXE",
+        "Fix__c": "Powerpoint (MS Office) is not installed",
+        "Message__c": "Checking path: C:\\Program Files (x86)\\Microsoft Office\\Office16\\POWERPNT.EXE",
+        "Operation__c": "Check Path",
+        "Order__c": 62,
+        "Count_Events__c": 1
       }
     ]
   }
