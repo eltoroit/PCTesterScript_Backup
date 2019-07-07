@@ -1,0 +1,108 @@
+[
+    {
+        "id": "BM_1",
+        "title": "[BAR][Salesforce dataloader | Import & Export Data]",
+        "urlChrome": "https://dataloader.io/",
+        "urlFirefox": "https://dataloader.io/",
+        "urlExpected": "https://dataloader.io/",
+        "hasFF": true,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_2",
+        "title": "[BAR][Login | Salesforce]",
+        "urlChrome": "https://login.salesforce.com/",
+        "urlFirefox": "https://login.salesforce.com/",
+        "urlExpected": "https://login.salesforce.com/",
+        "hasFF": true,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_3",
+        "title": "[BAR][Marketing Cloud Login]",
+        "urlChrome": "https://mc.login.exacttarget.com/hub-cas/login?service=https%3a%2f%2fmc.exacttarget.com%2fcloud%2flogin.html%3fhash%3dOrEn1bG9nZ2VkLWluSXc9PQ2",
+        "urlExpected": "NO_IDEA",
+        "hasFF": false,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_4",
+        "title": "[BAR][Sign In - Pardot]",
+        "urlChrome": "https://pi.pardot.com/",
+        "urlFirefox": "https://pi.pardot.com/",
+        "urlExpected": "https://pi.pardot.com/",
+        "hasFF": true,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_5",
+        "title": "[BAR][Gold Coast Bootcamp 2019 Survey]",
+        "urlChrome": "https://www.surveymonkey.com/r/goldcoastbootcamp",
+        "urlFirefox": "https://www.surveymonkey.com/r/goldcoastbootcamp",
+        "urlExpected": "https://www.surveymonkey.com/r/goldcoastbootcamp",
+        "hasFF": true,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_6",
+        "title": "[BAR][Trailhead Bootcamp Australia]",
+        "urlChrome": "https://trailhead.salesforce.com/bootcamps/australia",
+        "urlFirefox": "https://trailhead.salesforce.com/bootcamps/australia",
+        "urlExpected": "https://trailhead.salesforce.com/bootcamps/australia",
+        "hasFF": true,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_7",
+        "title": "[BAR][Mimeo Digital]",
+        "urlChrome": "https://salesforce.mimeo.digital/login",
+        "urlFirefox": "https://salesforce.mimeo.digital/login",
+        "urlExpected": "https://salesforce.mimeo.digital/login",
+        "hasFF": true,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_8",
+        "title": "[BAR][Certification]",
+        "urlChrome": "https://www.webassessor.com/salesforce",
+        "urlExpected": "NO_IDEA",
+        "hasFF": false,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_9",
+        "title": "[BAR][Login | Salesforce Marketing Cloud]",
+        "urlFirefox": "https://mc.login.exacttarget.com/hub-cas/login?service",
+        "urlExpected": "NO_IDEA",
+        "hasFF": true,
+        "hasChrome": false,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_10",
+        "title": "[BAR][Schedule your Salesforce Certification Exam]",
+        "urlFirefox": "https://www.webassessor.com/salesforce",
+        "urlExpected": "NO_IDEA",
+        "hasFF": true,
+        "hasChrome": false,
+        "checkFF": true,
+        "checkChrome": true
+    }
+]
