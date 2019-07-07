@@ -639,25 +639,25 @@ function executeInstruction() {
 			promptYesNo(instruction);
 			break;
 		case "Open Application":
-			if (executeManualChecks) {
-				instruction.callback = function(output) {
-					if (output.stderr) {
-						instruction.hasErrors = true;
-						instruction.returned = output;
-						reportError(instruction);
-						nextInstruction();
-					}
-				};
-				executeCommand(instruction);
-				setTimeout(function() {
-					if (!instruction.hasErrors) {
-						promptYesNo(instruction);
-					}
-				}, timerDelay * 10);
-			} else {
-				log.error("Manual checks are being skipped for testing! (Open application skipped)");
-				nextInstruction();
-			}
+			// if (executeManualChecks) {
+			instruction.callback = function(output) {
+				if (output.stderr) {
+					instruction.hasErrors = true;
+					instruction.returned = output;
+					reportError(instruction);
+					nextInstruction();
+				}
+			};
+			executeCommand(instruction);
+			setTimeout(function() {
+				if (!instruction.hasErrors) {
+					promptYesNo(instruction);
+				}
+			}, timerDelay * 10);
+			// } else {
+			// 	log.error("Manual checks are being skipped for testing! (Open application skipped)");
+			// 	nextInstruction();
+			// }
 			break;
 		case "Write":
 			// Force debug mode...

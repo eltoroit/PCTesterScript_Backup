@@ -1,5 +1,5 @@
 {
-  "now": "2019-07-07T16:02:40.901Z",
+  "now": "2019-07-07T16:27:16.316Z",
   "events": [
     {
       "attributes": {
@@ -630,13 +630,13 @@
         },
         "Id": "a00P00000046AVPIA2",
         "Name": "ACT-0006",
-        "AppName__c": "Git 2.18",
+        "AppName__c": "Git 2.22",
         "Command__c": "git --version",
         "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: Git 2.18 (git --version)",
-        "Expected__c": "git version 2.21",
+        "ErrorMessage__c": "Could not validate: Git 2.22 (git --version)",
+        "Expected__c": "git version 2.22",
         "Fix__c": "Download from here: https://git-scm.com/download/win",
-        "Message__c": "Validating: Git 2.18 (git --version)",
+        "Message__c": "Validating: Git 2.22 (git --version)",
         "Operation__c": "Check Contains",
         "Order__c": 38,
         "Count_Events__c": 3
@@ -684,7 +684,7 @@
         "Command__c": "\"C:\\Program Files\\7-Zip\\7z.exe\" -version",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: 7-Zip (\"C:\\Program Files\\7-Zip\\7z.exe\" -version)",
-        "Expected__c": "7-Zip 18.06 (x64)",
+        "Expected__c": "7-Zip 19.00 (x64)",
         "Message__c": "Validating: 7-Zip (\"C:\\Program Files\\7-Zip\\7z.exe\" -version)",
         "Operation__c": "Check Contains",
         "Order__c": 41,
@@ -701,7 +701,7 @@
         "Command__c": "node --version",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "v10.15.3",
+        "Expected__c": "v10.16.0",
         "Message__c": "Checking exact: node --version",
         "Operation__c": "Check Exact",
         "Order__c": 42,
