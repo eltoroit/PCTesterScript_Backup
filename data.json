@@ -1,5 +1,5 @@
 {
-  "now": "2019-07-26T23:14:57.818Z",
+  "now": "2019-07-26T23:36:33.686Z",
   "events": [
     {
       "attributes": {
@@ -139,7 +139,7 @@
         "Id": "a000R000002E5glQAC",
         "Name": "ACT-0208",
         "AppName__c": "Firefox + Salesforce is homepage",
-        "Command__c": "\"C:\\Users\\User\\Desktop\\Firefox.lnk\"",
+        "Command__c": "\"C:\\Users\\Public\\Desktop\\Firefox.lnk\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Unable to open application: \"Firefox + Salesforce is homepage\"",
         "Expected__c": "Application was opened from shortcut",
@@ -259,7 +259,7 @@
         "Command__c": "java -version",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: Check Java version (java -version)",
-        "Expected__c": "openjdk version \"1.8.0_212\"",
+        "Expected__c": "openjdk version \"1.8.0_221\"",
         "Fix__c": "Please ensure Java is installed",
         "Message__c": "Validating: Check Java version (java -version)",
         "Operation__c": "Check Contains",
