@@ -1,0 +1,22 @@
+{
+  "name": "pctesterscript",
+  "version": "1.0.0",
+  "description": "Tests computer images",
+  "main": "tester.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eltoroit/PCTesterScript.git"
+  },
+  "author": "Andres Perez <aperez@salesforce.com> (http://eltoro.it)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eltoroit/PCTesterScript/issues"
+  },
+  "homepage": "https://github.com/eltoroit/PCTesterScript#readme",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
+}

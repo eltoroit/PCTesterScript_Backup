@@ -11,10 +11,16 @@ const url = require("url");
 const http = require("http");
 const https = require("https");
 const log = require("./colorLogs.js");
+const minimist = require("minimist");
+const args = minimist(process.argv.slice(2), {
+	alias: {
+		t: "test"
+	}
+});
 
 // Configure execution...
 var timerDelay = 250;
-var testType = "PROD"; // TEST | PROD
+var testType = args.test ? "TEST" : "PROD"; // TEST | PROD
 
 // Depending on execution (TEST | PROD)
 var debug = false;
