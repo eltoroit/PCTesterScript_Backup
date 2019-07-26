@@ -58,8 +58,8 @@ const bmPretendPath = "./bmPretend.json";
 const bmCheckPath = "./bmCheck.json";
 const bmDumpPath = "./bmDump.json";
 const bmTempFFLinePath = "./bmTempFF_LINE.txt";
-const bmChromePath = "C:\\Users\\Client\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks";
-const bmFirefoxPath = ["C:\\Users\\Client\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\", "*.default", "places.sqlite"];
+const bmChromePath = "C:\\Users\\User\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks";
+const bmFirefoxPath = ["C:\\Users\\User\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\", "*.default", "places.sqlite"];
 
 function reportError(instruction) {
 	if (debug) log.debug("ERROR FOR: " + log.getPrettyJson(instruction));
