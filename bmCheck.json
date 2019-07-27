@@ -59,7 +59,7 @@
 		"urlExpected": "https://www.webassessor.com/salesforce",
 		"hasFF": false,
 		"hasChrome": true,
-		"checkFF": true,
+		"checkFF": false,
 		"checkChrome": true
 	}
 ]
