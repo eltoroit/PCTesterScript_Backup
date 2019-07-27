@@ -1,5 +1,5 @@
 {
-  "now": "2019-07-26T23:54:34.506Z",
+  "now": "2019-07-27T00:18:06.936Z",
   "events": [
     {
       "attributes": {
@@ -224,7 +224,7 @@
         "Id": "a000R000002E5hAQAS",
         "Name": "ACT-0233",
         "AppName__c": "Powerpoint (MS Office)",
-        "Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint 2016.lnk",
+        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint 2016.lnk\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Unable to open application: \"Powerpoint (MS Office)\"",
         "Expected__c": "Application runs with no errors",
@@ -242,7 +242,7 @@
         "Id": "a000R000002E5h8QAC",
         "Name": "ACT-0231",
         "AppName__c": "Excel (MS Office)",
-        "Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk",
+        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Unable to open application: \"Excel (MS Office)\"",
         "Expected__c": "Application runs with no errors",
