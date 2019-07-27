@@ -19,7 +19,7 @@
 	},
 	{
 		"id": "BM_4",
-		"title": "[BAR][Dataloader]",
+		"title": "[BAR][Data Loader]",
 		"urlExpected": "https://dataloader.io/",
 		"hasFF": true,
 		"hasChrome": true,
@@ -56,7 +56,7 @@
 	{
 		"id": "BM_8",
 		"title": "[BAR][Salesforce Certification]",
-		"urlExpected": "https://www.webassessor.com/salesforce ",
+		"urlExpected": "https://www.webassessor.com/salesforce",
 		"hasFF": false,
 		"hasChrome": true,
 		"checkFF": true,
