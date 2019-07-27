@@ -1,5 +1,5 @@
 {
-  "now": "2019-07-27T00:18:06.936Z",
+  "now": "2019-07-27T00:29:53.709Z",
   "events": [
     {
       "attributes": {
@@ -295,7 +295,7 @@
         "Command__c": "java -version",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: Check Java version (java -version)",
-        "Expected__c": "openjdk version \"1.8.0_221\"",
+        "Expected__c": "openjdk version \"1.8.0_222\"",
         "Fix__c": "Please ensure Java is installed",
         "Message__c": "Validating: Check Java version (java -version)",
         "Operation__c": "Check Contains",
@@ -914,7 +914,7 @@
         "Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "WINWORD.EXE",
+        "Expected__c": "Word 2016.lnk",
         "Fix__c": "Word (MS Office) is not installed",
         "Message__c": "Checking path: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
         "Operation__c": "Check Path",
